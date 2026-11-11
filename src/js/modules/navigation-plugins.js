@@ -1,57 +1,7 @@
 /**
- * Navigation, scroll-to-top, testimonial carousel, and portfolio lightbox initialization.
+ * Navigation, mobile collapse, and scroll-to-top progressive enhancements.
  */
 export function initNavigationPlugins() {
-    const $ = window.jQuery;
-
-    if ($) {
-        const $testimonialWrap = $('.testimonial-wrap');
-        if ($testimonialWrap.length && typeof $testimonialWrap.slick === 'function') {
-            $testimonialWrap.slick({
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: true,
-                dots: true,
-                arrows: false,
-                autoplay: true,
-                autoplaySpeed: 6000,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            infinite: true,
-                            dots: true,
-                        },
-                    },
-                    {
-                        breakpoint: 900,
-                        settings: { slidesToShow: 1, slidesToScroll: 1 },
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: { slidesToShow: 1, slidesToScroll: 1 },
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: { slidesToShow: 1, slidesToScroll: 1 },
-                    },
-                ],
-            });
-        }
-
-        const $portfolioGallery = $('.portfolio-gallery');
-        if ($portfolioGallery.length && typeof $.fn.magnificPopup === 'function') {
-            $portfolioGallery.each(function () {
-                $(this).find('.popup-gallery').magnificPopup({
-                    type: 'image',
-                    gallery: { enabled: true },
-                });
-            });
-        }
-    }
-
     // Desktop hover-intent dropdown behavior with clean mouseout cleanup
     const desktopQuery = window.matchMedia('(min-width: 992px)');
     const navDropdowns = Array.from(document.querySelectorAll('#navbar .nav-item.dropdown'));
