@@ -8,10 +8,11 @@
 [![JavaScript](https://img.shields.io/badge/ES6%2B%20Modular-Pure%20Vanilla-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/)
 [![Zero jQuery](https://img.shields.io/badge/jQuery-Zero%20(Removed)-success)](#)
 [![Standalone Build](https://img.shields.io/badge/Dist-18%20Standalone%20Pages-brightgreen)](#)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Workflow-222222?logo=githubpages&logoColor=white)](https://xivig.github.io/xivig-blog-template-2026/)
 
 A modern, responsive editorial blog and digital magazine template suite engineered with **Bootstrap 5.3.8**, modular **HTML layouts & partials**, **Dart Sass (`sass-embedded`)**, pure **ES6+ vanilla JavaScript (zero jQuery)**, and a fast **Vite 8** standalone build pipeline.
 
-[Explore Pages Catalog](docs/PAGES-CATALOG.md) • [Architecture Guide](docs/ARCHITECTURE.md) • [SCSS & Theming](docs/SCSS-THEMING.md) • [Deployment Guide](docs/DEPLOYMENT.md)
+[Live Demo (GitHub Pages)](https://xivig.github.io/xivig-blog-template-2026/) • [Explore Pages Catalog](docs/PAGES-CATALOG.md) • [Architecture Guide](docs/ARCHITECTURE.md) • [SCSS & Theming](docs/SCSS-THEMING.md) • [Deployment Guide](docs/DEPLOYMENT.md)
 
 </div>
 
@@ -32,6 +33,7 @@ A modern, responsive editorial blog and digital magazine template suite engineer
 
 ```text
 xivig-blog-template-2026/
+├── .github/workflows/deploy.yml       # Automated GitHub Pages build & deployment
 ├── docs/                              # Architecture, pages, theming & deployment docs
 │   ├── ARCHITECTURE.md                # Vite 8 composition pipeline & ES6+ JS modules
 │   ├── DEPLOYMENT.md                  # file://, GitHub Pages, Vercel/Netlify & Nginx

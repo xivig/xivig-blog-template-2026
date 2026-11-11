@@ -30,50 +30,19 @@ You can zip and distribute `dist/` directly, or open `dist/index.html` straight 
 
 ---
 
-## 2. GitHub Pages
+## 2. GitHub Pages (`gh-pages` + Actions Workflow)
 
-`npm run build` automatically creates `dist/.nojekyll` so GitHub Pages serves static files without Jekyll processing.
+`npm run build` automatically creates `dist/.nojekyll` and strictly relative `assets/...` links so GitHub Pages subpath hosting (`https://xivig.github.io/xivig-blog-template-2026/`) works out of the box without any custom Vite base path.
 
-### Option A: Automated GitHub Actions Workflow
+The repository includes [.github/workflows/deploy.yml](../.github/workflows/deploy.yml), which supports **dual deployment** on every push to `main`:
 
-Save `.github/workflows/deploy.yml`:
+1. Builds `dist/` via `npm ci && npm run build` and runs `npm run validate`.
+2. Publishes compiled static output directly to the `gh-pages` branch (`peaceiris/actions-gh-pages@v4`).
+3. Uploads and deploys via native GitHub Pages Actions (`actions/configure-pages@v5`, `upload-pages-artifact@v3`, `deploy-pages@v4`) when workflow deployment is enabled in **Settings -> Pages**.
 
-```yaml
-name: Deploy Xivig Blog Template
-
-on:
-  push:
-    branches: ['main']
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-jobs:
-  build_and_deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run build
-      - run: npm run validate
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-      - id: deployment
-        uses: actions/deploy-pages@v4
-```
-
-Then enable **Settings -> Pages -> Source: GitHub Actions** in your repository.
+In your GitHub repository **Settings -> Pages**, choose either:
+- **Build and deployment -> GitHub Actions**, or
+- **Deploy from a branch -> `gh-pages` / `(root)`**
 
 ---
 
