@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Browse Xivig">
+    <meta name="author" content="Xivig Engineering">
+
+    <title>Blog Catalog - Xivig Technical Articles &amp; Architecture Blueprints</title>
+
+    <!-- Synchronous Anti-FOUC Theme Preloader -->
+    <script>
+        (function () {
+            try {
+                var savedTheme = localStorage.getItem('xivig-theme');
+                if (savedTheme === 'dark' || savedTheme === 'light') {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                    document.documentElement.setAttribute('data-bs-theme', savedTheme);
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon-Dj7GUot0.png" />
+
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans + Source Serif 4 for Magazine Essays -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+
+    <!-- Xivig Modular Blog Stylesheet -->
+  <script defer src="assets/js/main-kfVEqR6Q.js"></script>
+  <link rel="stylesheet" href="assets/css/main-Bae_PHke.css">
+</head>
+
+<body class="boxed-layout-body" data-page="blog-list">
+<div class="boxed-layout-wrapper">
+    <header class="navigation">
+    <!-- Top Header Utility Bar -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- Left: Social Icons & Engine Badge -->
+                <div class="col-auto d-flex align-items-center">
+                    <div class="header-top-socials">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://x.com/xivig" target="_blank" rel="noopener noreferrer" aria-label="X" title="Follow on X">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="https://github.com/xivig" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                    <span class="badge-v13 ms-3 d-none d-sm-inline-flex">
+                        <span class="badge-dot pulse"></span> v13 Engine
+                    </span>
+                </div>
+
+                <!-- Right: Quick Nav, Theme Switcher & Actions -->
+                <div class="col-auto text-end">
+                    <div class="d-inline-flex align-items-center header-top-right">
+                        <a href="feed.html" class="top-util-link me-3 d-none d-md-inline-flex">
+                            <i class="bi bi-lightning-charge me-1 text-primary"></i> Live Feed
+                        </a>
+                        <a href="contact.html" class="top-util-link me-3 d-none d-sm-inline-flex">
+                            <i class="bi bi-envelope me-1 text-primary"></i> Contact
+                        </a>
+                        <span class="top-util-divider me-3 d-none d-sm-inline-block"></span>
+
+                        <!-- Dark/Light Mode Switcher -->
+                        <button type="button" id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Dark / Light Mode" aria-label="Toggle dark/light mode">
+                            <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
+                            <i class="bi bi-sun-fill theme-icon-light" style="display: none;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Primary Editorial Navbar -->
+    <nav class="navbar navbar-expand-lg py-3" id="navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-decoration-none" href="index.html">
+                <span class="brand-text-gradient">Xivig</span>
+                <span class="badge bg-primary bg-opacity-10 text-primary ms-2 rounded-pill fw-semibold" style="font-size: 11px;">Editorial</span>
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMain"
+                aria-controls="navbarsMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="ti-menu"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsMain">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item" data-li-nav="index,magazine">
+                        <a class="nav-link" href="index.html" data-nav="index,magazine">Magazine</a>
+                    </li>
+                    <li class="nav-item active" data-li-nav="blog-list">
+                        <a class="nav-link active" href="blog-list.html" data-nav="blog-list" aria-current="page">Catalog</a>
+                    </li>
+
+                    <!-- Rich 3-Column Editorial Mega-Menu -->
+                    <li class="nav-item dropdown blog-dropdown d-none d-lg-block" data-li-nav="blog-post,single-magazine,feed,format-image,format-link,category,tag,tags,author,authors">
+    <a class="nav-link dropdown-toggle" href="#" id="dropdownBlog" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" data-nav="blog-post,single-magazine,feed,format-image,format-link,category,tag,tags,author,authors">
+        Explore <i class="bi bi-chevron-down"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-elite blog-mega-menu shadow-lg" aria-labelledby="dropdownBlog">
+        <div class="row g-3 text-start">
+            <!-- Column 1: Portals & Catalogs -->
+            <div class="col-lg-4 blog-mega-col">
+                <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #6366f1;">
+                    <i class="fas fa-newspaper me-1"></i> Portals &amp; Catalogs
+                </div>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="index.html" data-nav="index,magazine">
+                    <i class="fas fa-bolt text-danger me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Magazine Portal</span>
+                        <small class="text-muted" style="font-size: 11px;">Headline hero &amp; breaking ticker</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center active" href="blog-list.html" data-nav="blog-list" aria-current="page">
+                    <i class="fas fa-th-large text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">4-Column Catalog</span>
+                        <small class="text-muted" style="font-size: 11px;">Grid view with quick filters</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="feed.html" data-nav="feed">
+                    <i class="fas fa-rss text-warning me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Live Feed Stream</span>
+                        <small class="text-muted" style="font-size: 11px;">Continuous dispatch stream</small>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Column 2: Visual & Article Formats -->
+            <div class="col-lg-4 blog-mega-col">
+                <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #10b981;">
+                    <i class="fas fa-photo-video me-1"></i> Visual &amp; Formats
+                </div>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="blog-post.html" data-nav="blog-post">
+                    <i class="fas fa-align-left text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Standard Article Post</span>
+                        <small class="text-muted" style="font-size: 11px;">Technical TOC &amp; discussions</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="single-magazine.html" data-nav="single-magazine">
+                    <i class="fas fa-book-open text-info me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Magazine Essay Single</span>
+                        <small class="text-muted" style="font-size: 11px;">High-contrast serif editorial</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="format-image.html" data-nav="format-image">
+                    <i class="fas fa-camera-retro me-3" style="font-size: 14px; width: 18px; text-align: center; color: #8b5cf6;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Immersive Visual Essay</span>
+                        <small class="text-muted" style="font-size: 11px;">EXIF dock &amp; zen viewer</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="format-link.html" data-nav="format-link">
+                    <i class="fas fa-bookmark text-danger me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Curated Bookmark Post</span>
+                        <small class="text-muted" style="font-size: 11px;">External specs &amp; citations</small>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Column 3: Taxonomies & Directory -->
+            <div class="col-lg-4 blog-mega-col">
+                <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #f59e0b;">
+                    <i class="fas fa-sitemap me-1"></i> Taxonomies &amp; Directory
+                </div>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="category.html" data-nav="category">
+                    <i class="fas fa-folder-open text-warning me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Category Archives</span>
+                        <small class="text-muted" style="font-size: 11px;">Cloud, Security &amp; Frontend</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="tags.html" data-nav="tags">
+                    <i class="fas fa-tags text-success me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">All Tags Directory</span>
+                        <small class="text-muted" style="font-size: 11px;">A–Z topic index &amp; clouds</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="tag.html" data-nav="tag">
+                    <i class="fas fa-hashtag text-danger me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Tag Stream (#laravel-13)</span>
+                        <small class="text-muted" style="font-size: 11px;">Single topic filter view</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="authors.html" data-nav="authors,author">
+                    <i class="fas fa-users text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Authors Directory</span>
+                        <small class="text-muted" style="font-size: 11px;">Editorial board &amp; profiles</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<!-- Mobile Formats Dropdown -->
+<li class="nav-item dropdown pages-dropdown d-lg-none">
+    <a class="nav-link dropdown-toggle" href="#" id="mobileExploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Explore Blog <i class="bi bi-chevron-down"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-elite pages-dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="mobileExploreDropdown">
+        <a class="dropdown-item" href="blog-post.html" data-nav="blog-post">Standard Post</a>
+        <a class="dropdown-item" href="single-magazine.html" data-nav="single-magazine">Magazine Article</a>
+        <a class="dropdown-item" href="feed.html" data-nav="feed">Live Feed Stream</a>
+        <a class="dropdown-item" href="format-image.html" data-nav="format-image">Visual Essay</a>
+        <a class="dropdown-item" href="format-link.html" data-nav="format-link">Curated Bookmark</a>
+        <hr class="dropdown-divider">
+        <a class="dropdown-item" href="category.html" data-nav="category">Categories</a>
+        <a class="dropdown-item" href="tags.html" data-nav="tags">Tags Directory</a>
+        <a class="dropdown-item" href="tag.html" data-nav="tag">Tag Archive</a>
+        <a class="dropdown-item" href="authors.html" data-nav="authors">Authors</a>
+        <a class="dropdown-item" href="author.html" data-nav="author">Author Profile</a>
+    </div>
+</li>
+
+
+                    <li class="nav-item" data-li-nav="gallery">
+                        <a class="nav-link" href="gallery.html" data-nav="gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item" data-li-nav="video">
+                        <a class="nav-link" href="video.html" data-nav="video">Videos</a>
+                    </li>
+                    <li class="nav-item dropdown pages-dropdown" data-li-nav="about,contact,privacy,terms">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" data-nav="about,contact,privacy,terms">
+                            Pages <i class="bi bi-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-elite pages-dropdown-menu shadow-lg" aria-labelledby="dropdownPages">
+                            <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #6366f1;">
+                                <i class="bi bi-file-earmark-richtext me-1"></i> Editorial Pages
+                            </div>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="about.html" data-nav="about">
+                                <i class="fas fa-info-circle text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">About Editorial</span>
+                                    <small class="text-muted" style="font-size: 11px;">Mission &amp; collective</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="contact.html" data-nav="contact">
+                                <i class="fas fa-envelope text-success me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Contact Desk</span>
+                                    <small class="text-muted" style="font-size: 11px;">Tips &amp; inquiries</small>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider my-1">
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="privacy.html" data-nav="privacy">
+                                <i class="fas fa-shield-alt text-secondary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Privacy Policy</span>
+                                    <small class="text-muted" style="font-size: 11px;">Data compliance</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="terms.html" data-nav="terms">
+                                <i class="fas fa-file-contract text-secondary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Terms &amp; Conditions</span>
+                                    <small class="text-muted" style="font-size: 11px;">Usage &amp; licensing</small>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a href="feed.html" class="btn-elite btn-elite-primary btn-sm" style="padding: 8px 18px; font-size: 13px;">
+                            <i class="fas fa-bolt me-1"></i> Live Stream
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <main class="xivig-main-content">
+        <!-- Hero Banner -->
+<section class="page-title py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <span class="badge-elite badge-elite-dark mb-3">
+                    <span class="badge-dot pulse"></span> Engineering &amp; Architecture Journal
+                </span>
+                <h1 class="fw-bold mb-3 display-4 text-body" style="letter-spacing: -0.03em;">
+                    Articles &amp; Engineering Insights
+                </h1>
+                <p class="text-muted lead mb-0" style="max-width: 680px;">
+                    Explore verified deep-dive technical articles, architectural blueprints, and full-stack best practices.
+                </p>
+            </div>
+            <div class="col-lg-5 mt-4 mt-lg-0 text-lg-end">
+                <div class="position-relative w-100 ms-lg-auto" style="max-width: 390px;">
+                    <input type="text" id="catalogSearchInput" class="form-control form-control-elite"
+                        style="border-radius: 999px; padding-right: 52px; height: 48px;"
+                        placeholder="Search articles, guides, tech...">
+                    <span class="btn-elite btn-elite-primary btn-sm position-absolute"
+                        style="top: 50%; right: 6px; transform: translateY(-50%); border-radius: 999px; height: 36px; width: 36px; padding: 0; display: inline-flex; align-items: center; justify-content: center; pointer-events: none;">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Blog Catalog -->
+<section class="section py-4">
+    <div class="container">
+        <!-- Category Filter & Column Controls Bar -->
+        <div class="blog-filter-bar mb-4">
+            <div class="d-flex flex-wrap align-items-center justify-content-between" style="gap: 12px;">
+                <div class="category-pill-group">
+                    <button type="button" class="cat-pill js-cat-filter active" data-category="all">
+                        <i class="fas fa-layer-group me-1"></i> All Articles <span class="cat-count" id="catalogResultCount">8</span>
+                    </button>
+                    <button type="button" class="cat-pill js-cat-filter" data-category="cloud">
+                        Cloud Infrastructure <span class="cat-count">3</span>
+                    </button>
+                    <button type="button" class="cat-pill js-cat-filter" data-category="security">
+                        Security &amp; Zero-Trust <span class="cat-count">2</span>
+                    </button>
+                    <button type="button" class="cat-pill js-cat-filter" data-category="frontend">
+                        Frontend &amp; Design <span class="cat-count">2</span>
+                    </button>
+                    <button type="button" class="cat-pill js-cat-filter" data-category="database">
+                        Database Engineering <span class="cat-count">1</span>
+                    </button>
+                </div>
+
+                <div class="d-flex align-items-center ms-auto" style="gap: 16px;">
+                    <span class="text-muted small d-none d-md-inline">Grid View</span>
+                    <div class="btn-group btn-group-sm layout-switcher" role="group">
+                        <button type="button" id="btnGridCol4" class="btn btn-primary" title="4 Columns Grid" aria-label="4 Columns Grid">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button type="button" id="btnGridCol3" class="btn btn-outline-secondary" title="3 Columns Grid" aria-label="3 Columns Grid">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4-Column / 3-Column Elite Card Grid -->
+        <div class="row" id="blogCatalogGrid">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12 mb-4 js-catalog-item" data-category="cloud" data-keywords="laravel 13 hyperscale octane swoole scaling cloud">
+                <article class="blog-item-elite h-100">
+                    <div class="blog-img-wrap-elite">
+                        <a href="blog-post.html"><img loading="lazy" src="assets/img/laravel-hyperscale-architecture-CQ4moJmT.jpg" alt="Laravel 13 Hyperscale"></a>
+                        <div class="blog-card-badges">
+                            <div class="badge-status-wrap">
+                                <span class="badge-elite-pinned"><i class="fas fa-thumbtack me-1"></i> Pinned</span>
+                            </div>
+                            <span class="badge-elite-category">Cloud</span>
+                        </div>
+                    </div>
+                    <div class="blog-body-elite">
+                        <div class="blog-meta-row-elite">
+                            <span><i class="far fa-user"></i> Aria Alchemist</span>
+                            <span><i class="far fa-calendar-alt"></i> Nov 10, 2026</span>
+                        </div>
+                        <div class="blog-tag-row-elite">
+                            <span class="blog-tag-pill"><i class="fas fa-tag"></i> #laravel-13</span>
+                        </div>
+                        <h3 class="blog-title-wrap-elite">
+                            <a href="blog-post.html" class="blog-title-elite">Laravel 13 Hyperscale Octane Blueprints</a>
+                        </h3>
+                        <p class="blog-excerpt-elite">Isolated worker pools, Swoole coroutines, and sub-50ms edge routing patterns.</p>
+                        <div class="blog-footer-elite">
+                            <a href="blog-post.html" class="btn-read-elite">Read <i class="fas fa-arrow-right"></i></a>
+                            <span class="blog-reading-time"><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12 mb-4 js-catalog-item" data-category="security" data-keywords="zero-trust fortify passkey webauthn authentication security">
+                <article class="blog-item-elite h-100">
+                    <div class="blog-img-wrap-elite">
+                        <a href="single-magazine.html"><img loading="lazy" src="assets/img/fortify-passkey-security-Uq2t2vSu.jpg" alt="Fortify Passkeys"></a>
+                        <div class="blog-card-badges">
+                            <div class="badge-status-wrap">
+                                <span class="badge-elite-featured"><i class="fas fa-star me-1"></i> Featured</span>
+                            </div>
+                            <span class="badge-elite-category">Security</span>
+                        </div>
+                    </div>
+                    <div class="blog-body-elite">
+                        <div class="blog-meta-row-elite">
+                            <span><i class="far fa-user"></i> Julian Vance</span>
+                            <span><i class="far fa-calendar-alt"></i> Nov 08, 2026</span>
+                        </div>
+                        <div class="blog-tag-row-elite">
+                            <span class="blog-tag-pill"><i class="fas fa-tag"></i> #zero-trust</span>
+                        </div>
+                        <h3 class="blog-title-wrap-elite">
+                            <a href="single-magazine.html" class="blog-title-elite">Zero-Trust Fortify Passkey Migration Guide</a>
+                        </h3>
+                        <p class="blog-excerpt-elite">Replacing password credentials with cryptographic hardware attestation and FIDO2.</p>
+                        <div class="blog-footer-elite">
+                            <a href="single-magazine.html" class="btn-read-elite">Read <i class="fas fa-arrow-right"></i></a>
+                            <span class="blog-reading-time"><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12 mb-4 js-catalog-item" data-category="frontend" data-keywords="tokens dark light theme scss design systems ui architecture">
+                <article class="blog-item-elite h-100">
+                    <div class="blog-img-wrap-elite">
+                        <a href="format-image.html"><img loading="lazy" src="assets/img/reactive-ui-engineering-AW8ROeeB.jpg" alt="Design Tokens"></a>
+                        <div class="blog-card-badges">
+                            <span class="badge-elite-category">Frontend</span>
+                        </div>
+                    </div>
+                    <div class="blog-body-elite">
+                        <div class="blog-meta-row-elite">
+                            <span><i class="far fa-user"></i> Clara Chen</span>
+                            <span><i class="far fa-calendar-alt"></i> Nov 05, 2026</span>
+                        </div>
+                        <div class="blog-tag-row-elite">
+                            <span class="blog-tag-pill"><i class="fas fa-tag"></i> #design-tokens</span>
+                        </div>
+                        <h3 class="blog-title-wrap-elite">
+                            <a href="format-image.html" class="blog-title-elite">Tokenized UI Architecture &amp; Dark/Light Modes</a>
+                        </h3>
+                        <p class="blog-excerpt-elite">Visual essay exploring semantic color graphs across multi-brand interfaces.</p>
+                        <div class="blog-footer-elite">
+                            <a href="format-image.html" class="btn-read-elite">Essay <i class="fas fa-arrow-right"></i></a>
+                            <span class="blog-reading-time"><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12 mb-4 js-catalog-item" data-category="database" data-keywords="mysql zero downtime migrations cutover database video">
+                <article class="blog-item-elite h-100">
+                    <div class="blog-img-wrap-elite">
+                        <a href="video.html"><img loading="lazy" src="assets/img/video-feature-fallback-I0zacnYl.jpg" alt="Database Schema Migrations"></a>
+                        <div class="blog-card-badges">
+                            <div class="badge-status-wrap">
+                                <span class="badge-elite-featured"><i class="fas fa-video me-1"></i> Video</span>
+                            </div>
+                            <span class="badge-elite-category">Database</span>
+                        </div>
+                    </div>
+                    <div class="blog-body-elite">
+                        <div class="blog-meta-row-elite">
+                            <span><i class="far fa-user"></i> Marcus Thorne</span>
+                            <span><i class="far fa-calendar-alt"></i> Nov 04, 2026</span>
+                        </div>
+                        <div class="blog-tag-row-elite">
+                            <span class="blog-tag-pill"><i class="fas fa-tag"></i> #mysql-tuning</span>
+                        </div>
+                        <h3 class="blog-title-wrap-elite">
+                            <a href="video.html" class="blog-title-elite">Zero-Downtime Schema Migrations Walkthrough</a>
+                        </h3>
+                        <p class="blog-excerpt-elite">Step-by-step ghost table shadow sync and online cutover verification.</p>
+                        <div class="blog-footer-elite">
+                            <a href="video.html" class="btn-read-elite">Watch <i class="fas fa-arrow-right"></i></a>
+                            <span class="blog-reading-time"><i class="far fa-clock"></i> 11 min watch</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12 mb-4 js-catalog-item" data-category="cloud" data-keywords="edge caching stale while revalidate cdn cloud http">
+                <article class="blog-item-elite h-100">
+                    <div class="blog-img-wrap-elite">
+                        <a href="feed.html"><img loading="lazy" src="assets/img/blog-1-PTDVKJDt.webp" alt="Edge Caching"></a>
+                        <div class="blog-card-badges">
+                            <span class="badge-elite-category">Cloud</span>
+                        </div>
+                    </div>
+                    <div class="blog-body-elite">
+                        <div class="blog-meta-row-elite">
+                            <span><i class="far fa-user"></i> Aria Alchemist</span>
+                            <span><i class="far fa-calendar-alt"></i> Nov 03, 2026</span>
+                        </div>
+                        <div class="blog-tag-row-elite">
+                            <span class="blog-tag-pill"><i class="fas fa-tag"></i> #edge-cache</span>
+                        </div>
+                        <h3 class="blog-title-wrap-elite">
+                            <a href="feed.html" class="blog-title-elite">Deterministic Edge Caching with Stale Revalidation</a>
+                        </h3>
+                        <p class="blog-excerpt-elite">Surrogate keys, instant purge webhooks, and regional cache consistency.</p>
+                        <div class="blog-footer-elite">
+                            <a href="feed.html" class="btn-read-elite">Read <i class="fas fa-arrow-right"></i></a>
+                            <span class="blog-reading-time"><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12 mb-4 js-catalog-item" data-category="security" data-keywords="rfc 9530 digest fields api signing security bookmark">
+                <article class="blog-item-elite h-100">
+                    <div class="blog-img-wrap-elite">
+                        <a href="format-link.html"><img loading="lazy" src="assets/img/bookmark-link-fallback-i9FnoIt6.jpg" alt="HTTP Digest Fields"></a>
+                        <div class="blog-card-badges">
+                            <span class="badge-elite-category">Bookmark</span>
+                        </div>
+                    </div>
+                    <div class="blog-body-elite">
+                        <div class="blog-meta-row-elite">
+                            <span><i class="far fa-user"></i> Elena Vance</span>
+                            <span><i class="far fa-calendar-alt"></i> Nov 02, 2026</span>
+                        </div>
+                        <div class="blog-tag-row-elite">
+                            <span class="blog-tag-pill"><i class="fas fa-tag"></i> #api-signing</span>
+                        </div>
+                        <h3 class="blog-title-wrap-elite">
+                            <a href="format-link.html" class="blog-title-elite">RFC 9530 Digest Fields &amp; API Signing Standard</a>
+                        </h3>
+                        <p class="blog-excerpt-elite">Annotated reference on integrity headers for financial webhooks.</p>
+                        <div class="blog-footer-elite">
+                            <a href="format-link.html" class="btn-read-elite">Open <i class="fas fa-arrow-right"></i></a>
+                            <span class="blog-reading-time"><i class="far fa-clock"></i> 4 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12 mb-4 js-catalog-item" data-category="cloud" data-keywords="opentelemetry tracing microservices telemetry observability">
+                <article class="blog-item-elite h-100">
+                    <div class="blog-img-wrap-elite">
+                        <a href="blog-post.html"><img loading="lazy" src="assets/img/blog-2-DbDLCISq.webp" alt="Trace Correlation"></a>
+                        <div class="blog-card-badges">
+                            <span class="badge-elite-category">Telemetry</span>
+                        </div>
+                    </div>
+                    <div class="blog-body-elite">
+                        <div class="blog-meta-row-elite">
+                            <span><i class="far fa-user"></i> Julian Vance</span>
+                            <span><i class="far fa-calendar-alt"></i> Nov 01, 2026</span>
+                        </div>
+                        <div class="blog-tag-row-elite">
+                            <span class="blog-tag-pill"><i class="fas fa-tag"></i> #kubernetes</span>
+                        </div>
+                        <h3 class="blog-title-wrap-elite">
+                            <a href="blog-post.html" class="blog-title-elite">Distributed Trace Correlation Across Mesh Gateways</a>
+                        </h3>
+                        <p class="blog-excerpt-elite">Tail-based sampling pipelines reducing cardinality spend without losing errors.</p>
+                        <div class="blog-footer-elite">
+                            <a href="blog-post.html" class="btn-read-elite">Read <i class="fas fa-arrow-right"></i></a>
+                            <span class="blog-reading-time"><i class="far fa-clock"></i> 9 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12 mb-4 js-catalog-item" data-category="frontend" data-keywords="vite 8 rollup scss es modules build frontend">
+                <article class="blog-item-elite h-100">
+                    <div class="blog-img-wrap-elite">
+                        <a href="single-magazine.html"><img loading="lazy" src="assets/img/blog-3-BCh7ZU5G.webp" alt="Vite 8 Pipelines"></a>
+                        <div class="blog-card-badges">
+                            <span class="badge-elite-category">Tooling</span>
+                        </div>
+                    </div>
+                    <div class="blog-body-elite">
+                        <div class="blog-meta-row-elite">
+                            <span><i class="far fa-user"></i> Clara Chen</span>
+                            <span><i class="far fa-calendar-alt"></i> Oct 29, 2026</span>
+                        </div>
+                        <div class="blog-tag-row-elite">
+                            <span class="blog-tag-pill"><i class="fas fa-tag"></i> #vite-8</span>
+                        </div>
+                        <h3 class="blog-title-wrap-elite">
+                            <a href="single-magazine.html" class="blog-title-elite">Building Ultra-Fast Vite 8 Multi-Page Asset Pipelines</a>
+                        </h3>
+                        <p class="blog-excerpt-elite">Custom Rollup plugins, SCSS partials, and portable flat-HTML bundles.</p>
+                        <div class="blog-footer-elite">
+                            <a href="single-magazine.html" class="btn-read-elite">Read <i class="fas fa-arrow-right"></i></a>
+                            <span class="blog-reading-time"><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Empty Search State -->
+        <div id="catalogEmptyState" class="d-none text-center py-5 p-4 rounded-4 bg-surface-card border">
+            <i class="fas fa-search text-muted mb-3" style="font-size: 2.5rem;"></i>
+            <h4 class="fw-bold text-body">No matching publications found</h4>
+            <p class="text-muted small mb-0">Try clearing the filter or switching back to "All Articles".</p>
+        </div>
+
+        <!-- Pagination Partial -->
+        <nav class="mt-5 d-flex justify-content-center" aria-label="Blog pagination">
+    <ul class="pagination gap-2">
+        <li class="page-item disabled">
+            <a class="page-link rounded-pill px-3" href="#" tabindex="-1" aria-disabled="true"><i class="fas fa-chevron-left"></i></a>
+        </li>
+        <li class="page-item active"><a class="page-link rounded-pill px-3" href="blog-list.html">1</a></li>
+        <li class="page-item"><a class="page-link rounded-pill px-3" href="blog-list.html">2</a></li>
+        <li class="page-item"><a class="page-link rounded-pill px-3" href="blog-list.html">3</a></li>
+        <li class="page-item">
+            <a class="page-link rounded-pill px-3" href="blog-list.html" aria-label="Next page"><i class="fas fa-chevron-right"></i></a>
+        </li>
+    </ul>
+</nav>
+
+    </div>
+</section>
+    </main>
+
+    <footer class="footer section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget mb-4 mb-lg-0">
+                    <h4 class="text-capitalize mb-4">Company &amp; Legal</h4>
+                    <ul class="list-unstyled footer-menu lh-35">
+                        <li><a href="about.html">About Editorial</a></li>
+                        <li><a href="authors.html">Authors Directory</a></li>
+                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget mb-4 mb-lg-0">
+                    <h4 class="text-capitalize mb-4">Publication Formats</h4>
+                    <ul class="list-unstyled footer-menu lh-35">
+                        <li><a href="index.html">Magazine Portal</a></li>
+                        <li><a href="blog-list.html">Article Catalog</a></li>
+                        <li><a href="feed.html">Live Dispatch Stream</a></li>
+                        <li><a href="gallery.html">Visual Gallery</a></li>
+                        <li><a href="video.html">Video Studio</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget mb-4 mb-lg-0">
+                    <h4 class="text-capitalize mb-4">Dispatch Subscribe</h4>
+                    <p>Weekly system architecture blueprints, release engineering briefs, and security advisories.</p>
+                    <form class="sub-form js-newsletter-form mt-3" data-feedback="footerNewsletterMsg">
+                        <div class="position-relative w-100">
+                            <input type="email" name="email" class="form-control form-control-elite" placeholder="Enter your email" aria-label="Email address" style="border-radius: 999px; padding-right: 118px; height: 46px;" required>
+                            <button type="submit" class="btn-elite btn-elite-primary btn-sm position-absolute" style="top: 50%; right: 5px; transform: translateY(-50%); border-radius: 999px; height: 36px; padding: 0 18px; display: inline-flex; align-items: center; justify-content: center; z-index: 5;">
+                                Subscribe
+                            </button>
+                        </div>
+                        <div id="footerNewsletterMsg" class="small text-success fw-semibold d-none mt-2"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget">
+                    <div class="logo mb-3">
+                        <span class="brand-text-gradient" style="font-size: 1.85rem; font-weight: 800; letter-spacing: -0.03em;">
+                            Xivig.
+                        </span>
+                    </div>
+                    <h6 class="mb-1"><a href="mailto:hello@xivig.com">hello@xivig.com</a></h6>
+                    <span class="text-primary d-block fw-semibold mb-2">Paris · San Francisco · Remote</span>
+                    <p class="small text-muted mb-0">Modular HTML &amp; SCSS editorial platform built with Vite and dark/light adaptive tokens.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-btm pt-4 mt-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
+                    <div class="copyright">
+                        &copy; 2026 <span class="text-primary fw-bold">Xivig Editorial</span> &mdash; Modular Blog Template Suite
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="https://facebook.com/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://x.com/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X" title="X"><i class="bi bi-twitter-x"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub" title="GitHub"><i class="bi bi-github"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://linkedin.com/company/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<!-- Vendor JavaScript Dependencies (Pure Vanilla Bootstrap 5 Bundle) -->
+<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+<!-- Modular Xivig Blog Script Bundle -->
+
+
+</body>
+</html>

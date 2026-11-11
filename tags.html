@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Browse all engineering topics, stacks, and architecture tags indexed alphabetically across Xivig Editorial.">
+    <meta name="author" content="Xivig Engineering">
+
+    <title>Tags Directory - Browse Topics & Blueprints - Xivig Editorial</title>
+
+    <!-- Synchronous Anti-FOUC Theme Preloader -->
+    <script>
+        (function () {
+            try {
+                var savedTheme = localStorage.getItem('xivig-theme');
+                if (savedTheme === 'dark' || savedTheme === 'light') {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                    document.documentElement.setAttribute('data-bs-theme', savedTheme);
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon-Dj7GUot0.png" />
+
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans + Source Serif 4 for Magazine Essays -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+
+    <!-- Xivig Modular Blog Stylesheet -->
+  <script defer src="assets/js/main-kfVEqR6Q.js"></script>
+  <link rel="stylesheet" href="assets/css/main-Bae_PHke.css">
+</head>
+
+<body class="boxed-layout-body" data-page="tags">
+<div class="boxed-layout-wrapper">
+    <header class="navigation">
+    <!-- Top Header Utility Bar -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- Left: Social Icons & Engine Badge -->
+                <div class="col-auto d-flex align-items-center">
+                    <div class="header-top-socials">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://x.com/xivig" target="_blank" rel="noopener noreferrer" aria-label="X" title="Follow on X">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="https://github.com/xivig" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                    <span class="badge-v13 ms-3 d-none d-sm-inline-flex">
+                        <span class="badge-dot pulse"></span> v13 Engine
+                    </span>
+                </div>
+
+                <!-- Right: Quick Nav, Theme Switcher & Actions -->
+                <div class="col-auto text-end">
+                    <div class="d-inline-flex align-items-center header-top-right">
+                        <a href="feed.html" class="top-util-link me-3 d-none d-md-inline-flex">
+                            <i class="bi bi-lightning-charge me-1 text-primary"></i> Live Feed
+                        </a>
+                        <a href="contact.html" class="top-util-link me-3 d-none d-sm-inline-flex">
+                            <i class="bi bi-envelope me-1 text-primary"></i> Contact
+                        </a>
+                        <span class="top-util-divider me-3 d-none d-sm-inline-block"></span>
+
+                        <!-- Dark/Light Mode Switcher -->
+                        <button type="button" id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Dark / Light Mode" aria-label="Toggle dark/light mode">
+                            <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
+                            <i class="bi bi-sun-fill theme-icon-light" style="display: none;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Primary Editorial Navbar -->
+    <nav class="navbar navbar-expand-lg py-3" id="navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-decoration-none" href="index.html">
+                <span class="brand-text-gradient">Xivig</span>
+                <span class="badge bg-primary bg-opacity-10 text-primary ms-2 rounded-pill fw-semibold" style="font-size: 11px;">Editorial</span>
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMain"
+                aria-controls="navbarsMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="ti-menu"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsMain">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item" data-li-nav="index,magazine">
+                        <a class="nav-link" href="index.html" data-nav="index,magazine">Magazine</a>
+                    </li>
+                    <li class="nav-item" data-li-nav="blog-list">
+                        <a class="nav-link" href="blog-list.html" data-nav="blog-list">Catalog</a>
+                    </li>
+
+                    <!-- Rich 3-Column Editorial Mega-Menu -->
+                    <li class="nav-item dropdown blog-dropdown d-none d-lg-block active" data-li-nav="blog-post,single-magazine,feed,format-image,format-link,category,tag,tags,author,authors">
+    <a class="nav-link dropdown-toggle active" href="#" id="dropdownBlog" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" data-nav="blog-post,single-magazine,feed,format-image,format-link,category,tag,tags,author,authors" aria-current="page">
+        Explore <i class="bi bi-chevron-down"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-elite blog-mega-menu shadow-lg" aria-labelledby="dropdownBlog">
+        <div class="row g-3 text-start">
+            <!-- Column 1: Portals & Catalogs -->
+            <div class="col-lg-4 blog-mega-col">
+                <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #6366f1;">
+                    <i class="fas fa-newspaper me-1"></i> Portals &amp; Catalogs
+                </div>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="index.html" data-nav="index,magazine">
+                    <i class="fas fa-bolt text-danger me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Magazine Portal</span>
+                        <small class="text-muted" style="font-size: 11px;">Headline hero &amp; breaking ticker</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="blog-list.html" data-nav="blog-list">
+                    <i class="fas fa-th-large text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">4-Column Catalog</span>
+                        <small class="text-muted" style="font-size: 11px;">Grid view with quick filters</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="feed.html" data-nav="feed">
+                    <i class="fas fa-rss text-warning me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Live Feed Stream</span>
+                        <small class="text-muted" style="font-size: 11px;">Continuous dispatch stream</small>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Column 2: Visual & Article Formats -->
+            <div class="col-lg-4 blog-mega-col">
+                <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #10b981;">
+                    <i class="fas fa-photo-video me-1"></i> Visual &amp; Formats
+                </div>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="blog-post.html" data-nav="blog-post">
+                    <i class="fas fa-align-left text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Standard Article Post</span>
+                        <small class="text-muted" style="font-size: 11px;">Technical TOC &amp; discussions</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="single-magazine.html" data-nav="single-magazine">
+                    <i class="fas fa-book-open text-info me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Magazine Essay Single</span>
+                        <small class="text-muted" style="font-size: 11px;">High-contrast serif editorial</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="format-image.html" data-nav="format-image">
+                    <i class="fas fa-camera-retro me-3" style="font-size: 14px; width: 18px; text-align: center; color: #8b5cf6;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Immersive Visual Essay</span>
+                        <small class="text-muted" style="font-size: 11px;">EXIF dock &amp; zen viewer</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="format-link.html" data-nav="format-link">
+                    <i class="fas fa-bookmark text-danger me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Curated Bookmark Post</span>
+                        <small class="text-muted" style="font-size: 11px;">External specs &amp; citations</small>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Column 3: Taxonomies & Directory -->
+            <div class="col-lg-4 blog-mega-col">
+                <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #f59e0b;">
+                    <i class="fas fa-sitemap me-1"></i> Taxonomies &amp; Directory
+                </div>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="category.html" data-nav="category">
+                    <i class="fas fa-folder-open text-warning me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Category Archives</span>
+                        <small class="text-muted" style="font-size: 11px;">Cloud, Security &amp; Frontend</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center active" href="tags.html" data-nav="tags" aria-current="page">
+                    <i class="fas fa-tags text-success me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">All Tags Directory</span>
+                        <small class="text-muted" style="font-size: 11px;">A–Z topic index &amp; clouds</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="tag.html" data-nav="tag">
+                    <i class="fas fa-hashtag text-danger me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Tag Stream (#laravel-13)</span>
+                        <small class="text-muted" style="font-size: 11px;">Single topic filter view</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="authors.html" data-nav="authors,author">
+                    <i class="fas fa-users text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Authors Directory</span>
+                        <small class="text-muted" style="font-size: 11px;">Editorial board &amp; profiles</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<!-- Mobile Formats Dropdown -->
+<li class="nav-item dropdown pages-dropdown d-lg-none">
+    <a class="nav-link dropdown-toggle" href="#" id="mobileExploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Explore Blog <i class="bi bi-chevron-down"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-elite pages-dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="mobileExploreDropdown">
+        <a class="dropdown-item" href="blog-post.html" data-nav="blog-post">Standard Post</a>
+        <a class="dropdown-item" href="single-magazine.html" data-nav="single-magazine">Magazine Article</a>
+        <a class="dropdown-item" href="feed.html" data-nav="feed">Live Feed Stream</a>
+        <a class="dropdown-item" href="format-image.html" data-nav="format-image">Visual Essay</a>
+        <a class="dropdown-item" href="format-link.html" data-nav="format-link">Curated Bookmark</a>
+        <hr class="dropdown-divider">
+        <a class="dropdown-item" href="category.html" data-nav="category">Categories</a>
+        <a class="dropdown-item active" href="tags.html" data-nav="tags" aria-current="page">Tags Directory</a>
+        <a class="dropdown-item" href="tag.html" data-nav="tag">Tag Archive</a>
+        <a class="dropdown-item" href="authors.html" data-nav="authors">Authors</a>
+        <a class="dropdown-item" href="author.html" data-nav="author">Author Profile</a>
+    </div>
+</li>
+
+
+                    <li class="nav-item" data-li-nav="gallery">
+                        <a class="nav-link" href="gallery.html" data-nav="gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item" data-li-nav="video">
+                        <a class="nav-link" href="video.html" data-nav="video">Videos</a>
+                    </li>
+                    <li class="nav-item dropdown pages-dropdown" data-li-nav="about,contact,privacy,terms">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" data-nav="about,contact,privacy,terms">
+                            Pages <i class="bi bi-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-elite pages-dropdown-menu shadow-lg" aria-labelledby="dropdownPages">
+                            <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #6366f1;">
+                                <i class="bi bi-file-earmark-richtext me-1"></i> Editorial Pages
+                            </div>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="about.html" data-nav="about">
+                                <i class="fas fa-info-circle text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">About Editorial</span>
+                                    <small class="text-muted" style="font-size: 11px;">Mission &amp; collective</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="contact.html" data-nav="contact">
+                                <i class="fas fa-envelope text-success me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Contact Desk</span>
+                                    <small class="text-muted" style="font-size: 11px;">Tips &amp; inquiries</small>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider my-1">
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="privacy.html" data-nav="privacy">
+                                <i class="fas fa-shield-alt text-secondary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Privacy Policy</span>
+                                    <small class="text-muted" style="font-size: 11px;">Data compliance</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="terms.html" data-nav="terms">
+                                <i class="fas fa-file-contract text-secondary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Terms &amp; Conditions</span>
+                                    <small class="text-muted" style="font-size: 11px;">Usage &amp; licensing</small>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a href="feed.html" class="btn-elite btn-elite-primary btn-sm" style="padding: 8px 18px; font-size: 13px;">
+                            <i class="fas fa-bolt me-1"></i> Live Stream
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <main class="xivig-main-content">
+        <section class="page-title py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-muted">Magazine</a></li>
+                        <li class="breadcrumb-item"><a href="blog-list.html" class="text-muted">Catalog</a></li>
+                        <li class="breadcrumb-item active text-primary" aria-current="page">Tags Directory</li>
+                    </ol>
+                </nav>
+
+                <div class="d-flex align-items-center flex-wrap" style="gap: 16px;">
+                    <div class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle shadow-sm" style="width: 58px; height: 58px;">
+                        <i class="fas fa-tags" style="font-size: 1.4rem;"></i>
+                    </div>
+                    <div>
+                        <span class="badge-elite badge-elite-dark mb-1">
+                            <span class="badge-dot pulse"></span> Knowledge Index
+                        </span>
+                        <h1 class="fw-bold mb-1 display-5 text-body" style="letter-spacing: -0.02em;">Tags &amp; Topics Directory</h1>
+                        <p class="text-muted mb-0 small">Browse engineering and architectural tags organized by popularity and alphabetical section.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section pt-4 pb-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <!-- Trending High-Volume Tags -->
+                <div class="p-4 rounded-4 shadow-sm bg-surface-card border mb-4">
+                    <h2 class="h6 fw-bold text-body mb-3 d-flex align-items-center">
+                        <i class="fas fa-fire me-2 text-danger"></i> Trending &amp; High-Volume Topics
+                    </h2>
+                    <div class="d-flex flex-wrap" style="gap: 10px;">
+                        <a href="tag.html" class="badge bg-light border text-decoration-none py-2 px-3 rounded-pill text-body fw-bold shadow-sm d-inline-flex align-items-center" style="font-size: 13px; gap: 6px;">
+                            <span class="text-primary">#laravel-13</span> <span class="badge bg-primary text-white rounded-pill" style="font-size: 10px;">12</span>
+                        </a>
+                        <a href="tag.html" class="badge bg-light border text-decoration-none py-2 px-3 rounded-pill text-body fw-bold shadow-sm d-inline-flex align-items-center" style="font-size: 13px; gap: 6px;">
+                            <span class="text-primary">#zero-trust</span> <span class="badge bg-primary text-white rounded-pill" style="font-size: 10px;">9</span>
+                        </a>
+                        <a href="tag.html" class="badge bg-light border text-decoration-none py-2 px-3 rounded-pill text-body fw-bold shadow-sm d-inline-flex align-items-center" style="font-size: 13px; gap: 6px;">
+                            <span class="text-primary">#kubernetes</span> <span class="badge bg-primary text-white rounded-pill" style="font-size: 10px;">10</span>
+                        </a>
+                        <a href="tag.html" class="badge bg-light border text-decoration-none py-2 px-3 rounded-pill text-body fw-bold shadow-sm d-inline-flex align-items-center" style="font-size: 13px; gap: 6px;">
+                            <span class="text-primary">#vite-8</span> <span class="badge bg-primary text-white rounded-pill" style="font-size: 10px;">7</span>
+                        </a>
+                        <a href="tag.html" class="badge bg-light border text-decoration-none py-2 px-3 rounded-pill text-body fw-bold shadow-sm d-inline-flex align-items-center" style="font-size: 13px; gap: 6px;">
+                            <span class="text-primary">#passkeys</span> <span class="badge bg-primary text-white rounded-pill" style="font-size: 10px;">6</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Alphabetical Index -->
+                <div class="p-4 rounded-4 shadow-sm bg-surface-card border">
+                    <h2 class="h6 fw-bold text-body mb-4 d-flex align-items-center pb-2 border-bottom">
+                        <i class="fas fa-sort-alpha-down me-2 text-primary"></i> A to Z Topic Index
+                    </h2>
+
+                    <div class="d-flex flex-wrap mb-4 pb-3 border-bottom" style="gap: 6px;">
+                        <a href="#letter-A" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">A</a>
+                        <a href="#letter-D" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">D</a>
+                        <a href="#letter-K" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">K</a>
+                        <a href="#letter-L" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">L</a>
+                        <a href="#letter-P" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">P</a>
+                        <a href="#letter-V" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">V</a>
+                        <a href="#letter-Z" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">Z</a>
+                    </div>
+
+                    <div class="d-flex flex-column gap-4">
+                        <div id="letter-A">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">A</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section A</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#api-signing</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">4</span></a></div>
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#architecture</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">11</span></a></div>
+                            </div>
+                        </div>
+
+                        <div id="letter-D">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">D</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section D</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#dark-mode</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">8</span></a></div>
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#design-tokens</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">8</span></a></div>
+                            </div>
+                        </div>
+
+                        <div id="letter-K">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">K</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section K</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#kubernetes</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">10</span></a></div>
+                            </div>
+                        </div>
+
+                        <div id="letter-L">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">L</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section L</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#laravel-13</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">12</span></a></div>
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#latency</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">5</span></a></div>
+                            </div>
+                        </div>
+
+                        <div id="letter-P">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">P</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section P</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#passkeys</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">6</span></a></div>
+                            </div>
+                        </div>
+
+                        <div id="letter-V">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">V</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section V</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#vite-8</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">7</span></a></div>
+                            </div>
+                        </div>
+
+                        <div id="letter-Z">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">Z</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section Z</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#zero-trust</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">9</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="position-sticky" style="top: 90px;">
+                    <aside class="blog-sidebar-elite w-100">
+    <!-- 1. Search Insights Widget -->
+    <div class="sidebar-widget-card mb-4">
+        <h5 class="sidebar-card-title">
+            <i class="fas fa-search me-2 text-primary"></i> Search Insights
+        </h5>
+        <div class="position-relative w-100" id="sidebarSearchWrapper" data-fallback-avatar="assets/img/avatar.png">
+            <form action="blog-list.html" method="GET" class="position-relative w-100 mb-0" id="sidebarSearchForm">
+                <input type="text" name="search" id="sidebarSearchInput" class="form-control form-control-elite"
+                    style="border-radius: 999px; padding-right: 52px; height: 46px; font-size: 14px;"
+                    placeholder="Search articles, topics..." autocomplete="off">
+                <button type="submit" class="btn-elite btn-elite-primary btn-sm position-absolute"
+                    style="top: 50%; right: 5px; transform: translateY(-50%); border-radius: 999px; height: 36px; width: 36px; padding: 0; display: inline-flex; align-items: center; justify-content: center; z-index: 5;"
+                    title="Search" aria-label="Search Articles">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+            <!-- Floating Live Autocomplete Dropdown -->
+            <div id="sidebarAutocompleteDropdown" class="card border shadow-lg rounded-4 p-3 position-absolute w-100 d-none" style="top: 52px; left: 0; z-index: 1050; max-height: 400px; overflow-y: auto;">
+                <div id="autocompleteResultsContent"></div>
+            </div>
+        </div>
+
+        <!-- Popular Search Terms -->
+        <div class="d-flex flex-wrap align-items-center mt-3" style="gap: 5px;">
+            <small class="text-muted me-1" style="font-size: 11px;"><i class="fas fa-fire text-danger me-1"></i> Popular:</small>
+            <a href="blog-list.html?search=Laravel" class="badge bg-light border text-muted px-2 py-1 small text-decoration-none" style="font-size: 11px; border-radius: 999px;">Laravel</a>
+            <a href="blog-list.html?search=Passkey" class="badge bg-light border text-muted px-2 py-1 small text-decoration-none" style="font-size: 11px; border-radius: 999px;">Passkeys</a>
+            <a href="blog-list.html?search=Architecture" class="badge bg-light border text-muted px-2 py-1 small text-decoration-none" style="font-size: 11px; border-radius: 999px;">Architecture</a>
+            <a href="blog-list.html?search=Zero-Trust" class="badge bg-light border text-muted px-2 py-1 small text-decoration-none" style="font-size: 11px; border-radius: 999px;">Zero-Trust</a>
+        </div>
+    </div>
+
+    <!-- 2. Interactive Tabs Widget: Popular / Recent / Comments -->
+    <div class="sidebar-widget-card mb-4">
+        <ul class="nav nav-tabs nav-tabs-elite" id="sidebarStoryTabs" role="tablist">
+            <li class="nav-item flex-fill text-center" role="presentation">
+                <button class="nav-link active w-100" id="tab-popular-btn" data-bs-toggle="tab" data-bs-target="#tab-popular" type="button" role="tab" aria-controls="tab-popular" aria-selected="true">
+                    <i class="fas fa-fire me-1 text-danger"></i> Popular
+                </button>
+            </li>
+            <li class="nav-item flex-fill text-center" role="presentation">
+                <button class="nav-link w-100" id="tab-recent-btn" data-bs-toggle="tab" data-bs-target="#tab-recent" type="button" role="tab" aria-controls="tab-recent" aria-selected="false">
+                    <i class="far fa-clock me-1 text-primary"></i> Recent
+                </button>
+            </li>
+            <li class="nav-item flex-fill text-center" role="presentation">
+                <button class="nav-link w-100" id="tab-comments-btn" data-bs-toggle="tab" data-bs-target="#tab-comments" type="button" role="tab" aria-controls="tab-comments" aria-selected="false">
+                    <i class="far fa-comments me-1 text-success"></i> Replies
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content pt-3" id="sidebarStoryTabsContent">
+            <!-- Popular Stories Tab -->
+            <div class="tab-pane fade show active" id="tab-popular" role="tabpanel" aria-labelledby="tab-popular-btn">
+                <div class="d-flex flex-column" style="gap: 14px;">
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="blog-post.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="assets/img/laravel-hyperscale-architecture-CQ4moJmT.jpg" alt="Laravel 13 Hyperscale Architecture" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge bg-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Cloud</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="blog-post.html" class="text-body text-decoration-none sidebar-article-title">Laravel 13 Hyperscale Octane Blueprints</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-eye me-1"></i> 18,420</span>
+                                <span><i class="far fa-clock me-1"></i> 8m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="single-magazine.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="assets/img/fortify-passkey-security-Uq2t2vSu.jpg" alt="Zero-Trust Passkey Authentication" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge bg-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Security</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="single-magazine.html" class="text-body text-decoration-none sidebar-article-title">Zero-Trust Fortify Passkey Migration Guide</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-eye me-1"></i> 14,190</span>
+                                <span><i class="far fa-clock me-1"></i> 7m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="format-image.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="assets/img/reactive-ui-engineering-AW8ROeeB.jpg" alt="Reactive UI Design Tokens" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge bg-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Design Systems</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="format-image.html" class="text-body text-decoration-none sidebar-article-title">Tokenized UI Architecture for Multi-Brand Systems</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-eye me-1"></i> 11,860</span>
+                                <span><i class="far fa-clock me-1"></i> 6m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Stories Tab -->
+            <div class="tab-pane fade" id="tab-recent" role="tabpanel" aria-labelledby="tab-recent-btn">
+                <div class="d-flex flex-column" style="gap: 14px;">
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="feed.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="assets/img/blog-1-PTDVKJDt.webp" alt="Deterministic Edge Caching" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge bg-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Cloud</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="feed.html" class="text-body text-decoration-none sidebar-article-title">Deterministic Edge Caching with Stale Revalidation</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-calendar-alt me-1"></i> Nov 09</span>
+                                <span><i class="far fa-clock me-1"></i> 5m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="video.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="assets/img/video-feature-fallback-I0zacnYl.jpg" alt="Zero-Downtime MySQL Cutovers" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge bg-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Database</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="video.html" class="text-body text-decoration-none sidebar-article-title">Zero-Downtime MySQL 8.4 Blue-Green Cutovers</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-calendar-alt me-1"></i> Nov 06</span>
+                                <span><i class="far fa-clock me-1"></i> 11m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="format-link.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="assets/img/bookmark-link-fallback-i9FnoIt6.jpg" alt="RFC 9530 Digest Auth" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge bg-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Specs</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="format-link.html" class="text-body text-decoration-none sidebar-article-title">RFC 9530 Digest Fields &amp; Signing Standard</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-calendar-alt me-1"></i> Nov 02</span>
+                                <span><i class="far fa-clock me-1"></i> 4m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments Tab -->
+            <div class="tab-pane fade" id="tab-comments" role="tabpanel" aria-labelledby="tab-comments-btn">
+                <div class="d-flex flex-column" style="gap: 12px;">
+                    <div class="p-2 rounded bg-body-tertiary border border-light-subtle">
+                        <div class="d-flex align-items-center mb-1 flex-wrap gap-2">
+                            <span class="badge bg-secondary py-1 px-2 text-truncate" style="font-size: 10px; max-width: 140px;">
+                                <i class="far fa-user me-1"></i> Elena Vance
+                            </span>
+                            <small class="text-muted" style="font-size: 11px;">4h ago</small>
+                        </div>
+                        <p class="mb-1 small text-body fst-italic" style="font-size: 12.5px; line-height: 1.4;">"The Octane memory isolation checklist eliminated our worker drift completely."</p>
+                        <a href="blog-post.html#comments" class="small text-primary fw-bold text-decoration-none d-block text-truncate" style="font-size: 11.5px;">
+                            on Laravel 13 Hyperscale <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="p-2 rounded bg-body-tertiary border border-light-subtle">
+                        <div class="d-flex align-items-center mb-1 flex-wrap gap-2">
+                            <span class="badge bg-secondary py-1 px-2 text-truncate" style="font-size: 10px; max-width: 140px;">
+                                <i class="far fa-user me-1"></i> Marcus Thorne
+                            </span>
+                            <small class="text-muted" style="font-size: 11px;">1d ago</small>
+                        </div>
+                        <p class="mb-1 small text-body fst-italic" style="font-size: 12.5px; line-height: 1.4;">"WebAuthn attestation examples made hardware passkey testing effortless."</p>
+                        <a href="single-magazine.html#comments" class="small text-primary fw-bold text-decoration-none d-block text-truncate" style="font-size: 11.5px;">
+                            on Zero-Trust Passkey Guide <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Topic Categories Widget -->
+    <div class="sidebar-widget-card mb-4">
+        <h5 class="sidebar-card-title">
+            <i class="fas fa-folder-open me-2 text-primary"></i> Topic Categories
+        </h5>
+        <div class="d-flex flex-column" style="gap: 8px;">
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">Cloud &amp; Infrastructure</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">14</span>
+            </a>
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">Security &amp; Zero-Trust</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">11</span>
+            </a>
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">Frontend &amp; Design Systems</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">9</span>
+            </a>
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">AI Systems &amp; Telemetry</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">8</span>
+            </a>
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">Database Engineering</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">6</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 4. Trending Tags Cloud -->
+    <div class="sidebar-widget-card mb-4">
+        <h5 class="sidebar-card-title">
+            <i class="fas fa-tags me-2 text-primary"></i> Trending Tags
+        </h5>
+        <div class="d-flex flex-wrap" style="gap: 8px;">
+            <a href="tag.html" class="sidebar-tag-chip">#laravel-13 <span class="tag-chip-count">12</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#zero-trust <span class="tag-chip-count">9</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#vite-8 <span class="tag-chip-count">7</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#kubernetes <span class="tag-chip-count">10</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#passkeys <span class="tag-chip-count">6</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#mysql-tuning <span class="tag-chip-count">5</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#design-tokens <span class="tag-chip-count">8</span></a>
+            <a href="tags.html" class="sidebar-tag-chip text-primary fw-bold">All Tags &rarr;</a>
+        </div>
+    </div>
+
+    <!-- 5. Newsletter Dispatch Widget -->
+    <div class="sidebar-widget-card sidebar-newsletter-card mb-4 text-center">
+        <div class="mb-3">
+            <div class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width: 52px; height: 52px; box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);">
+                <i class="fas fa-paper-plane" style="font-size: 1.25rem;"></i>
+            </div>
+        </div>
+        <h5 class="fw-bold mb-2 text-body">Engineering Dispatch</h5>
+        <p class="text-muted small mb-3">Join 15,000+ developers receiving weekly system blueprints and security updates.</p>
+        <form class="js-newsletter-form" data-feedback="sidebarNewsletterMsg">
+            <div class="position-relative w-100 mb-2">
+                <input type="email" name="email" class="form-control form-control-elite" placeholder="name@company.com" aria-label="Email address" required style="border-radius: 999px; padding-right: 84px; height: 44px; font-size: 13.5px;">
+                <button class="btn-elite btn-elite-primary btn-sm position-absolute fw-bold" type="submit" style="top: 50%; right: 5px; transform: translateY(-50%); border-radius: 999px; height: 34px; padding: 0 16px; display: inline-flex; align-items: center; justify-content: center; z-index: 5;">
+                    Join
+                </button>
+            </div>
+            <div id="sidebarNewsletterMsg" class="small text-success fw-semibold d-none mt-2"></div>
+        </form>
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer class="footer section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget mb-4 mb-lg-0">
+                    <h4 class="text-capitalize mb-4">Company &amp; Legal</h4>
+                    <ul class="list-unstyled footer-menu lh-35">
+                        <li><a href="about.html">About Editorial</a></li>
+                        <li><a href="authors.html">Authors Directory</a></li>
+                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget mb-4 mb-lg-0">
+                    <h4 class="text-capitalize mb-4">Publication Formats</h4>
+                    <ul class="list-unstyled footer-menu lh-35">
+                        <li><a href="index.html">Magazine Portal</a></li>
+                        <li><a href="blog-list.html">Article Catalog</a></li>
+                        <li><a href="feed.html">Live Dispatch Stream</a></li>
+                        <li><a href="gallery.html">Visual Gallery</a></li>
+                        <li><a href="video.html">Video Studio</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget mb-4 mb-lg-0">
+                    <h4 class="text-capitalize mb-4">Dispatch Subscribe</h4>
+                    <p>Weekly system architecture blueprints, release engineering briefs, and security advisories.</p>
+                    <form class="sub-form js-newsletter-form mt-3" data-feedback="footerNewsletterMsg">
+                        <div class="position-relative w-100">
+                            <input type="email" name="email" class="form-control form-control-elite" placeholder="Enter your email" aria-label="Email address" style="border-radius: 999px; padding-right: 118px; height: 46px;" required>
+                            <button type="submit" class="btn-elite btn-elite-primary btn-sm position-absolute" style="top: 50%; right: 5px; transform: translateY(-50%); border-radius: 999px; height: 36px; padding: 0 18px; display: inline-flex; align-items: center; justify-content: center; z-index: 5;">
+                                Subscribe
+                            </button>
+                        </div>
+                        <div id="footerNewsletterMsg" class="small text-success fw-semibold d-none mt-2"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget">
+                    <div class="logo mb-3">
+                        <span class="brand-text-gradient" style="font-size: 1.85rem; font-weight: 800; letter-spacing: -0.03em;">
+                            Xivig.
+                        </span>
+                    </div>
+                    <h6 class="mb-1"><a href="mailto:hello@xivig.com">hello@xivig.com</a></h6>
+                    <span class="text-primary d-block fw-semibold mb-2">Paris · San Francisco · Remote</span>
+                    <p class="small text-muted mb-0">Modular HTML &amp; SCSS editorial platform built with Vite and dark/light adaptive tokens.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-btm pt-4 mt-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
+                    <div class="copyright">
+                        &copy; 2026 <span class="text-primary fw-bold">Xivig Editorial</span> &mdash; Modular Blog Template Suite
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="https://facebook.com/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://x.com/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X" title="X"><i class="bi bi-twitter-x"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub" title="GitHub"><i class="bi bi-github"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://linkedin.com/company/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<!-- Vendor JavaScript Dependencies (Pure Vanilla Bootstrap 5 Bundle) -->
+<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+<!-- Modular Xivig Blog Script Bundle -->
+
+
+</body>
+</html>

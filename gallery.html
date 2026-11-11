@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Interactive living masonry gallery of architectural blueprints, UI design systems, and system topology plates with fullscreen lightbox.">
+    <meta name="author" content="Xivig Engineering">
+
+    <title>Living Image Gallery - Architectural Visions &amp; Visual Assets</title>
+
+    <!-- Synchronous Anti-FOUC Theme Preloader -->
+    <script>
+        (function () {
+            try {
+                var savedTheme = localStorage.getItem('xivig-theme');
+                if (savedTheme === 'dark' || savedTheme === 'light') {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                    document.documentElement.setAttribute('data-bs-theme', savedTheme);
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon-Dj7GUot0.png" />
+
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans + Source Serif 4 for Magazine Essays -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+
+    <!-- Xivig Modular Blog Stylesheet -->
+  <script defer src="assets/js/main-kfVEqR6Q.js"></script>
+  <link rel="stylesheet" href="assets/css/main-Bae_PHke.css">
+</head>
+
+<body class="boxed-layout-body" data-page="gallery">
+<div class="boxed-layout-wrapper">
+    <header class="navigation">
+    <!-- Top Header Utility Bar -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- Left: Social Icons & Engine Badge -->
+                <div class="col-auto d-flex align-items-center">
+                    <div class="header-top-socials">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://x.com/xivig" target="_blank" rel="noopener noreferrer" aria-label="X" title="Follow on X">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="https://github.com/xivig" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                    <span class="badge-v13 ms-3 d-none d-sm-inline-flex">
+                        <span class="badge-dot pulse"></span> v13 Engine
+                    </span>
+                </div>
+
+                <!-- Right: Quick Nav, Theme Switcher & Actions -->
+                <div class="col-auto text-end">
+                    <div class="d-inline-flex align-items-center header-top-right">
+                        <a href="feed.html" class="top-util-link me-3 d-none d-md-inline-flex">
+                            <i class="bi bi-lightning-charge me-1 text-primary"></i> Live Feed
+                        </a>
+                        <a href="contact.html" class="top-util-link me-3 d-none d-sm-inline-flex">
+                            <i class="bi bi-envelope me-1 text-primary"></i> Contact
+                        </a>
+                        <span class="top-util-divider me-3 d-none d-sm-inline-block"></span>
+
+                        <!-- Dark/Light Mode Switcher -->
+                        <button type="button" id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Dark / Light Mode" aria-label="Toggle dark/light mode">
+                            <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
+                            <i class="bi bi-sun-fill theme-icon-light" style="display: none;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Primary Editorial Navbar -->
+    <nav class="navbar navbar-expand-lg py-3" id="navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-decoration-none" href="index.html">
+                <span class="brand-text-gradient">Xivig</span>
+                <span class="badge bg-primary bg-opacity-10 text-primary ms-2 rounded-pill fw-semibold" style="font-size: 11px;">Editorial</span>
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMain"
+                aria-controls="navbarsMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="ti-menu"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsMain">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item" data-li-nav="index,magazine">
+                        <a class="nav-link" href="index.html" data-nav="index,magazine">Magazine</a>
+                    </li>
+                    <li class="nav-item" data-li-nav="blog-list">
+                        <a class="nav-link" href="blog-list.html" data-nav="blog-list">Catalog</a>
+                    </li>
+
+                    <!-- Rich 3-Column Editorial Mega-Menu -->
+                    <li class="nav-item dropdown blog-dropdown d-none d-lg-block" data-li-nav="blog-post,single-magazine,feed,format-image,format-link,category,tag,tags,author,authors">
+    <a class="nav-link dropdown-toggle" href="#" id="dropdownBlog" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" data-nav="blog-post,single-magazine,feed,format-image,format-link,category,tag,tags,author,authors">
+        Explore <i class="bi bi-chevron-down"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-elite blog-mega-menu shadow-lg" aria-labelledby="dropdownBlog">
+        <div class="row g-3 text-start">
+            <!-- Column 1: Portals & Catalogs -->
+            <div class="col-lg-4 blog-mega-col">
+                <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #6366f1;">
+                    <i class="fas fa-newspaper me-1"></i> Portals &amp; Catalogs
+                </div>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="index.html" data-nav="index,magazine">
+                    <i class="fas fa-bolt text-danger me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Magazine Portal</span>
+                        <small class="text-muted" style="font-size: 11px;">Headline hero &amp; breaking ticker</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="blog-list.html" data-nav="blog-list">
+                    <i class="fas fa-th-large text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">4-Column Catalog</span>
+                        <small class="text-muted" style="font-size: 11px;">Grid view with quick filters</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="feed.html" data-nav="feed">
+                    <i class="fas fa-rss text-warning me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Live Feed Stream</span>
+                        <small class="text-muted" style="font-size: 11px;">Continuous dispatch stream</small>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Column 2: Visual & Article Formats -->
+            <div class="col-lg-4 blog-mega-col">
+                <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #10b981;">
+                    <i class="fas fa-photo-video me-1"></i> Visual &amp; Formats
+                </div>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="blog-post.html" data-nav="blog-post">
+                    <i class="fas fa-align-left text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Standard Article Post</span>
+                        <small class="text-muted" style="font-size: 11px;">Technical TOC &amp; discussions</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="single-magazine.html" data-nav="single-magazine">
+                    <i class="fas fa-book-open text-info me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Magazine Essay Single</span>
+                        <small class="text-muted" style="font-size: 11px;">High-contrast serif editorial</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="format-image.html" data-nav="format-image">
+                    <i class="fas fa-camera-retro me-3" style="font-size: 14px; width: 18px; text-align: center; color: #8b5cf6;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Immersive Visual Essay</span>
+                        <small class="text-muted" style="font-size: 11px;">EXIF dock &amp; zen viewer</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="format-link.html" data-nav="format-link">
+                    <i class="fas fa-bookmark text-danger me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Curated Bookmark Post</span>
+                        <small class="text-muted" style="font-size: 11px;">External specs &amp; citations</small>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Column 3: Taxonomies & Directory -->
+            <div class="col-lg-4 blog-mega-col">
+                <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #f59e0b;">
+                    <i class="fas fa-sitemap me-1"></i> Taxonomies &amp; Directory
+                </div>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="category.html" data-nav="category">
+                    <i class="fas fa-folder-open text-warning me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Category Archives</span>
+                        <small class="text-muted" style="font-size: 11px;">Cloud, Security &amp; Frontend</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="tags.html" data-nav="tags">
+                    <i class="fas fa-tags text-success me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">All Tags Directory</span>
+                        <small class="text-muted" style="font-size: 11px;">A–Z topic index &amp; clouds</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="tag.html" data-nav="tag">
+                    <i class="fas fa-hashtag text-danger me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Tag Stream (#laravel-13)</span>
+                        <small class="text-muted" style="font-size: 11px;">Single topic filter view</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="authors.html" data-nav="authors,author">
+                    <i class="fas fa-users text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Authors Directory</span>
+                        <small class="text-muted" style="font-size: 11px;">Editorial board &amp; profiles</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<!-- Mobile Formats Dropdown -->
+<li class="nav-item dropdown pages-dropdown d-lg-none">
+    <a class="nav-link dropdown-toggle" href="#" id="mobileExploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Explore Blog <i class="bi bi-chevron-down"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-elite pages-dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="mobileExploreDropdown">
+        <a class="dropdown-item" href="blog-post.html" data-nav="blog-post">Standard Post</a>
+        <a class="dropdown-item" href="single-magazine.html" data-nav="single-magazine">Magazine Article</a>
+        <a class="dropdown-item" href="feed.html" data-nav="feed">Live Feed Stream</a>
+        <a class="dropdown-item" href="format-image.html" data-nav="format-image">Visual Essay</a>
+        <a class="dropdown-item" href="format-link.html" data-nav="format-link">Curated Bookmark</a>
+        <hr class="dropdown-divider">
+        <a class="dropdown-item" href="category.html" data-nav="category">Categories</a>
+        <a class="dropdown-item" href="tags.html" data-nav="tags">Tags Directory</a>
+        <a class="dropdown-item" href="tag.html" data-nav="tag">Tag Archive</a>
+        <a class="dropdown-item" href="authors.html" data-nav="authors">Authors</a>
+        <a class="dropdown-item" href="author.html" data-nav="author">Author Profile</a>
+    </div>
+</li>
+
+
+                    <li class="nav-item active" data-li-nav="gallery">
+                        <a class="nav-link active" href="gallery.html" data-nav="gallery" aria-current="page">Gallery</a>
+                    </li>
+                    <li class="nav-item" data-li-nav="video">
+                        <a class="nav-link" href="video.html" data-nav="video">Videos</a>
+                    </li>
+                    <li class="nav-item dropdown pages-dropdown" data-li-nav="about,contact,privacy,terms">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" data-nav="about,contact,privacy,terms">
+                            Pages <i class="bi bi-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-elite pages-dropdown-menu shadow-lg" aria-labelledby="dropdownPages">
+                            <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #6366f1;">
+                                <i class="bi bi-file-earmark-richtext me-1"></i> Editorial Pages
+                            </div>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="about.html" data-nav="about">
+                                <i class="fas fa-info-circle text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">About Editorial</span>
+                                    <small class="text-muted" style="font-size: 11px;">Mission &amp; collective</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="contact.html" data-nav="contact">
+                                <i class="fas fa-envelope text-success me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Contact Desk</span>
+                                    <small class="text-muted" style="font-size: 11px;">Tips &amp; inquiries</small>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider my-1">
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="privacy.html" data-nav="privacy">
+                                <i class="fas fa-shield-alt text-secondary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Privacy Policy</span>
+                                    <small class="text-muted" style="font-size: 11px;">Data compliance</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="terms.html" data-nav="terms">
+                                <i class="fas fa-file-contract text-secondary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Terms &amp; Conditions</span>
+                                    <small class="text-muted" style="font-size: 11px;">Usage &amp; licensing</small>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a href="feed.html" class="btn-elite btn-elite-primary btn-sm" style="padding: 8px 18px; font-size: 13px;">
+                            <i class="fas fa-bolt me-1"></i> Live Stream
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <main class="xivig-main-content">
+        <!-- Gallery Hero Banner -->
+<section class="page-title py-4">
+    <div class="container text-center">
+        <span class="badge-elite badge-elite-dark mb-3">
+            <span class="badge-dot pulse"></span> Visual Intelligence &amp; Architectural Imagery
+        </span>
+        <h1 class="fw-bold mb-3 display-4 text-body" style="letter-spacing: -0.03em;">
+            Living Gallery &amp; Diagrams
+        </h1>
+        <p class="text-muted lead mx-auto mb-4" style="max-width: 680px;">
+            High-resolution hardware setups, cluster topology blueprints, and contemporary engineering visual essays.
+        </p>
+
+        <!-- Category / Filter Pill Row -->
+        <div class="category-pill-group justify-content-center">
+            <button type="button" class="cat-pill js-gallery-filter active" data-filter="all">
+                <i class="fas fa-th-large me-1"></i> All Plates <span class="cat-count">6</span>
+            </button>
+            <button type="button" class="cat-pill js-gallery-filter" data-filter="architecture">
+                Architecture <span class="cat-count">2</span>
+            </button>
+            <button type="button" class="cat-pill js-gallery-filter" data-filter="design">
+                Design Systems <span class="cat-count">2</span>
+            </button>
+            <button type="button" class="cat-pill js-gallery-filter" data-filter="hardware">
+                Security &amp; Enclaves <span class="cat-count">2</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Living Masonry Gallery Grid -->
+<section class="section pt-4 pb-5">
+    <div class="container">
+        <div class="living-gallery mb-5" id="livingGalleryGrid">
+            <div class="gallery-item large js-gallery-item" data-category="architecture"
+                onclick="openGalleryLightbox('assets/img/gallery/gallery-thumb-1.webp', 'Distributed worker clusters pinned across isolated memory bounds.', 'Multi-Region Worker Topology', 'blog-post.html')">
+                <img loading="lazy" src="assets/img/gallery-thumb-1-DVaIXPfU.webp" alt="Multi-Region Worker Topology">
+                <div class="gallery-caption">
+                    <h4>Multi-Region Worker Topology</h4>
+                    <p><i class="fas fa-link me-1"></i> Laravel 13 Hyperscale Blueprints</p>
+                </div>
+            </div>
+
+            <div class="gallery-item tall js-gallery-item" data-category="design"
+                onclick="openGalleryLightbox('assets/img/gallery/gallery-thumb-2.webp', 'Adaptive surface luminance scale verified across WCAG AA checkpoints.', 'Tokenized Contrast Matrix', 'format-image.html')">
+                <img loading="lazy" src="assets/img/gallery-thumb-2-Bx02kIw5.webp" alt="Tokenized Contrast Matrix">
+                <div class="gallery-caption">
+                    <h4>Tokenized Contrast Matrix</h4>
+                    <p><i class="fas fa-link me-1"></i> Tokenized UI Architecture Essay</p>
+                </div>
+            </div>
+
+            <div class="gallery-item wide js-gallery-item" data-category="hardware"
+                onclick="openGalleryLightbox('assets/img/gallery/gallery-thumb-3.webp', 'FIDO2 hardware enclave provisioning workflow inside zero-trust admin zones.', 'Hardware Passkey Enclave', 'single-magazine.html')">
+                <img loading="lazy" src="assets/img/gallery-thumb-3-OHzJxOxV.webp" alt="Hardware Passkey Enclave">
+                <div class="gallery-caption">
+                    <h4>Hardware Passkey Enclave</h4>
+                    <p><i class="fas fa-link me-1"></i> Zero-Trust Passkey Migration Guide</p>
+                </div>
+            </div>
+
+            <div class="gallery-item js-gallery-item" data-category="architecture"
+                onclick="openGalleryLightbox('assets/img/gallery/gallery-thumb-4.webp', 'Flamegraph trace correlation identifying cold cache contention.', 'Flamegraph Latency Trace', 'feed.html')">
+                <img loading="lazy" src="assets/img/gallery-thumb-4-B0hX10_M.webp" alt="Flamegraph Latency Trace">
+                <div class="gallery-caption">
+                    <h4>Flamegraph Latency Trace</h4>
+                    <p><i class="fas fa-link me-1"></i> Edge Caching Live Dispatch</p>
+                </div>
+            </div>
+
+            <div class="gallery-item tall js-gallery-item" data-category="design"
+                onclick="openGalleryLightbox('assets/img/gallery/gallery-thumb-5.webp', 'Editorial headline modular grid rhythm on desktop viewports.', 'Magazine Grid Anatomy', 'index.html')">
+                <img loading="lazy" src="assets/img/gallery-thumb-5-CUmFW87Y.webp" alt="Magazine Grid Anatomy">
+                <div class="gallery-caption">
+                    <h4>Magazine Grid Anatomy</h4>
+                    <p><i class="fas fa-link me-1"></i> Xivig Editorial Magazine Portal</p>
+                </div>
+            </div>
+
+            <div class="gallery-item wide js-gallery-item" data-category="hardware"
+                onclick="openGalleryLightbox('assets/img/gallery/gallery-thumb-6.webp', 'Blue-green replication verification console during cutover testing.', 'Replication Verification Console', 'video.html')">
+                <img loading="lazy" src="assets/img/gallery-thumb-6-BdxFU5lL.webp" alt="Replication Verification Console">
+                <div class="gallery-caption">
+                    <h4>Replication Verification Console</h4>
+                    <p><i class="fas fa-link me-1"></i> MySQL 8.4 Blue-Green Cutover Video</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cinema Gallery Lightbox Modal -->
+<div class="modal fade" id="galleryLightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-dark text-white border-0" style="border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.7);">
+            <div class="modal-header border-0 pb-0 position-absolute top-0 end-0 z-3 p-3">
+                <button type="button" class="btn btn-light rounded-circle shadow d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; padding: 0;" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body p-0 text-center position-relative">
+                <img id="lightboxImg" src="assets/img/gallery-thumb-1-DVaIXPfU.webp" alt="Fullscreen Visual" class="img-fluid w-100" style="max-height: 75vh; object-fit: contain; background: #0b0f19;">
+                <div class="p-4 text-start d-flex flex-wrap align-items-center justify-content-between gap-3" style="background: rgba(15, 23, 42, 0.95);">
+                    <div>
+                        <h4 id="lightboxCaption" class="fw-bold mb-1 text-white">Architectural Plate</h4>
+                        <p id="lightboxSubtitle" class="text-muted small mb-0">High-resolution Xivig Visual Archive</p>
+                    </div>
+                    <a id="lightboxPostLink" href="blog-post.html" class="btn-elite btn-elite-primary btn-sm">
+                        Read Full Article <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <footer class="footer section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget mb-4 mb-lg-0">
+                    <h4 class="text-capitalize mb-4">Company &amp; Legal</h4>
+                    <ul class="list-unstyled footer-menu lh-35">
+                        <li><a href="about.html">About Editorial</a></li>
+                        <li><a href="authors.html">Authors Directory</a></li>
+                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget mb-4 mb-lg-0">
+                    <h4 class="text-capitalize mb-4">Publication Formats</h4>
+                    <ul class="list-unstyled footer-menu lh-35">
+                        <li><a href="index.html">Magazine Portal</a></li>
+                        <li><a href="blog-list.html">Article Catalog</a></li>
+                        <li><a href="feed.html">Live Dispatch Stream</a></li>
+                        <li><a href="gallery.html">Visual Gallery</a></li>
+                        <li><a href="video.html">Video Studio</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget mb-4 mb-lg-0">
+                    <h4 class="text-capitalize mb-4">Dispatch Subscribe</h4>
+                    <p>Weekly system architecture blueprints, release engineering briefs, and security advisories.</p>
+                    <form class="sub-form js-newsletter-form mt-3" data-feedback="footerNewsletterMsg">
+                        <div class="position-relative w-100">
+                            <input type="email" name="email" class="form-control form-control-elite" placeholder="Enter your email" aria-label="Email address" style="border-radius: 999px; padding-right: 118px; height: 46px;" required>
+                            <button type="submit" class="btn-elite btn-elite-primary btn-sm position-absolute" style="top: 50%; right: 5px; transform: translateY(-50%); border-radius: 999px; height: 36px; padding: 0 18px; display: inline-flex; align-items: center; justify-content: center; z-index: 5;">
+                                Subscribe
+                            </button>
+                        </div>
+                        <div id="footerNewsletterMsg" class="small text-success fw-semibold d-none mt-2"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget">
+                    <div class="logo mb-3">
+                        <span class="brand-text-gradient" style="font-size: 1.85rem; font-weight: 800; letter-spacing: -0.03em;">
+                            Xivig.
+                        </span>
+                    </div>
+                    <h6 class="mb-1"><a href="mailto:hello@xivig.com">hello@xivig.com</a></h6>
+                    <span class="text-primary d-block fw-semibold mb-2">Paris · San Francisco · Remote</span>
+                    <p class="small text-muted mb-0">Modular HTML &amp; SCSS editorial platform built with Vite and dark/light adaptive tokens.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-btm pt-4 mt-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
+                    <div class="copyright">
+                        &copy; 2026 <span class="text-primary fw-bold">Xivig Editorial</span> &mdash; Modular Blog Template Suite
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="https://facebook.com/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://x.com/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X" title="X"><i class="bi bi-twitter-x"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub" title="GitHub"><i class="bi bi-github"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://linkedin.com/company/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<!-- Vendor JavaScript Dependencies (Pure Vanilla Bootstrap 5 Bundle) -->
+<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+<!-- Modular Xivig Blog Script Bundle -->
+
+
+</body>
+</html>

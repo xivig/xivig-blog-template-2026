@@ -1,0 +1,1734 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Xivig Full-Width Magazine Portal featuring breaking technical dispatches, architecture case studies, visual essays, and video briefings.">
+    <meta name="author" content="Xivig Engineering">
+
+    <title>Xivig Magazine Portal - Engineering Intelligence & Architecture News</title>
+
+    <!-- Synchronous Anti-FOUC Theme Preloader -->
+    <script>
+        (function () {
+            try {
+                var savedTheme = localStorage.getItem('xivig-theme');
+                if (savedTheme === 'dark' || savedTheme === 'light') {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                    document.documentElement.setAttribute('data-bs-theme', savedTheme);
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon-Dj7GUot0.png" />
+
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans + Source Serif 4 for Magazine Essays -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+
+    <!-- Xivig Modular Blog Stylesheet -->
+  <script defer src="assets/js/main-kfVEqR6Q.js"></script>
+  <link rel="stylesheet" href="assets/css/main-Bae_PHke.css">
+</head>
+
+<body class="boxed-layout-body" data-page="index">
+<div class="boxed-layout-wrapper">
+    <header class="navigation">
+    <!-- Top Header Utility Bar -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- Left: Social Icons & Engine Badge -->
+                <div class="col-auto d-flex align-items-center">
+                    <div class="header-top-socials">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://x.com/xivig" target="_blank" rel="noopener noreferrer" aria-label="X" title="Follow on X">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="https://github.com/xivig" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                    <span class="badge-v13 ms-3 d-none d-sm-inline-flex">
+                        <span class="badge-dot pulse"></span> v13 Engine
+                    </span>
+                </div>
+
+                <!-- Right: Quick Nav, Theme Switcher & Actions -->
+                <div class="col-auto text-end">
+                    <div class="d-inline-flex align-items-center header-top-right">
+                        <a href="feed.html" class="top-util-link me-3 d-none d-md-inline-flex">
+                            <i class="bi bi-lightning-charge me-1 text-primary"></i> Live Feed
+                        </a>
+                        <a href="contact.html" class="top-util-link me-3 d-none d-sm-inline-flex">
+                            <i class="bi bi-envelope me-1 text-primary"></i> Contact
+                        </a>
+                        <span class="top-util-divider me-3 d-none d-sm-inline-block"></span>
+
+                        <!-- Dark/Light Mode Switcher -->
+                        <button type="button" id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Dark / Light Mode" aria-label="Toggle dark/light mode">
+                            <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
+                            <i class="bi bi-sun-fill theme-icon-light" style="display: none;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Primary Editorial Navbar -->
+    <nav class="navbar navbar-expand-lg py-3" id="navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-decoration-none" href="index.html">
+                <span class="brand-text-gradient">Xivig</span>
+                <span class="badge bg-primary bg-opacity-10 text-primary ms-2 rounded-pill fw-semibold" style="font-size: 11px;">Editorial</span>
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMain"
+                aria-controls="navbarsMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="ti-menu"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsMain">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item active" data-li-nav="index,magazine">
+                        <a class="nav-link active" href="index.html" data-nav="index,magazine" aria-current="page">Magazine</a>
+                    </li>
+                    <li class="nav-item" data-li-nav="blog-list">
+                        <a class="nav-link" href="blog-list.html" data-nav="blog-list">Catalog</a>
+                    </li>
+
+                    <!-- Rich 3-Column Editorial Mega-Menu -->
+                    <li class="nav-item dropdown blog-dropdown d-none d-lg-block" data-li-nav="blog-post,single-magazine,feed,format-image,format-link,category,tag,tags,author,authors">
+    <a class="nav-link dropdown-toggle" href="#" id="dropdownBlog" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" data-nav="blog-post,single-magazine,feed,format-image,format-link,category,tag,tags,author,authors">
+        Explore <i class="bi bi-chevron-down"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-elite blog-mega-menu shadow-lg" aria-labelledby="dropdownBlog">
+        <div class="row g-3 text-start">
+            <!-- Column 1: Portals & Catalogs -->
+            <div class="col-lg-4 blog-mega-col">
+                <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #6366f1;">
+                    <i class="fas fa-newspaper me-1"></i> Portals &amp; Catalogs
+                </div>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center active" href="index.html" data-nav="index,magazine" aria-current="page">
+                    <i class="fas fa-bolt text-danger me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Magazine Portal</span>
+                        <small class="text-muted" style="font-size: 11px;">Headline hero &amp; breaking ticker</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="blog-list.html" data-nav="blog-list">
+                    <i class="fas fa-th-large text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">4-Column Catalog</span>
+                        <small class="text-muted" style="font-size: 11px;">Grid view with quick filters</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="feed.html" data-nav="feed">
+                    <i class="fas fa-rss text-warning me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Live Feed Stream</span>
+                        <small class="text-muted" style="font-size: 11px;">Continuous dispatch stream</small>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Column 2: Visual & Article Formats -->
+            <div class="col-lg-4 blog-mega-col">
+                <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #10b981;">
+                    <i class="fas fa-photo-video me-1"></i> Visual &amp; Formats
+                </div>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="blog-post.html" data-nav="blog-post">
+                    <i class="fas fa-align-left text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Standard Article Post</span>
+                        <small class="text-muted" style="font-size: 11px;">Technical TOC &amp; discussions</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="single-magazine.html" data-nav="single-magazine">
+                    <i class="fas fa-book-open text-info me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Magazine Essay Single</span>
+                        <small class="text-muted" style="font-size: 11px;">High-contrast serif editorial</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="format-image.html" data-nav="format-image">
+                    <i class="fas fa-camera-retro me-3" style="font-size: 14px; width: 18px; text-align: center; color: #8b5cf6;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Immersive Visual Essay</span>
+                        <small class="text-muted" style="font-size: 11px;">EXIF dock &amp; zen viewer</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="format-link.html" data-nav="format-link">
+                    <i class="fas fa-bookmark text-danger me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Curated Bookmark Post</span>
+                        <small class="text-muted" style="font-size: 11px;">External specs &amp; citations</small>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Column 3: Taxonomies & Directory -->
+            <div class="col-lg-4 blog-mega-col">
+                <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #f59e0b;">
+                    <i class="fas fa-sitemap me-1"></i> Taxonomies &amp; Directory
+                </div>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="category.html" data-nav="category">
+                    <i class="fas fa-folder-open text-warning me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Category Archives</span>
+                        <small class="text-muted" style="font-size: 11px;">Cloud, Security &amp; Frontend</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="tags.html" data-nav="tags">
+                    <i class="fas fa-tags text-success me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">All Tags Directory</span>
+                        <small class="text-muted" style="font-size: 11px;">A–Z topic index &amp; clouds</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="tag.html" data-nav="tag">
+                    <i class="fas fa-hashtag text-danger me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Tag Stream (#laravel-13)</span>
+                        <small class="text-muted" style="font-size: 11px;">Single topic filter view</small>
+                    </div>
+                </a>
+                <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="authors.html" data-nav="authors,author">
+                    <i class="fas fa-users text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                    <div>
+                        <span class="d-block fw-bold" style="font-size: 13.5px;">Authors Directory</span>
+                        <small class="text-muted" style="font-size: 11px;">Editorial board &amp; profiles</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<!-- Mobile Formats Dropdown -->
+<li class="nav-item dropdown pages-dropdown d-lg-none">
+    <a class="nav-link dropdown-toggle" href="#" id="mobileExploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Explore Blog <i class="bi bi-chevron-down"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-elite pages-dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="mobileExploreDropdown">
+        <a class="dropdown-item" href="blog-post.html" data-nav="blog-post">Standard Post</a>
+        <a class="dropdown-item" href="single-magazine.html" data-nav="single-magazine">Magazine Article</a>
+        <a class="dropdown-item" href="feed.html" data-nav="feed">Live Feed Stream</a>
+        <a class="dropdown-item" href="format-image.html" data-nav="format-image">Visual Essay</a>
+        <a class="dropdown-item" href="format-link.html" data-nav="format-link">Curated Bookmark</a>
+        <hr class="dropdown-divider">
+        <a class="dropdown-item" href="category.html" data-nav="category">Categories</a>
+        <a class="dropdown-item" href="tags.html" data-nav="tags">Tags Directory</a>
+        <a class="dropdown-item" href="tag.html" data-nav="tag">Tag Archive</a>
+        <a class="dropdown-item" href="authors.html" data-nav="authors">Authors</a>
+        <a class="dropdown-item" href="author.html" data-nav="author">Author Profile</a>
+    </div>
+</li>
+
+
+                    <li class="nav-item" data-li-nav="gallery">
+                        <a class="nav-link" href="gallery.html" data-nav="gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item" data-li-nav="video">
+                        <a class="nav-link" href="video.html" data-nav="video">Videos</a>
+                    </li>
+                    <li class="nav-item dropdown pages-dropdown" data-li-nav="about,contact,privacy,terms">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" data-nav="about,contact,privacy,terms">
+                            Pages <i class="bi bi-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-elite pages-dropdown-menu shadow-lg" aria-labelledby="dropdownPages">
+                            <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #6366f1;">
+                                <i class="bi bi-file-earmark-richtext me-1"></i> Editorial Pages
+                            </div>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="about.html" data-nav="about">
+                                <i class="fas fa-info-circle text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">About Editorial</span>
+                                    <small class="text-muted" style="font-size: 11px;">Mission &amp; collective</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="contact.html" data-nav="contact">
+                                <i class="fas fa-envelope text-success me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Contact Desk</span>
+                                    <small class="text-muted" style="font-size: 11px;">Tips &amp; inquiries</small>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider my-1">
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="privacy.html" data-nav="privacy">
+                                <i class="fas fa-shield-alt text-secondary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Privacy Policy</span>
+                                    <small class="text-muted" style="font-size: 11px;">Data compliance</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="terms.html" data-nav="terms">
+                                <i class="fas fa-file-contract text-secondary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Terms &amp; Conditions</span>
+                                    <small class="text-muted" style="font-size: 11px;">Usage &amp; licensing</small>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a href="feed.html" class="btn-elite btn-elite-primary btn-sm" style="padding: 8px 18px; font-size: 13px;">
+                            <i class="fas fa-bolt me-1"></i> Live Stream
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <main class="xivig-main-content">
+        <!-- 0. Top Breaking News Ticker -->
+<div class="ticker-wrap">
+    <div class="container d-flex align-items-center min-w-0">
+        <span class="ticker-title bg-danger text-white shadow-sm">
+            <i class="fas fa-bolt me-1"></i> Breaking
+        </span>
+        <div class="ticker-scroll-container">
+            <div class="ticker">
+                <a href="blog-post.html" class="ticker-item text-decoration-none d-inline-flex align-items-center gap-2">
+                    <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1" style="font-size: 10px;">Cloud</span>
+                    <span class="fw-semibold">Laravel 13 Hyperscale Octane Architecture Blueprints Published</span>
+                </a>
+                <a href="single-magazine.html" class="ticker-item text-decoration-none d-inline-flex align-items-center gap-2">
+                    <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1" style="font-size: 10px;">Security</span>
+                    <span class="fw-semibold">Zero-Trust Passkey Authentication Across Distributed Microservices</span>
+                </a>
+                <a href="format-image.html" class="ticker-item text-decoration-none d-inline-flex align-items-center gap-2">
+                    <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1" style="font-size: 10px;">Frontend</span>
+                    <span class="fw-semibold">Visual Essay: Tokenized Dark &amp; Light Theme Engineering at Scale</span>
+                </a>
+                <a href="video.html" class="ticker-item text-decoration-none d-inline-flex align-items-center gap-2">
+                    <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1" style="font-size: 10px;">Database</span>
+                    <span class="fw-semibold">Video Studio: Zero-Downtime MySQL 8.4 Blue-Green Cutover Guide</span>
+                </a>
+                <a href="blog-post.html" class="ticker-item text-decoration-none d-inline-flex align-items-center gap-2">
+                    <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1" style="font-size: 10px;">Cloud</span>
+                    <span class="fw-semibold">Laravel 13 Hyperscale Octane Architecture Blueprints Published</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-3 pb-5">
+    <!-- Magazine Edition Masthead & Telemetry Band -->
+    <div class="mag-masthead-band mb-4 mb-lg-5">
+        <div class="row align-items-center g-3">
+            <div class="col-lg-6">
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
+                    <span class="badge bg-primary text-white rounded-pill px-3 py-1 fw-bold" style="font-size: 11px;">
+                        <i class="fas fa-newspaper me-1"></i> MAGAZINE EDITION
+                    </span>
+                    <span class="text-muted small">
+                        <i class="far fa-calendar-alt me-1"></i> November 2026
+                    </span>
+                </div>
+                <h1 class="h3 fw-bold mb-1 text-body">Xivig Global Dispatch &amp; Editorial Portal</h1>
+                <p class="text-muted small mb-0">
+                    Curated reporting across engineering, enterprise strategy, visual essays, and deep-dive research.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex flex-wrap align-items-center justify-content-lg-end gap-2">
+                    <span class="badge bg-body-secondary text-body border px-3 py-2 rounded-pill small">
+                        <i class="fas fa-file-alt text-primary me-1"></i> 48 Stories
+                    </span>
+                    <span class="badge bg-body-secondary text-body border px-3 py-2 rounded-pill small">
+                        <i class="fas fa-layer-group text-success me-1"></i> 5 Channels
+                    </span>
+                    <a href="gallery.html" class="badge bg-body-secondary text-body border px-3 py-2 rounded-pill small text-decoration-none">
+                        <i class="fas fa-images text-info me-1"></i> 6 Visuals
+                    </a>
+                    <a href="video.html" class="badge bg-body-secondary text-body border px-3 py-2 rounded-pill small text-decoration-none">
+                        <i class="fas fa-play-circle text-danger me-1"></i> 4 Videos
+                    </a>
+                    <a href="blog-list.html" class="btn btn-sm btn-primary rounded-pill px-3 fw-semibold">
+                        All Stories <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. Hero 3-Column Showcase (Left 3 | Center 6 Carousel | Right 3) -->
+    <section class="mb-5 fade-in-section" data-mag-section="hero">
+        <div class="row g-4 align-items-stretch">
+            <!-- Left Stack -->
+            <div class="col-lg-3 d-flex flex-column gap-4">
+                <article class="mag-card flex-fill d-flex flex-column">
+                    <div class="card-img-wrapper" style="height: 175px;">
+                        <span class="badge bg-warning text-dark position-absolute shadow-sm" style="top: 10px; right: 10px; z-index: 4; font-size: 10px; font-weight: 700;">
+                            <i class="fas fa-star me-1"></i> Featured
+                        </span>
+                        <a href="category.html" class="badge-category text-decoration-none">Security</a>
+                        <img src="assets/img/fortify-passkey-security-Uq2t2vSu.jpg" alt="Zero-Trust Passkey Security" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="p-3 d-flex flex-column flex-grow-1 justify-content-between">
+                        <h3 class="h6 fw-bold mb-2 lh-sm mag-line-clamp-2">
+                            <a href="single-magazine.html" class="text-body text-decoration-none">
+                                Zero-Trust Fortify Passkey Migration Guide for Enterprise Apps
+                            </a>
+                        </h3>
+                        <div class="d-flex justify-content-between text-muted" style="font-size: 11.5px;">
+                            <span><i class="far fa-clock me-1"></i> Nov 08, 2026</span>
+                            <span><i class="far fa-eye me-1"></i> 14,190</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="mag-card flex-fill d-flex flex-column">
+                    <div class="card-img-wrapper" style="height: 175px;">
+                        <a href="category.html" class="badge-category text-decoration-none">Frontend Systems</a>
+                        <img src="assets/img/reactive-ui-engineering-AW8ROeeB.jpg" alt="Tokenized UI Architecture" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="p-3 d-flex flex-column flex-grow-1 justify-content-between">
+                        <h3 class="h6 fw-bold mb-2 lh-sm mag-line-clamp-2">
+                            <a href="format-image.html" class="text-body text-decoration-none">
+                                Tokenized UI Architecture for Multi-Brand Dark/Light Themes
+                            </a>
+                        </h3>
+                        <div class="d-flex justify-content-between text-muted" style="font-size: 11.5px;">
+                            <span><i class="far fa-clock me-1"></i> Nov 05, 2026</span>
+                            <span><i class="far fa-eye me-1"></i> 11,860</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Center Highlight Carousel -->
+            <div class="col-lg-6">
+                <div id="heroMagCarousel" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="5500">
+                    <div class="carousel-indicators mb-2">
+                        <button type="button" data-bs-target="#heroMagCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#heroMagCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner h-100 rounded-4 overflow-hidden shadow-sm">
+                        <div class="carousel-item h-100 active">
+                            <article class="mag-card h-100 d-flex flex-column border-0">
+                                <div class="card-img-wrapper" style="height: 315px;">
+                                    <span class="badge bg-dark bg-opacity-75 text-white position-absolute" style="top: 12px; right: 12px; z-index: 4; font-size: 11px;">
+                                        <i class="fas fa-book-open me-1"></i> 8m read
+                                    </span>
+                                    <a href="category.html" class="badge-category text-decoration-none">Cloud Architecture</a>
+                                    <img src="assets/img/laravel-hyperscale-architecture-CQ4moJmT.jpg" alt="Laravel 13 Hyperscale Architecture" class="w-100 h-100 object-fit-cover">
+                                </div>
+                                <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <div class="text-muted small mb-2 d-flex flex-wrap gap-3">
+                                            <span><i class="far fa-user me-1 text-primary"></i> Aria Alchemist</span>
+                                            <span><i class="far fa-calendar-alt me-1 text-primary"></i> Nov 10, 2026</span>
+                                            <span><i class="far fa-eye me-1 text-primary"></i> 18,420 views</span>
+                                        </div>
+                                        <h2 class="h4 fw-bold mb-2 lh-sm">
+                                            <a href="blog-post.html" class="text-body text-decoration-none">
+                                                Laravel 13 Hyperscale: Designing Deterministic Multi-Region Octane Pools
+                                            </a>
+                                        </h2>
+                                        <p class="text-muted small mb-0 mag-line-clamp-2">
+                                            Worker memory isolation, stale-while-revalidate edge routing, and sub-50ms p99 tail latency across multi-cluster workloads.
+                                        </p>
+                                    </div>
+                                    <div class="mt-3 pt-2 border-top d-flex align-items-center justify-content-between">
+                                        <a href="blog-post.html" class="text-primary fw-semibold small text-decoration-none">
+                                            Read Full Story <i class="fas fa-arrow-right ms-1"></i>
+                                        </a>
+                                        <a href="video.html" class="badge bg-danger bg-opacity-10 text-danger text-decoration-none">
+                                            <i class="fas fa-play me-1"></i> Video Inside
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="carousel-item h-100">
+                            <article class="mag-card h-100 d-flex flex-column border-0">
+                                <div class="card-img-wrapper" style="height: 315px;">
+                                    <span class="badge bg-dark bg-opacity-75 text-white position-absolute" style="top: 12px; right: 12px; z-index: 4; font-size: 11px;">
+                                        <i class="fas fa-book-open me-1"></i> 6m read
+                                    </span>
+                                    <a href="category.html" class="badge-category text-decoration-none">AI Systems</a>
+                                    <img src="assets/img/slide-hero-1-DvTkwF07.webp" alt="Autonomous Telemetry" class="w-100 h-100 object-fit-cover">
+                                </div>
+                                <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <div class="text-muted small mb-2 d-flex flex-wrap gap-3">
+                                            <span><i class="far fa-user me-1 text-primary"></i> Julian Vance</span>
+                                            <span><i class="far fa-calendar-alt me-1 text-primary"></i> Nov 06, 2026</span>
+                                            <span><i class="far fa-eye me-1 text-primary"></i> 12,310 views</span>
+                                        </div>
+                                        <h2 class="h4 fw-bold mb-2 lh-sm">
+                                            <a href="single-magazine.html" class="text-body text-decoration-none">
+                                                Distributed OpenTelemetry Collectors: Correlation Without High Cardinality Cost
+                                            </a>
+                                        </h2>
+                                        <p class="text-muted small mb-0 mag-line-clamp-2">
+                                            Adaptive tail-based sampling pipelines keeping p99 incident forensics crisp while cutting storage overhead by 62%.
+                                        </p>
+                                    </div>
+                                    <div class="mt-3 pt-2 border-top d-flex align-items-center justify-content-between">
+                                        <a href="single-magazine.html" class="text-primary fw-semibold small text-decoration-none">
+                                            Read Magazine Essay <i class="fas fa-arrow-right ms-1"></i>
+                                        </a>
+                                        <a href="format-image.html" class="badge bg-info bg-opacity-10 text-info text-decoration-none">
+                                            <i class="fas fa-images me-1"></i> Visual Brief
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#heroMagCarousel" data-bs-slide="prev" style="width: 40px; height: 40px; background: rgba(15,23,42,0.55); border-radius: 50%; top: 145px; left: 14px;">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="width: 18px;"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#heroMagCarousel" data-bs-slide="next" style="width: 40px; height: 40px; background: rgba(15,23,42,0.55); border-radius: 50%; top: 145px; right: 14px;">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="width: 18px;"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Stack -->
+            <div class="col-lg-3 d-flex flex-column gap-4">
+                <article class="mag-card flex-fill d-flex flex-column">
+                    <div class="card-img-wrapper" style="height: 175px;">
+                        <span class="badge bg-danger bg-opacity-90 text-white position-absolute shadow-sm" style="top: 10px; right: 10px; z-index: 4; font-size: 10px; font-weight: 700;">
+                            <i class="fas fa-fire me-1"></i> Trending
+                        </span>
+                        <a href="category.html" class="badge-category text-decoration-none">Database</a>
+                        <img src="assets/img/video-feature-fallback-I0zacnYl.jpg" alt="Zero-Downtime Schema Migrations" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="p-3 d-flex flex-column flex-grow-1 justify-content-between">
+                        <h3 class="h6 fw-bold mb-2 lh-sm mag-line-clamp-2">
+                            <a href="video.html" class="text-body text-decoration-none">
+                                Online MySQL Schema Migrations Without Replication Lag
+                            </a>
+                        </h3>
+                        <div class="d-flex justify-content-between text-muted" style="font-size: 11.5px;">
+                            <span><i class="far fa-clock me-1"></i> Nov 04, 2026</span>
+                            <span><i class="far fa-eye me-1"></i> 9,840</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="mag-card flex-fill d-flex flex-column">
+                    <div class="card-img-wrapper" style="height: 175px;">
+                        <span class="badge bg-danger bg-opacity-90 text-white position-absolute shadow-sm" style="top: 10px; right: 10px; z-index: 4; font-size: 10px; font-weight: 700;">
+                            <i class="fas fa-bookmark me-1"></i> Curated
+                        </span>
+                        <a href="category.html" class="badge-category text-decoration-none">Specs</a>
+                        <img src="assets/img/bookmark-link-fallback-i9FnoIt6.jpg" alt="HTTP Digest Fields" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="p-3 d-flex flex-column flex-grow-1 justify-content-between">
+                        <h3 class="h6 fw-bold mb-2 lh-sm mag-line-clamp-2">
+                            <a href="format-link.html" class="text-body text-decoration-none">
+                                RFC 9530 Digest Fields &amp; API Payload Signing Deep Dive
+                            </a>
+                        </h3>
+                        <div class="d-flex justify-content-between text-muted" style="font-size: 11.5px;">
+                            <span><i class="far fa-clock me-1"></i> Nov 02, 2026</span>
+                            <span><i class="far fa-eye me-1"></i> 7,610</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Popular Stories (4-Column Grid) -->
+    <section class="mb-5 fade-in-section" data-mag-section="popular">
+        <div class="mag-section-heading">
+            <h2 class="mag-section-title text-body">
+                <i class="fas fa-fire text-danger"></i> Popular Stories
+            </h2>
+            <a href="blog-list.html" class="text-primary small fw-semibold text-decoration-none">
+                View Archive <i class="fas fa-angle-right ms-1"></i>
+            </a>
+        </div>
+        <div class="row g-3">
+            <div class="col-sm-6 col-lg-3">
+                <article class="mag-card h-100 d-flex flex-column">
+                    <div class="card-img-wrapper" style="height: 170px;">
+                        <a href="category.html" class="badge-category text-decoration-none">Infrastructure</a>
+                        <img src="assets/img/blog-1-PTDVKJDt.webp" alt="Edge Caching Architecture" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                        <h3 class="h6 fw-bold mb-2 lh-sm mag-line-clamp-2">
+                            <a href="blog-post.html" class="text-body text-decoration-none">Deterministic Edge Caching with Stale-While-Revalidate</a>
+                        </h3>
+                        <div class="text-muted d-flex justify-content-between align-items-center" style="font-size: 12px;">
+                            <span><i class="far fa-calendar-alt me-1"></i> Nov 09, 2026</span>
+                            <span><i class="far fa-eye me-1"></i> 8,920</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <article class="mag-card h-100 d-flex flex-column">
+                    <div class="card-img-wrapper" style="height: 170px;">
+                        <a href="category.html" class="badge-category text-decoration-none">Telemetry</a>
+                        <img src="assets/img/blog-2-DbDLCISq.webp" alt="Trace Correlation" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                        <h3 class="h6 fw-bold mb-2 lh-sm mag-line-clamp-2">
+                            <a href="single-magazine.html" class="text-body text-decoration-none">Distributed Trace Correlation Across Mesh Gateways</a>
+                        </h3>
+                        <div class="text-muted d-flex justify-content-between align-items-center" style="font-size: 12px;">
+                            <span><i class="far fa-calendar-alt me-1"></i> Nov 07, 2026</span>
+                            <span><i class="far fa-eye me-1"></i> 7,450</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <article class="mag-card h-100 d-flex flex-column">
+                    <div class="card-img-wrapper" style="height: 170px;">
+                        <a href="category.html" class="badge-category text-decoration-none">Build Tooling</a>
+                        <img src="assets/img/blog-3-BCh7ZU5G.webp" alt="Vite 8 Build Pipelines" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                        <h3 class="h6 fw-bold mb-2 lh-sm mag-line-clamp-2">
+                            <a href="format-image.html" class="text-body text-decoration-none">Ultra-Fast Vite 8 Multi-Page SCSS &amp; ES Module Pipelines</a>
+                        </h3>
+                        <div class="text-muted d-flex justify-content-between align-items-center" style="font-size: 12px;">
+                            <span><i class="far fa-calendar-alt me-1"></i> Nov 05, 2026</span>
+                            <span><i class="far fa-eye me-1"></i> 6,380</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <article class="mag-card h-100 d-flex flex-column">
+                    <div class="card-img-wrapper" style="height: 170px;">
+                        <a href="category.html" class="badge-category text-decoration-none">Security</a>
+                        <img src="assets/img/magazine-hero-fallback-Bc6wdvKS.jpg" alt="Hardware Key Attestation" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                        <h3 class="h6 fw-bold mb-2 lh-sm mag-line-clamp-2">
+                            <a href="format-link.html" class="text-body text-decoration-none">Hardware WebAuthn Attestation for Zero-Trust Admin Consoles</a>
+                        </h3>
+                        <div class="text-muted d-flex justify-content-between align-items-center" style="font-size: 12px;">
+                            <span><i class="far fa-calendar-alt me-1"></i> Nov 01, 2026</span>
+                            <span><i class="far fa-eye me-1"></i> 5,910</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Recent Dispatches (4-Column Grid) -->
+    <section class="mb-5 fade-in-section" data-mag-section="recent">
+        <div class="mag-section-heading">
+            <h2 class="mag-section-title text-body">
+                <i class="fas fa-clock text-primary"></i> Recent Dispatches
+            </h2>
+            <a href="feed.html" class="text-primary small fw-semibold text-decoration-none">
+                Live Feed <i class="fas fa-angle-right ms-1"></i>
+            </a>
+        </div>
+        <div class="row g-3">
+            <div class="col-sm-6 col-lg-3">
+                <article class="mag-card h-100 d-flex flex-column">
+                    <div class="card-img-wrapper" style="height: 170px;">
+                        <a href="category.html" class="badge-category text-decoration-none">Edge Routing</a>
+                        <img src="assets/img/slide-1-DAdpZkTS.webp" alt="Regional Anycast Cutover" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                        <h3 class="h6 fw-bold mb-2 lh-sm mag-line-clamp-2">
+                            <a href="feed.html" class="text-body text-decoration-none">Anycast BGP Health Checks for Sub-Second PoP Eviction</a>
+                        </h3>
+                        <div class="text-muted d-flex justify-content-between align-items-center" style="font-size: 12px;">
+                            <span><i class="far fa-user me-1"></i> Aria Alchemist</span>
+                            <span><i class="far fa-clock me-1"></i> 5m read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <article class="mag-card h-100 d-flex flex-column">
+                    <div class="card-img-wrapper" style="height: 170px;">
+                        <a href="category.html" class="badge-category text-decoration-none">Databases</a>
+                        <img src="assets/img/slide-2-CeLpkn94.webp" alt="Read Replica Lag Control" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                        <h3 class="h6 fw-bold mb-2 lh-sm mag-line-clamp-2">
+                            <a href="video.html" class="text-body text-decoration-none">Read-After-Write Consistency Across Async MySQL Replicas</a>
+                        </h3>
+                        <div class="text-muted d-flex justify-content-between align-items-center" style="font-size: 12px;">
+                            <span><i class="far fa-user me-1"></i> Marcus Thorne</span>
+                            <span><i class="far fa-clock me-1"></i> 7m read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <article class="mag-card h-100 d-flex flex-column">
+                    <div class="card-img-wrapper" style="height: 170px;">
+                        <a href="category.html" class="badge-category text-decoration-none">Cryptography</a>
+                        <img src="assets/img/slide-3-DQ5iz3mi.webp" alt="JWT Rotation" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                        <h3 class="h6 fw-bold mb-2 lh-sm mag-line-clamp-2">
+                            <a href="single-magazine.html" class="text-body text-decoration-none">Zero-Downtime JWKS Key Rotation for Service Meshes</a>
+                        </h3>
+                        <div class="text-muted d-flex justify-content-between align-items-center" style="font-size: 12px;">
+                            <span><i class="far fa-user me-1"></i> Julian Vance</span>
+                            <span><i class="far fa-clock me-1"></i> 6m read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <article class="mag-card h-100 d-flex flex-column">
+                    <div class="card-img-wrapper" style="height: 170px;">
+                        <a href="category.html" class="badge-category text-decoration-none">Design</a>
+                        <img src="assets/img/magazine-related-fallback-zgdmZSuF.jpg" alt="Fluid Grids" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                        <h3 class="h6 fw-bold mb-2 lh-sm mag-line-clamp-2">
+                            <a href="format-image.html" class="text-body text-decoration-none">Intrinsic CSS Grid Subgrids in Complex Editorial Layouts</a>
+                        </h3>
+                        <div class="text-muted d-flex justify-content-between align-items-center" style="font-size: 12px;">
+                            <span><i class="far fa-user me-1"></i> Clara Chen</span>
+                            <span><i class="far fa-clock me-1"></i> 4m read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Split Column (8 cols Editorial Sections + 4 cols Sticky Sidebar) -->
+    <div class="row g-4">
+        <div class="col-lg-8 min-w-0">
+            <!-- 4. Featured Block Posts (2x2 Grid) -->
+            <section class="mb-5 fade-in-section" data-mag-section="block-posts">
+                <div class="mag-section-heading">
+                    <h2 class="mag-section-title text-body">
+                        <i class="fas fa-th-large text-primary"></i> Featured Block Posts
+                    </h2>
+                    <span class="text-muted small">2&times;2 Editorial Grid</span>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <div class="card-img-wrapper" style="height: 210px;">
+                                <a href="category.html" class="badge-category text-decoration-none">Cloud Architecture</a>
+                                <img src="assets/img/laravel-hyperscale-architecture-CQ4moJmT.jpg" alt="Multi-Region Octane" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="text-muted small mb-2 d-flex flex-wrap gap-3">
+                                        <span><i class="far fa-clock me-1 text-primary"></i> Nov 10, 2026</span>
+                                        <span><i class="fas fa-book-reader me-1 text-primary"></i> 8 min</span>
+                                    </div>
+                                    <h3 class="h5 fw-bold mb-2 lh-sm">
+                                        <a href="blog-post.html" class="text-body text-decoration-none">Isolating Container Singletons in Long-Lived Workers</a>
+                                    </h3>
+                                    <p class="text-muted small mb-0 mag-line-clamp-2">Preventing state bleed between concurrent tenant requests on Octane clusters.</p>
+                                </div>
+                                <div class="mt-3 pt-2 border-top d-flex align-items-center justify-content-between small">
+                                    <span class="text-muted"><i class="far fa-user me-1"></i> Aria Alchemist</span>
+                                    <a href="blog-post.html" class="text-primary fw-semibold text-decoration-none">Explore <i class="fas fa-chevron-right ms-1" style="font-size: 10px;"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <div class="card-img-wrapper" style="height: 210px;">
+                                <a href="category.html" class="badge-category text-decoration-none">Security</a>
+                                <img src="assets/img/fortify-passkey-security-Uq2t2vSu.jpg" alt="Enterprise Passkeys" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="text-muted small mb-2 d-flex flex-wrap gap-3">
+                                        <span><i class="far fa-clock me-1 text-primary"></i> Nov 08, 2026</span>
+                                        <span><i class="fas fa-book-reader me-1 text-primary"></i> 7 min</span>
+                                    </div>
+                                    <h3 class="h5 fw-bold mb-2 lh-sm">
+                                        <a href="single-magazine.html" class="text-body text-decoration-none">Progressive Passkey Rollout for High-Security Portals</a>
+                                    </h3>
+                                    <p class="text-muted small mb-0 mag-line-clamp-2">Conditional WebAuthn ceremonies pushing hardware MFA adoption above 84%.</p>
+                                </div>
+                                <div class="mt-3 pt-2 border-top d-flex align-items-center justify-content-between small">
+                                    <span class="text-muted"><i class="far fa-user me-1"></i> Julian Vance</span>
+                                    <a href="single-magazine.html" class="text-primary fw-semibold text-decoration-none">Explore <i class="fas fa-chevron-right ms-1" style="font-size: 10px;"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <div class="card-img-wrapper" style="height: 210px;">
+                                <a href="category.html" class="badge-category text-decoration-none">Design Systems</a>
+                                <img src="assets/img/reactive-ui-engineering-AW8ROeeB.jpg" alt="Theme Token Layers" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="text-muted small mb-2 d-flex flex-wrap gap-3">
+                                        <span><i class="far fa-clock me-1 text-primary"></i> Nov 05, 2026</span>
+                                        <span><i class="fas fa-book-reader me-1 text-primary"></i> 6 min</span>
+                                    </div>
+                                    <h3 class="h5 fw-bold mb-2 lh-sm">
+                                        <a href="format-image.html" class="text-body text-decoration-none">Layered Luminance Contracts in Dual-Theme Interfaces</a>
+                                    </h3>
+                                    <p class="text-muted small mb-0 mag-line-clamp-2">Mapping semantic CSS custom properties directly to surface elevation tiers.</p>
+                                </div>
+                                <div class="mt-3 pt-2 border-top d-flex align-items-center justify-content-between small">
+                                    <span class="text-muted"><i class="far fa-user me-1"></i> Clara Chen</span>
+                                    <a href="format-image.html" class="text-primary fw-semibold text-decoration-none">Explore <i class="fas fa-chevron-right ms-1" style="font-size: 10px;"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <div class="card-img-wrapper" style="height: 210px;">
+                                <a href="category.html" class="badge-category text-decoration-none">Database Tuning</a>
+                                <img src="assets/img/category-archive-fallback-B5Afy6HZ.jpg" alt="Shadow Table Swaps" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="text-muted small mb-2 d-flex flex-wrap gap-3">
+                                        <span><i class="far fa-clock me-1 text-primary"></i> Nov 03, 2026</span>
+                                        <span><i class="fas fa-book-reader me-1 text-primary"></i> 9 min</span>
+                                    </div>
+                                    <h3 class="h5 fw-bold mb-2 lh-sm">
+                                        <a href="video.html" class="text-body text-decoration-none">Shadow Table Cutovers Without Holding Metadata Locks</a>
+                                    </h3>
+                                    <p class="text-muted small mb-0 mag-line-clamp-2">Throttle thresholds and binlog replay checks during billion-row migrations.</p>
+                                </div>
+                                <div class="mt-3 pt-2 border-top d-flex align-items-center justify-content-between small">
+                                    <span class="text-muted"><i class="far fa-user me-1"></i> Marcus Thorne</span>
+                                    <a href="video.html" class="text-primary fw-semibold text-decoration-none">Explore <i class="fas fa-chevron-right ms-1" style="font-size: 10px;"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Analysis Matrix & Visual Briefs (6+6 Split) -->
+            <section class="mb-5 fade-in-section" data-mag-section="matrix-visuals">
+                <div class="row g-4">
+                    <div class="col-md-6 min-w-0">
+                        <div class="mag-section-heading">
+                            <h2 class="mag-section-title text-body">
+                                <i class="fas fa-chart-line text-success"></i> Analysis Matrix
+                            </h2>
+                        </div>
+                        <div class="d-flex flex-column gap-3">
+                            <article class="mag-list-row">
+                                <img src="assets/img/laravel-hyperscale-architecture-CQ4moJmT.jpg" class="mag-list-thumb" alt="Queue Backpressure">
+                                <div class="mag-list-body">
+                                    <a href="category.html" class="badge bg-primary bg-opacity-10 text-primary text-decoration-none mb-1" style="font-size: 10px;">Cloud Systems</a>
+                                    <h3 class="h6 fw-bold mb-1 mag-line-clamp-2" style="font-size: 13.5px;">
+                                        <a href="blog-post.html" class="text-body text-decoration-none">Queue Worker Backpressure Under 100k RPM Spikes</a>
+                                    </h3>
+                                    <span class="text-muted" style="font-size: 11.5px;"><i class="far fa-calendar-alt me-1"></i> Nov 09, 2026</span>
+                                </div>
+                            </article>
+                            <article class="mag-list-row">
+                                <img src="assets/img/fortify-passkey-security-Uq2t2vSu.jpg" class="mag-list-thumb" alt="OAuth2 Token Rotation">
+                                <div class="mag-list-body">
+                                    <a href="category.html" class="badge bg-primary bg-opacity-10 text-primary text-decoration-none mb-1" style="font-size: 10px;">Security</a>
+                                    <h3 class="h6 fw-bold mb-1 mag-line-clamp-2" style="font-size: 13.5px;">
+                                        <a href="single-magazine.html" class="text-body text-decoration-none">Scoped OAuth2 Session Rotation in Edge Gateways</a>
+                                    </h3>
+                                    <span class="text-muted" style="font-size: 11.5px;"><i class="far fa-calendar-alt me-1"></i> Nov 06, 2026</span>
+                                </div>
+                            </article>
+                            <article class="mag-list-row">
+                                <img src="assets/img/reactive-ui-engineering-AW8ROeeB.jpg" class="mag-list-thumb" alt="WCAG Contrast">
+                                <div class="mag-list-body">
+                                    <a href="category.html" class="badge bg-primary bg-opacity-10 text-primary text-decoration-none mb-1" style="font-size: 10px;">UI Systems</a>
+                                    <h3 class="h6 fw-bold mb-1 mag-line-clamp-2" style="font-size: 13.5px;">
+                                        <a href="format-image.html" class="text-body text-decoration-none">WCAG Contrast Budgeting in Dark/Light Token Graphs</a>
+                                    </h3>
+                                    <span class="text-muted" style="font-size: 11.5px;"><i class="far fa-calendar-alt me-1"></i> Nov 03, 2026</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 min-w-0">
+                        <div class="mag-section-heading">
+                            <h2 class="mag-section-title text-body">
+                                <i class="fas fa-camera text-info"></i> Visual Briefs
+                            </h2>
+                            <a href="gallery.html" class="text-primary small fw-semibold text-decoration-none">
+                                Gallery <i class="fas fa-external-link-alt ms-1" style="font-size: 10px;"></i>
+                            </a>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <a href="format-image.html" class="mag-visual-tile text-decoration-none">
+                                    <img src="assets/img/gallery-thumb-1-DVaIXPfU.webp" alt="Cluster Mesh Visual">
+                                    <div class="mag-visual-scrim">
+                                        <span class="text-info fw-semibold" style="font-size: 10px; text-transform: uppercase;">Visual Essay</span>
+                                        <span class="text-white fw-bold mag-line-clamp-2" style="font-size: 12px;">Cluster Topology Diagrams</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="gallery.html" class="mag-visual-tile text-decoration-none">
+                                    <img src="assets/img/gallery-thumb-2-Bx02kIw5.webp" alt="Design System Plates">
+                                    <div class="mag-visual-scrim">
+                                        <span class="text-info fw-semibold" style="font-size: 10px; text-transform: uppercase;">Design</span>
+                                        <span class="text-white fw-bold mag-line-clamp-2" style="font-size: 12px;">Token Grid Anatomy</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="gallery.html" class="mag-visual-tile text-decoration-none">
+                                    <img src="assets/img/gallery-thumb-3-OHzJxOxV.webp" alt="Hardware HSM Lab">
+                                    <div class="mag-visual-scrim">
+                                        <span class="text-info fw-semibold" style="font-size: 10px; text-transform: uppercase;">Security</span>
+                                        <span class="text-white fw-bold mag-line-clamp-2" style="font-size: 12px;">Hardware Key Enclave Lab</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="gallery.html" class="mag-visual-tile text-decoration-none">
+                                    <img src="assets/img/gallery-thumb-4-B0hX10_M.webp" alt="Telemetry Dashboards">
+                                    <div class="mag-visual-scrim">
+                                        <span class="text-info fw-semibold" style="font-size: 10px; text-transform: uppercase;">Telemetry</span>
+                                        <span class="text-white fw-bold mag-line-clamp-2" style="font-size: 12px;">Flamegraph Benchmarks</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Editorial Spotlight (1 Flagship 21:9 + 2 Sub Cards) -->
+            <section class="mb-5 fade-in-section" data-mag-section="spotlight">
+                <div class="mag-section-heading">
+                    <h2 class="mag-section-title text-body">
+                        <i class="fas fa-award text-warning"></i> Editorial Spotlight
+                    </h2>
+                    <span class="badge bg-warning bg-opacity-10 text-warning rounded-pill px-2 py-1" style="font-size: 11px;">Flagship Feature</span>
+                </div>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <article class="mag-card">
+                            <div class="mag-spotlight-media card-img-wrapper">
+                                <a href="category.html" class="badge-category text-decoration-none">Architecture Blueprint</a>
+                                <img src="assets/img/slide-hero-2-CrXQlEOl.webp" alt="Zero-Downtime Cutover Playbook">
+                            </div>
+                            <div class="p-4">
+                                <div class="text-muted small mb-2 d-flex flex-wrap gap-3">
+                                    <span><i class="far fa-user me-1 text-primary"></i> Julian Vance</span>
+                                    <span><i class="far fa-clock me-1 text-primary"></i> 9 min read</span>
+                                    <span><i class="far fa-eye me-1 text-primary"></i> 15,240 views</span>
+                                </div>
+                                <h3 class="h3 fw-bold mb-2">
+                                    <a href="single-magazine.html" class="text-body text-decoration-none">
+                                        Zero-Downtime Cutovers: Multi-Region Dual-Write &amp; Traffic Replay Playbook
+                                    </a>
+                                </h3>
+                                <p class="text-muted mb-0">
+                                    How high-throughput engineering teams shadow-verify production traffic across active-active clusters before shifting a single DNS weight.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <div class="card-img-wrapper" style="height: 175px;">
+                                <a href="category.html" class="badge-category text-decoration-none">Observability</a>
+                                <img src="assets/img/blog-2-DbDLCISq.webp" alt="Service Mesh Tracing" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                                <h4 class="h6 fw-bold mb-2 mag-line-clamp-2"><a href="blog-post.html" class="text-body text-decoration-none">Distributed Span Linking Across Queue Workers</a></h4>
+                                <span class="text-muted" style="font-size: 12px;"><i class="far fa-calendar-alt me-1"></i> Nov 04, 2026</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <div class="card-img-wrapper" style="height: 175px;">
+                                <a href="category.html" class="badge-category text-decoration-none">Specs</a>
+                                <img src="assets/img/bookmark-link-fallback-i9FnoIt6.jpg" alt="RFC 9530 Digest" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                                <h4 class="h6 fw-bold mb-2 mag-line-clamp-2"><a href="format-link.html" class="text-body text-decoration-none">Signed Webhook Payloads with Content-Digest Headers</a></h4>
+                                <span class="text-muted" style="font-size: 12px;"><i class="far fa-calendar-alt me-1"></i> Nov 02, 2026</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Two-Column Dispatches (Opinion & Briefings) -->
+            <section class="mb-5 fade-in-section" data-mag-section="column-posts">
+                <div class="mag-section-heading">
+                    <h2 class="mag-section-title text-body">
+                        <i class="fas fa-columns text-primary"></i> Column Dispatches
+                    </h2>
+                    <span class="text-muted small">Opinion &amp; Briefings</span>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6 d-flex flex-column gap-3 min-w-0">
+                        <article class="mag-list-row">
+                            <img src="assets/img/magazine-ticker-fallback-DCFnIQfT.jpg" class="mag-list-thumb" alt="Release Cadence">
+                            <div class="mag-list-body">
+                                <a href="category.html" class="text-primary fw-semibold text-decoration-none d-block mb-1" style="font-size: 11px;">Platform Ops</a>
+                                <h3 class="h6 fw-bold mb-1 mag-line-clamp-2" style="font-size: 13.5px;"><a href="feed.html" class="text-body text-decoration-none">Why Trunk-Based Feature Flags Beat Long-Lived Branches</a></h3>
+                                <span class="text-muted" style="font-size: 11.5px;">Nov 09, 2026</span>
+                            </div>
+                        </article>
+                        <article class="mag-list-row">
+                            <img src="assets/img/blog-3-BCh7ZU5G.webp" class="mag-list-thumb" alt="Asset Caching">
+                            <div class="mag-list-body">
+                                <a href="category.html" class="text-primary fw-semibold text-decoration-none d-block mb-1" style="font-size: 11px;">Frontend Build</a>
+                                <h3 class="h6 fw-bold mb-1 mag-line-clamp-2" style="font-size: 13.5px;"><a href="single-magazine.html" class="text-body text-decoration-none">Deterministic Cache-Busting Without Runtime Manifests</a></h3>
+                                <span class="text-muted" style="font-size: 11.5px;">Nov 05, 2026</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 d-flex flex-column gap-3 min-w-0">
+                        <article class="mag-list-row">
+                            <img src="assets/img/fortify-passkey-security-Uq2t2vSu.jpg" class="mag-list-thumb" alt="Session Binding">
+                            <div class="mag-list-body">
+                                <a href="category.html" class="text-primary fw-semibold text-decoration-none d-block mb-1" style="font-size: 11px;">Identity</a>
+                                <h3 class="h6 fw-bold mb-1 mag-line-clamp-2" style="font-size: 13.5px;"><a href="blog-post.html" class="text-body text-decoration-none">Token Binding Against Session Hijacking in Multi-Region APIs</a></h3>
+                                <span class="text-muted" style="font-size: 11.5px;">Nov 04, 2026</span>
+                            </div>
+                        </article>
+                        <article class="mag-list-row">
+                            <img src="assets/img/video-feature-fallback-I0zacnYl.jpg" class="mag-list-thumb" alt="Connection Pooling">
+                            <div class="mag-list-body">
+                                <a href="category.html" class="text-primary fw-semibold text-decoration-none d-block mb-1" style="font-size: 11px;">Storage</a>
+                                <h3 class="h6 fw-bold mb-1 mag-line-clamp-2" style="font-size: 13.5px;"><a href="video.html" class="text-body text-decoration-none">Multiplexing Connection Pools with ProxySQL in Kubernetes</a></h3>
+                                <span class="text-muted" style="font-size: 11.5px;">Nov 01, 2026</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. Deep-Dive Dispatch (1 Large Left + 3 Stacked Right) -->
+            <section class="mb-5 fade-in-section" data-mag-section="deep-dive">
+                <div class="mag-section-heading">
+                    <h2 class="mag-section-title text-body">
+                        <i class="fas fa-newspaper text-warning"></i> Deep-Dive Dispatch
+                    </h2>
+                    <span class="text-muted small">Lead Brief &amp; Follow-Ups</span>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <div class="card-img-wrapper" style="height: 240px;">
+                                <a href="category.html" class="badge-category text-decoration-none">Systems</a>
+                                <img src="assets/img/slide-hero-3-Ckz1jIOd.webp" alt="Immutable Artifacts" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="h5 fw-bold mb-2 lh-sm">
+                                        <a href="blog-post.html" class="text-body text-decoration-none">Reproducible Container Builds with Attested SBOM Metadata</a>
+                                    </h3>
+                                    <p class="text-muted small mb-0">Pinning base layers, verifying cryptographic build provenance, and shipping minimal runtime images to production clusters.</p>
+                                </div>
+                                <div class="mt-3 pt-2 border-top d-flex justify-content-between text-muted small">
+                                    <span><i class="far fa-user me-1"></i> Elena Vance</span>
+                                    <span><i class="far fa-calendar-alt me-1"></i> Nov 07, 2026</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 d-flex flex-column gap-3 min-w-0">
+                        <article class="mag-list-row">
+                            <img src="assets/img/blog-1-PTDVKJDt.webp" class="mag-list-thumb" alt="Edge Rate Limit">
+                            <div class="mag-list-body">
+                                <a href="category.html" class="text-primary fw-semibold text-decoration-none d-block mb-1" style="font-size: 11px;">Edge Security</a>
+                                <h4 class="h6 fw-bold mb-1 mag-line-clamp-2" style="font-size: 13.5px;"><a href="feed.html" class="text-body text-decoration-none">Distributed Sliding-Window Rate Limiters in Redis</a></h4>
+                                <span class="text-muted" style="font-size: 11.5px;">Nov 06, 2026</span>
+                            </div>
+                        </article>
+                        <article class="mag-list-row">
+                            <img src="assets/img/reactive-ui-engineering-AW8ROeeB.jpg" class="mag-list-thumb" alt="Micro Frontends">
+                            <div class="mag-list-body">
+                                <a href="category.html" class="text-primary fw-semibold text-decoration-none d-block mb-1" style="font-size: 11px;">Frontend</a>
+                                <h4 class="h6 fw-bold mb-1 mag-line-clamp-2" style="font-size: 13.5px;"><a href="format-image.html" class="text-body text-decoration-none">Zero-Runtime CSS Variable Themes Over Bundle Splitting</a></h4>
+                                <span class="text-muted" style="font-size: 11.5px;">Nov 04, 2026</span>
+                            </div>
+                        </article>
+                        <article class="mag-list-row">
+                            <img src="assets/img/laravel-hyperscale-architecture-CQ4moJmT.jpg" class="mag-list-thumb" alt="Circuit Breakers">
+                            <div class="mag-list-body">
+                                <a href="category.html" class="text-primary fw-semibold text-decoration-none d-block mb-1" style="font-size: 11px;">Resilience</a>
+                                <h4 class="h6 fw-bold mb-1 mag-line-clamp-2" style="font-size: 13.5px;"><a href="blog-post.html" class="text-body text-decoration-none">Adaptive Circuit Breakers for Flaky Third-Party Webhooks</a></h4>
+                                <span class="text-muted" style="font-size: 11.5px;">Nov 02, 2026</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. Business & Markets Showcase (Full-Width Block + 3-Col Grid) -->
+            <section class="mb-5 fade-in-section" data-mag-section="business">
+                <div class="mag-section-heading">
+                    <h2 class="mag-section-title text-body">
+                        <i class="fas fa-briefcase text-success"></i> Engineering Economics &amp; Strategy
+                    </h2>
+                    <a href="category.html" class="text-primary small fw-semibold text-decoration-none">Browse Sector <i class="fas fa-angle-right ms-1"></i></a>
+                </div>
+                <article class="mag-card mb-4">
+                    <div class="mag-spotlight-media card-img-wrapper">
+                        <a href="category.html" class="badge-category text-decoration-none">FinOps &amp; Cloud</a>
+                        <img src="assets/img/magazine-hero-fallback-Bc6wdvKS.jpg" alt="Cloud Compute Cost Engineering">
+                    </div>
+                    <div class="p-4">
+                        <div class="text-muted small mb-2 d-flex flex-wrap gap-3">
+                            <span><i class="far fa-clock me-1 text-success"></i> Nov 08, 2026</span>
+                            <span><i class="far fa-user me-1 text-success"></i> Julian Vance</span>
+                            <span><i class="far fa-comment-alt me-1 text-success"></i> 14 Comments</span>
+                        </div>
+                        <h3 class="h4 fw-bold mb-2"><a href="single-magazine.html" class="text-body text-decoration-none">Cutting Multi-Region Cloud Egress Spend by 58% with Smart Tiering</a></h3>
+                        <p class="text-muted small mb-0">Benchmarking regional object caching, compressed replication streams, and workload co-location across multi-cloud vendors.</p>
+                    </div>
+                </article>
+
+                <div class="row g-3">
+                    <div class="col-md-4 min-w-0">
+                        <article class="mag-list-row h-100 align-items-start">
+                            <img src="assets/img/blog-1-PTDVKJDt.webp" class="mag-list-thumb" style="width: 68px; height: 68px;" alt="ARM64 Migration">
+                            <div class="mag-list-body">
+                                <h4 class="h6 fw-bold mb-1 mag-line-clamp-2" style="font-size: 13px;"><a href="blog-post.html" class="text-body text-decoration-none">ARM64 Graviton Benchmarking for PHP &amp; Node Services</a></h4>
+                                <span class="text-muted d-block" style="font-size: 11px;"><i class="far fa-calendar-alt me-1"></i> Nov 05, 2026</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4 min-w-0">
+                        <article class="mag-list-row h-100 align-items-start">
+                            <img src="assets/img/blog-2-DbDLCISq.webp" class="mag-list-thumb" style="width: 68px; height: 68px;" alt="SLO Budgets">
+                            <div class="mag-list-body">
+                                <h4 class="h6 fw-bold mb-1 mag-line-clamp-2" style="font-size: 13px;"><a href="feed.html" class="text-body text-decoration-none">Translating Error Budgets into Quarterly Roadmap Guardrails</a></h4>
+                                <span class="text-muted d-block" style="font-size: 11px;"><i class="far fa-calendar-alt me-1"></i> Nov 03, 2026</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4 min-w-0">
+                        <article class="mag-list-row h-100 align-items-start">
+                            <img src="assets/img/blog-3-BCh7ZU5G.webp" class="mag-list-thumb" style="width: 68px; height: 68px;" alt="Static Hosting">
+                            <div class="mag-list-body">
+                                <h4 class="h6 fw-bold mb-1 mag-line-clamp-2" style="font-size: 13px;"><a href="single-magazine.html" class="text-body text-decoration-none">Static Pre-Rendered Publishing at Near-Zero Origin Load</a></h4>
+                                <span class="text-muted d-block" style="font-size: 11px;"><i class="far fa-calendar-alt me-1"></i> Nov 01, 2026</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. Technology Intelligence (2 Cards + 2x2 List) -->
+            <section class="mb-5 fade-in-section" data-mag-section="technology">
+                <div class="mag-section-heading">
+                    <h2 class="mag-section-title text-body">
+                        <i class="fas fa-microchip text-primary"></i> Technology Intelligence
+                    </h2>
+                    <a href="blog-list.html" class="text-primary small fw-semibold text-decoration-none">All Tech Stories <i class="fas fa-angle-right ms-1"></i></a>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <div class="card-img-wrapper" style="height: 195px;">
+                                <a href="category.html" class="badge-category text-decoration-none">Backend</a>
+                                <img src="assets/img/laravel-hyperscale-architecture-CQ4moJmT.jpg" alt="Coroutine Pools" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="p-3 p-lg-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="text-muted small mb-1"><i class="far fa-clock me-1 text-primary"></i> Nov 09, 2026</div>
+                                    <h3 class="h5 fw-bold mb-2 lh-sm"><a href="blog-post.html" class="text-body text-decoration-none">Deterministic Concurrency with Swoole Task Workers</a></h3>
+                                    <p class="text-muted small mb-0 mag-line-clamp-2">Structuring isolated RPC calls without starving core web workers.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <div class="card-img-wrapper" style="height: 195px;">
+                                <a href="category.html" class="badge-category text-decoration-none">Frontend</a>
+                                <img src="assets/img/reactive-ui-engineering-AW8ROeeB.jpg" alt="Vite Rollup Architecture" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="p-3 p-lg-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="text-muted small mb-1"><i class="far fa-clock me-1 text-primary"></i> Nov 06, 2026</div>
+                                    <h3 class="h5 fw-bold mb-2 lh-sm"><a href="format-image.html" class="text-body text-decoration-none">Composable HTML Layouts &amp; Partials with Vite 8</a></h3>
+                                    <p class="text-muted small mb-0 mag-line-clamp-2">Building portable flat-HTML design systems with native ES modules.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. Video & Multimedia Briefings (3-Column Video Cards) -->
+            <section class="mb-5 fade-in-section" data-mag-section="videos">
+                <div class="mag-section-heading">
+                    <h2 class="mag-section-title text-body">
+                        <i class="fas fa-video text-danger"></i> Video &amp; Multimedia Briefings
+                    </h2>
+                    <a href="video.html" class="text-primary small fw-semibold text-decoration-none">Video Studio <i class="fas fa-angle-right ms-1"></i></a>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <a href="video.html" class="card-img-wrapper d-block" style="height: 165px;">
+                                <span class="badge-category">Database</span>
+                                <span class="mag-video-play"><i class="fas fa-play"></i></span>
+                                <img src="assets/img/video-feature-fallback-I0zacnYl.jpg" alt="MySQL 8.4 Blue-Green Cutover" class="w-100 h-100 object-fit-cover">
+                            </a>
+                            <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                                <h3 class="h6 fw-bold mb-2 mag-line-clamp-2" style="font-size: 13.5px;"><a href="video.html" class="text-body text-decoration-none">Zero-Downtime MySQL 8.4 Blue-Green Cutovers</a></h3>
+                                <div class="d-flex justify-content-between text-muted" style="font-size: 11.5px;">
+                                    <span><i class="far fa-clock me-1"></i> 11m watch</span>
+                                    <span class="text-danger fw-semibold"><i class="fas fa-play-circle me-1"></i> Watch</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <a href="video.html" class="card-img-wrapper d-block" style="height: 165px;">
+                                <span class="badge-category">Cloud</span>
+                                <span class="mag-video-play"><i class="fas fa-play"></i></span>
+                                <img src="assets/img/laravel-hyperscale-architecture-CQ4moJmT.jpg" alt="Octane Worker Isolation" class="w-100 h-100 object-fit-cover">
+                            </a>
+                            <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                                <h3 class="h6 fw-bold mb-2 mag-line-clamp-2" style="font-size: 13.5px;"><a href="video.html" class="text-body text-decoration-none">Octane Worker Isolation Deep-Dive</a></h3>
+                                <div class="d-flex justify-content-between text-muted" style="font-size: 11.5px;">
+                                    <span><i class="far fa-clock me-1"></i> 14m watch</span>
+                                    <span class="text-danger fw-semibold"><i class="fas fa-play-circle me-1"></i> Watch</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <a href="video.html" class="card-img-wrapper d-block" style="height: 165px;">
+                                <span class="badge-category">Security</span>
+                                <span class="mag-video-play"><i class="fas fa-play"></i></span>
+                                <img src="assets/img/fortify-passkey-security-Uq2t2vSu.jpg" alt="Passkey Enrollment" class="w-100 h-100 object-fit-cover">
+                            </a>
+                            <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                                <h3 class="h6 fw-bold mb-2 mag-line-clamp-2" style="font-size: 13.5px;"><a href="video.html" class="text-body text-decoration-none">Engineering Phishing-Resistant Passkey UX</a></h3>
+                                <div class="d-flex justify-content-between text-muted" style="font-size: 11.5px;">
+                                    <span><i class="far fa-clock me-1"></i> 10m watch</span>
+                                    <span class="text-danger fw-semibold"><i class="fas fa-play-circle me-1"></i> Watch</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Editor's Picks ("In Case You Missed") -->
+            <section class="mb-5 fade-in-section" data-mag-section="editors-picks">
+                <div class="mag-section-heading">
+                    <h2 class="mag-section-title text-body">
+                        <i class="fas fa-bookmark text-info"></i> Editor's Picks (In Case You Missed)
+                    </h2>
+                    <a href="tags.html" class="text-primary small fw-semibold text-decoration-none">Browse Tags <i class="fas fa-angle-right ms-1"></i></a>
+                </div>
+                <div class="row g-3">
+                    <div class="col-sm-6 col-md-3">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <div class="card-img-wrapper" style="height: 145px;">
+                                <a href="category.html" class="badge-category text-decoration-none">Specs</a>
+                                <img src="assets/img/bookmark-link-fallback-i9FnoIt6.jpg" alt="Digest Fields" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                                <h3 class="h6 fw-bold mb-2 mag-line-clamp-2" style="font-size: 13px;"><a href="format-link.html" class="text-body text-decoration-none">RFC 9530 Digest Fields Guide</a></h3>
+                                <span class="text-muted" style="font-size: 11px;"><i class="far fa-calendar-alt me-1"></i> Nov 02, 2026</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <div class="card-img-wrapper" style="height: 145px;">
+                                <a href="category.html" class="badge-category text-decoration-none">Visual</a>
+                                <img src="assets/img/gallery-thumb-2-Bx02kIw5.webp" alt="Token Matrix" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                                <h3 class="h6 fw-bold mb-2 mag-line-clamp-2" style="font-size: 13px;"><a href="format-image.html" class="text-body text-decoration-none">Tokenized Dark Theme Parity</a></h3>
+                                <span class="text-muted" style="font-size: 11px;"><i class="far fa-calendar-alt me-1"></i> Oct 28, 2026</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <div class="card-img-wrapper" style="height: 145px;">
+                                <a href="category.html" class="badge-category text-decoration-none">Writers</a>
+                                <img src="assets/img/avatar-1-K2kaIzYo.webp" alt="Editorial Collective" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                                <h3 class="h6 fw-bold mb-2 mag-line-clamp-2" style="font-size: 13px;"><a href="authors.html" class="text-body text-decoration-none">Meet the Research Fellows</a></h3>
+                                <span class="text-muted" style="font-size: 11px;"><i class="far fa-calendar-alt me-1"></i> Oct 24, 2026</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <article class="mag-card h-100 d-flex flex-column">
+                            <div class="card-img-wrapper" style="height: 145px;">
+                                <a href="category.html" class="badge-category text-decoration-none">Gallery</a>
+                                <img src="assets/img/gallery-thumb-6-BdxFU5lL.webp" alt="Replication Console" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                                <h3 class="h6 fw-bold mb-2 mag-line-clamp-2" style="font-size: 13px;"><a href="gallery.html" class="text-body text-decoration-none">Lab &amp; Hardware Plates</a></h3>
+                                <span class="text-muted" style="font-size: 11px;"><i class="far fa-calendar-alt me-1"></i> Oct 20, 2026</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13. Explore Topic Channels Directory -->
+            <section class="mb-4 fade-in-section" data-mag-section="channels">
+                <div class="mag-section-heading">
+                    <h2 class="mag-section-title text-body">
+                        <i class="fas fa-compass text-primary"></i> Explore Topic Channels
+                    </h2>
+                    <a href="category.html" class="text-primary small fw-semibold text-decoration-none">All Categories</a>
+                </div>
+                <div class="row g-3">
+                    <div class="col-sm-6 col-md-4 col-xl-3 min-w-0">
+                        <a href="category.html" class="mag-channel-card text-body">
+                            <div class="min-w-0">
+                                <div class="fw-bold text-truncate" style="font-size: 13px;">Cloud Systems</div>
+                                <div class="text-muted" style="font-size: 11px;">View Desk Archive</div>
+                            </div>
+                            <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill flex-shrink-0">14</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-xl-3 min-w-0">
+                        <a href="category.html" class="mag-channel-card text-body">
+                            <div class="min-w-0">
+                                <div class="fw-bold text-truncate" style="font-size: 13px;">Zero-Trust</div>
+                                <div class="text-muted" style="font-size: 11px;">View Desk Archive</div>
+                            </div>
+                            <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill flex-shrink-0">11</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-xl-3 min-w-0">
+                        <a href="category.html" class="mag-channel-card text-body">
+                            <div class="min-w-0">
+                                <div class="fw-bold text-truncate" style="font-size: 13px;">Design Systems</div>
+                                <div class="text-muted" style="font-size: 11px;">View Desk Archive</div>
+                            </div>
+                            <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill flex-shrink-0">9</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-xl-3 min-w-0">
+                        <a href="category.html" class="mag-channel-card text-body">
+                            <div class="min-w-0">
+                                <div class="fw-bold text-truncate" style="font-size: 13px;">Databases</div>
+                                <div class="text-muted" style="font-size: 11px;">View Desk Archive</div>
+                            </div>
+                            <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill flex-shrink-0">6</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sticky Magazine Sidebar -->
+        <div class="col-lg-4">
+            <div class="position-sticky" style="top: 90px;">
+                <aside class="blog-sidebar-elite w-100">
+    <!-- 1. Search Insights Widget -->
+    <div class="sidebar-widget-card mb-4">
+        <h5 class="sidebar-card-title">
+            <i class="fas fa-search me-2 text-primary"></i> Search Insights
+        </h5>
+        <div class="position-relative w-100" id="sidebarSearchWrapper" data-fallback-avatar="assets/img/avatar.png">
+            <form action="blog-list.html" method="GET" class="position-relative w-100 mb-0" id="sidebarSearchForm">
+                <input type="text" name="search" id="sidebarSearchInput" class="form-control form-control-elite"
+                    style="border-radius: 999px; padding-right: 52px; height: 46px; font-size: 14px;"
+                    placeholder="Search articles, topics..." autocomplete="off">
+                <button type="submit" class="btn-elite btn-elite-primary btn-sm position-absolute"
+                    style="top: 50%; right: 5px; transform: translateY(-50%); border-radius: 999px; height: 36px; width: 36px; padding: 0; display: inline-flex; align-items: center; justify-content: center; z-index: 5;"
+                    title="Search" aria-label="Search Articles">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+            <!-- Floating Live Autocomplete Dropdown -->
+            <div id="sidebarAutocompleteDropdown" class="card border shadow-lg rounded-4 p-3 position-absolute w-100 d-none" style="top: 52px; left: 0; z-index: 1050; max-height: 400px; overflow-y: auto;">
+                <div id="autocompleteResultsContent"></div>
+            </div>
+        </div>
+
+        <!-- Popular Search Terms -->
+        <div class="d-flex flex-wrap align-items-center mt-3" style="gap: 5px;">
+            <small class="text-muted me-1" style="font-size: 11px;"><i class="fas fa-fire text-danger me-1"></i> Popular:</small>
+            <a href="blog-list.html?search=Laravel" class="badge bg-light border text-muted px-2 py-1 small text-decoration-none" style="font-size: 11px; border-radius: 999px;">Laravel</a>
+            <a href="blog-list.html?search=Passkey" class="badge bg-light border text-muted px-2 py-1 small text-decoration-none" style="font-size: 11px; border-radius: 999px;">Passkeys</a>
+            <a href="blog-list.html?search=Architecture" class="badge bg-light border text-muted px-2 py-1 small text-decoration-none" style="font-size: 11px; border-radius: 999px;">Architecture</a>
+            <a href="blog-list.html?search=Zero-Trust" class="badge bg-light border text-muted px-2 py-1 small text-decoration-none" style="font-size: 11px; border-radius: 999px;">Zero-Trust</a>
+        </div>
+    </div>
+
+    <!-- 2. Interactive Tabs Widget: Popular / Recent / Comments -->
+    <div class="sidebar-widget-card mb-4">
+        <ul class="nav nav-tabs nav-tabs-elite" id="sidebarStoryTabs" role="tablist">
+            <li class="nav-item flex-fill text-center" role="presentation">
+                <button class="nav-link active w-100" id="tab-popular-btn" data-bs-toggle="tab" data-bs-target="#tab-popular" type="button" role="tab" aria-controls="tab-popular" aria-selected="true">
+                    <i class="fas fa-fire me-1 text-danger"></i> Popular
+                </button>
+            </li>
+            <li class="nav-item flex-fill text-center" role="presentation">
+                <button class="nav-link w-100" id="tab-recent-btn" data-bs-toggle="tab" data-bs-target="#tab-recent" type="button" role="tab" aria-controls="tab-recent" aria-selected="false">
+                    <i class="far fa-clock me-1 text-primary"></i> Recent
+                </button>
+            </li>
+            <li class="nav-item flex-fill text-center" role="presentation">
+                <button class="nav-link w-100" id="tab-comments-btn" data-bs-toggle="tab" data-bs-target="#tab-comments" type="button" role="tab" aria-controls="tab-comments" aria-selected="false">
+                    <i class="far fa-comments me-1 text-success"></i> Replies
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content pt-3" id="sidebarStoryTabsContent">
+            <!-- Popular Stories Tab -->
+            <div class="tab-pane fade show active" id="tab-popular" role="tabpanel" aria-labelledby="tab-popular-btn">
+                <div class="d-flex flex-column" style="gap: 14px;">
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="blog-post.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="assets/img/laravel-hyperscale-architecture-CQ4moJmT.jpg" alt="Laravel 13 Hyperscale Architecture" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge bg-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Cloud</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="blog-post.html" class="text-body text-decoration-none sidebar-article-title">Laravel 13 Hyperscale Octane Blueprints</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-eye me-1"></i> 18,420</span>
+                                <span><i class="far fa-clock me-1"></i> 8m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="single-magazine.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="assets/img/fortify-passkey-security-Uq2t2vSu.jpg" alt="Zero-Trust Passkey Authentication" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge bg-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Security</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="single-magazine.html" class="text-body text-decoration-none sidebar-article-title">Zero-Trust Fortify Passkey Migration Guide</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-eye me-1"></i> 14,190</span>
+                                <span><i class="far fa-clock me-1"></i> 7m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="format-image.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="assets/img/reactive-ui-engineering-AW8ROeeB.jpg" alt="Reactive UI Design Tokens" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge bg-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Design Systems</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="format-image.html" class="text-body text-decoration-none sidebar-article-title">Tokenized UI Architecture for Multi-Brand Systems</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-eye me-1"></i> 11,860</span>
+                                <span><i class="far fa-clock me-1"></i> 6m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Stories Tab -->
+            <div class="tab-pane fade" id="tab-recent" role="tabpanel" aria-labelledby="tab-recent-btn">
+                <div class="d-flex flex-column" style="gap: 14px;">
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="feed.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="assets/img/blog-1-PTDVKJDt.webp" alt="Deterministic Edge Caching" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge bg-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Cloud</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="feed.html" class="text-body text-decoration-none sidebar-article-title">Deterministic Edge Caching with Stale Revalidation</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-calendar-alt me-1"></i> Nov 09</span>
+                                <span><i class="far fa-clock me-1"></i> 5m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="video.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="assets/img/video-feature-fallback-I0zacnYl.jpg" alt="Zero-Downtime MySQL Cutovers" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge bg-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Database</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="video.html" class="text-body text-decoration-none sidebar-article-title">Zero-Downtime MySQL 8.4 Blue-Green Cutovers</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-calendar-alt me-1"></i> Nov 06</span>
+                                <span><i class="far fa-clock me-1"></i> 11m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="format-link.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="assets/img/bookmark-link-fallback-i9FnoIt6.jpg" alt="RFC 9530 Digest Auth" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge bg-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Specs</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="format-link.html" class="text-body text-decoration-none sidebar-article-title">RFC 9530 Digest Fields &amp; Signing Standard</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-calendar-alt me-1"></i> Nov 02</span>
+                                <span><i class="far fa-clock me-1"></i> 4m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments Tab -->
+            <div class="tab-pane fade" id="tab-comments" role="tabpanel" aria-labelledby="tab-comments-btn">
+                <div class="d-flex flex-column" style="gap: 12px;">
+                    <div class="p-2 rounded bg-body-tertiary border border-light-subtle">
+                        <div class="d-flex align-items-center mb-1 flex-wrap gap-2">
+                            <span class="badge bg-secondary py-1 px-2 text-truncate" style="font-size: 10px; max-width: 140px;">
+                                <i class="far fa-user me-1"></i> Elena Vance
+                            </span>
+                            <small class="text-muted" style="font-size: 11px;">4h ago</small>
+                        </div>
+                        <p class="mb-1 small text-body fst-italic" style="font-size: 12.5px; line-height: 1.4;">"The Octane memory isolation checklist eliminated our worker drift completely."</p>
+                        <a href="blog-post.html#comments" class="small text-primary fw-bold text-decoration-none d-block text-truncate" style="font-size: 11.5px;">
+                            on Laravel 13 Hyperscale <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="p-2 rounded bg-body-tertiary border border-light-subtle">
+                        <div class="d-flex align-items-center mb-1 flex-wrap gap-2">
+                            <span class="badge bg-secondary py-1 px-2 text-truncate" style="font-size: 10px; max-width: 140px;">
+                                <i class="far fa-user me-1"></i> Marcus Thorne
+                            </span>
+                            <small class="text-muted" style="font-size: 11px;">1d ago</small>
+                        </div>
+                        <p class="mb-1 small text-body fst-italic" style="font-size: 12.5px; line-height: 1.4;">"WebAuthn attestation examples made hardware passkey testing effortless."</p>
+                        <a href="single-magazine.html#comments" class="small text-primary fw-bold text-decoration-none d-block text-truncate" style="font-size: 11.5px;">
+                            on Zero-Trust Passkey Guide <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Topic Categories Widget -->
+    <div class="sidebar-widget-card mb-4">
+        <h5 class="sidebar-card-title">
+            <i class="fas fa-folder-open me-2 text-primary"></i> Topic Categories
+        </h5>
+        <div class="d-flex flex-column" style="gap: 8px;">
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">Cloud &amp; Infrastructure</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">14</span>
+            </a>
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">Security &amp; Zero-Trust</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">11</span>
+            </a>
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">Frontend &amp; Design Systems</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">9</span>
+            </a>
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">AI Systems &amp; Telemetry</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">8</span>
+            </a>
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">Database Engineering</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">6</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 4. Trending Tags Cloud -->
+    <div class="sidebar-widget-card mb-4">
+        <h5 class="sidebar-card-title">
+            <i class="fas fa-tags me-2 text-primary"></i> Trending Tags
+        </h5>
+        <div class="d-flex flex-wrap" style="gap: 8px;">
+            <a href="tag.html" class="sidebar-tag-chip">#laravel-13 <span class="tag-chip-count">12</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#zero-trust <span class="tag-chip-count">9</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#vite-8 <span class="tag-chip-count">7</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#kubernetes <span class="tag-chip-count">10</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#passkeys <span class="tag-chip-count">6</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#mysql-tuning <span class="tag-chip-count">5</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#design-tokens <span class="tag-chip-count">8</span></a>
+            <a href="tags.html" class="sidebar-tag-chip text-primary fw-bold">All Tags &rarr;</a>
+        </div>
+    </div>
+
+    <!-- 5. Newsletter Dispatch Widget -->
+    <div class="sidebar-widget-card sidebar-newsletter-card mb-4 text-center">
+        <div class="mb-3">
+            <div class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width: 52px; height: 52px; box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);">
+                <i class="fas fa-paper-plane" style="font-size: 1.25rem;"></i>
+            </div>
+        </div>
+        <h5 class="fw-bold mb-2 text-body">Engineering Dispatch</h5>
+        <p class="text-muted small mb-3">Join 15,000+ developers receiving weekly system blueprints and security updates.</p>
+        <form class="js-newsletter-form" data-feedback="sidebarNewsletterMsg">
+            <div class="position-relative w-100 mb-2">
+                <input type="email" name="email" class="form-control form-control-elite" placeholder="name@company.com" aria-label="Email address" required style="border-radius: 999px; padding-right: 84px; height: 44px; font-size: 13.5px;">
+                <button class="btn-elite btn-elite-primary btn-sm position-absolute fw-bold" type="submit" style="top: 50%; right: 5px; transform: translateY(-50%); border-radius: 999px; height: 34px; padding: 0 16px; display: inline-flex; align-items: center; justify-content: center; z-index: 5;">
+                    Join
+                </button>
+            </div>
+            <div id="sidebarNewsletterMsg" class="small text-success fw-semibold d-none mt-2"></div>
+        </form>
+    </div>
+</aside>
+
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <footer class="footer section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget mb-4 mb-lg-0">
+                    <h4 class="text-capitalize mb-4">Company &amp; Legal</h4>
+                    <ul class="list-unstyled footer-menu lh-35">
+                        <li><a href="about.html">About Editorial</a></li>
+                        <li><a href="authors.html">Authors Directory</a></li>
+                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget mb-4 mb-lg-0">
+                    <h4 class="text-capitalize mb-4">Publication Formats</h4>
+                    <ul class="list-unstyled footer-menu lh-35">
+                        <li><a href="index.html">Magazine Portal</a></li>
+                        <li><a href="blog-list.html">Article Catalog</a></li>
+                        <li><a href="feed.html">Live Dispatch Stream</a></li>
+                        <li><a href="gallery.html">Visual Gallery</a></li>
+                        <li><a href="video.html">Video Studio</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget mb-4 mb-lg-0">
+                    <h4 class="text-capitalize mb-4">Dispatch Subscribe</h4>
+                    <p>Weekly system architecture blueprints, release engineering briefs, and security advisories.</p>
+                    <form class="sub-form js-newsletter-form mt-3" data-feedback="footerNewsletterMsg">
+                        <div class="position-relative w-100">
+                            <input type="email" name="email" class="form-control form-control-elite" placeholder="Enter your email" aria-label="Email address" style="border-radius: 999px; padding-right: 118px; height: 46px;" required>
+                            <button type="submit" class="btn-elite btn-elite-primary btn-sm position-absolute" style="top: 50%; right: 5px; transform: translateY(-50%); border-radius: 999px; height: 36px; padding: 0 18px; display: inline-flex; align-items: center; justify-content: center; z-index: 5;">
+                                Subscribe
+                            </button>
+                        </div>
+                        <div id="footerNewsletterMsg" class="small text-success fw-semibold d-none mt-2"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="widget">
+                    <div class="logo mb-3">
+                        <span class="brand-text-gradient" style="font-size: 1.85rem; font-weight: 800; letter-spacing: -0.03em;">
+                            Xivig.
+                        </span>
+                    </div>
+                    <h6 class="mb-1"><a href="mailto:hello@xivig.com">hello@xivig.com</a></h6>
+                    <span class="text-primary d-block fw-semibold mb-2">Paris · San Francisco · Remote</span>
+                    <p class="small text-muted mb-0">Modular HTML &amp; SCSS editorial platform built with Vite and dark/light adaptive tokens.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-btm pt-4 mt-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
+                    <div class="copyright">
+                        &copy; 2026 <span class="text-primary fw-bold">Xivig Editorial</span> &mdash; Modular Blog Template Suite
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="https://facebook.com/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://x.com/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X" title="X"><i class="bi bi-twitter-x"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub" title="GitHub"><i class="bi bi-github"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://linkedin.com/company/xivig" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<!-- Vendor JavaScript Dependencies (Pure Vanilla Bootstrap 5 Bundle) -->
+<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+<!-- Modular Xivig Blog Script Bundle -->
+
+
+</body>
+</html>
