@@ -37,6 +37,13 @@ body.full-page-body {
   }
 }
 
+// Ensure button.cat-pill has identical cursor and clean button styling as a.cat-pill
+button.cat-pill {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
 // Active nav indicator compatibility (supports active on li.nav-item AND a.nav-link)
 #navbar .nav-link.active {
   color: #ffffff !important;
@@ -52,6 +59,17 @@ body.full-page-body {
 #sidebarAutocompleteDropdown {
   background-color: var(--xivig-card-bg) !important;
   border-color: var(--xivig-card-border) !important;
+}
+
+.footer-socials a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #6366f1;
+  }
 }
 
 [data-bs-theme="dark"],
@@ -112,6 +130,14 @@ body.full-page-body {
 .bg-surface-card {
   background-color: var(--xivig-card-bg);
   border-color: var(--xivig-card-border) !important;
+}
+
+.font-serif {
+  font-family: 'Source Serif 4', Georgia, serif !important;
+}
+
+.bg-opacity-90 {
+  --bs-bg-opacity: 0.9;
 }
 
 .btn-copy-feedback {

@@ -68,11 +68,21 @@ function initCatalogFiltering() {
 
     function setColumns(cols) {
         cards.forEach((card) => {
-            card.classList.remove('col-lg-4', 'col-lg-3');
-            card.classList.add(cols === 3 ? 'col-lg-4' : 'col-lg-3');
+            card.classList.remove('col-xl-3', 'col-lg-3', 'col-lg-4');
+            if (cols === 3) {
+                card.classList.add('col-lg-4');
+            } else {
+                card.classList.add('col-xl-3', 'col-lg-3');
+            }
         });
-        col3Btn?.classList.toggle('active', cols === 3);
-        col4Btn?.classList.toggle('active', cols === 4);
+        if (col3Btn) {
+            col3Btn.classList.toggle('btn-primary', cols === 3);
+            col3Btn.classList.toggle('btn-outline-secondary', cols !== 3);
+        }
+        if (col4Btn) {
+            col4Btn.classList.toggle('btn-primary', cols === 4);
+            col4Btn.classList.toggle('btn-outline-secondary', cols !== 4);
+        }
     }
 
     col3Btn?.addEventListener('click', () => setColumns(3));
