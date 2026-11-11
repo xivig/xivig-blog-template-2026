@@ -62,7 +62,7 @@ export function initSidebarAutocomplete() {
         if (categories.length > 0) {
             html += '<div class="small fw-bold text-uppercase text-muted mt-2 mb-1" style="font-size: 10px;">Categories</div><div class="d-flex flex-wrap gap-1 mb-2">';
             categories.forEach((c) => {
-                html += `<a href="${escapeHtml(c.url)}" class="badge badge-light border text-primary me-1 mb-1 px-2 py-1 text-decoration-none" style="font-size: 11px;"><i class="far fa-folder me-1"></i>${escapeHtml(c.name)}</a>`;
+                html += `<a href="${escapeHtml(c.url)}" class="badge bg-light border text-primary me-1 mb-1 px-2 py-1 text-decoration-none" style="font-size: 11px;"><i class="far fa-folder me-1"></i>${escapeHtml(c.name)}</a>`;
             });
             html += '</div>';
         }
@@ -70,7 +70,7 @@ export function initSidebarAutocomplete() {
         if (tags.length > 0) {
             html += '<div class="small fw-bold text-uppercase text-muted mt-2 mb-1" style="font-size: 10px;">Tags</div><div class="d-flex flex-wrap gap-1">';
             tags.forEach((t) => {
-                html += `<a href="${escapeHtml(t.url)}" class="badge badge-light border text-secondary me-1 mb-1 px-2 py-1 text-decoration-none" style="font-size: 11px;">#${escapeHtml(t.name)}</a>`;
+                html += `<a href="${escapeHtml(t.url)}" class="badge bg-light border text-secondary me-1 mb-1 px-2 py-1 text-decoration-none" style="font-size: 11px;">#${escapeHtml(t.name)}</a>`;
             });
             html += '</div>';
         }

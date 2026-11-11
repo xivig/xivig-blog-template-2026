@@ -25,8 +25,6 @@ export function openGalleryLightbox(url, caption, title, postLink) {
 
     if (window.bootstrap && window.bootstrap.Modal) {
         window.bootstrap.Modal.getOrCreateInstance(modalEl).show();
-    } else if (window.jQuery) {
-        window.jQuery(modalEl).modal('show');
     }
 }
 

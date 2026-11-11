@@ -383,7 +383,9 @@
 }
 
 [data-bs-theme="dark"] .badge-light,
-[data-theme="dark"] .badge-light {
+[data-theme="dark"] .badge-light,
+[data-bs-theme="dark"] .badge.bg-light,
+[data-theme="dark"] .badge.bg-light {
   background: #1e293b !important;
   color: #cbd5e1 !important;
 }
@@ -1064,7 +1066,9 @@
 }
 
 [data-bs-theme="light"] .badge-light,
-[data-theme="light"] .badge-light {
+[data-theme="light"] .badge-light,
+[data-bs-theme="light"] .badge.bg-light,
+[data-theme="light"] .badge.bg-light {
   background: #f1f5f9 !important;
   color: #475569 !important;
 }
