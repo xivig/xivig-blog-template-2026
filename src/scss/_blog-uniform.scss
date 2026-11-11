@@ -37,6 +37,12 @@ body.full-page-body {
   }
 }
 
+@media (max-width: 767.98px) {
+  .single-blog-content {
+    padding: 24px !important;
+  }
+}
+
 // Ensure button.cat-pill has identical cursor and clean button styling as a.cat-pill
 button.cat-pill {
   cursor: pointer;

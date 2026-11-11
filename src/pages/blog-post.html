@@ -26,35 +26,34 @@
         <div class="row g-4">
             <div class="col-lg-8">
                 <article class="single-blog-item">
-                    <!-- Category & Featured Flags -->
-                    <div class="d-flex flex-wrap align-items-center mb-3" style="gap: 8px;">
-                        <a href="category.html" class="badge bg-primary text-white px-3 py-2 text-decoration-none rounded-pill fw-semibold">
-                            Cloud &amp; Infrastructure
-                        </a>
-                        <span class="badge bg-warning bg-opacity-10 text-warning px-3 py-2 rounded-pill fw-semibold">
-                            <i class="fas fa-thumbtack me-1"></i> Pinned Blueprint
-                        </span>
-                    </div>
+                    <!-- Featured Hero Cover -->
+                    <img loading="lazy" src="/src/assets/img/blog/laravel-hyperscale-architecture.jpg" alt="Laravel 13 Hyperscale Architecture" class="single-post-hero-img">
 
-                    <h1 class="display-5 fw-bold text-body mb-3" style="letter-spacing: -0.025em; line-height: 1.2;">
-                        Laravel 13 Hyperscale: Designing Deterministic Multi-Region Octane Pools
-                    </h1>
+                    <div class="single-blog-content">
+                        <!-- Category & Featured Flags -->
+                        <div class="d-flex flex-wrap align-items-center mb-3" style="gap: 8px;">
+                            <a href="category.html" class="badge bg-primary text-white px-3 py-2 text-decoration-none rounded-pill fw-semibold">
+                                Cloud &amp; Infrastructure
+                            </a>
+                            <span class="badge bg-warning bg-opacity-10 text-warning px-3 py-2 rounded-pill fw-semibold">
+                                <i class="fas fa-thumbtack me-1"></i> Pinned Blueprint
+                            </span>
+                        </div>
 
-                    <!-- Meta Strip -->
-                    <div class="d-flex flex-wrap align-items-center text-muted small pb-4 mb-4 border-bottom" style="gap: 20px;">
-                        <a href="author.html" class="d-inline-flex align-items-center text-decoration-none text-body fw-semibold">
-                            <img src="/src/assets/img/avatars/avatar-1.webp" alt="Aria Alchemist" class="rounded-circle me-2" style="width: 34px; height: 34px; object-fit: cover;">
-                            Aria Alchemist
-                        </a>
-                        <span><i class="far fa-calendar-alt me-1 text-primary"></i> November 10, 2026</span>
-                        <span><i class="far fa-clock me-1 text-primary"></i> 8 min read</span>
-                        <span><i class="far fa-eye me-1 text-primary"></i> 18,420 reads</span>
-                    </div>
+                        <h1 class="display-5 fw-bold text-body mb-3" style="letter-spacing: -0.025em; line-height: 1.2;">
+                            Laravel 13 Hyperscale: Designing Deterministic Multi-Region Octane Pools
+                        </h1>
 
-                    <!-- Featured Hero Image -->
-                    <div class="rounded-4 overflow-hidden shadow-sm mb-4">
-                        <img src="/src/assets/img/blog/laravel-hyperscale-architecture.jpg" alt="Laravel 13 Hyperscale Architecture" class="w-100 object-fit-cover" style="max-height: 440px;">
-                    </div>
+                        <!-- Meta Strip -->
+                        <div class="d-flex flex-wrap align-items-center text-muted small pb-4 mb-4 border-bottom" style="gap: 20px;">
+                            <a href="author.html" class="d-inline-flex align-items-center text-decoration-none text-body fw-semibold">
+                                <img src="/src/assets/img/avatars/avatar-1.webp" alt="Aria Alchemist" class="rounded-circle me-2" style="width: 34px; height: 34px; object-fit: cover;">
+                                Aria Alchemist
+                            </a>
+                            <span><i class="far fa-calendar-alt me-1 text-primary"></i> November 10, 2026</span>
+                            <span><i class="far fa-clock me-1 text-primary"></i> 8 min read</span>
+                            <span><i class="far fa-eye me-1 text-primary"></i> 18,420 reads</span>
+                        </div>
 
                     <!-- Collapsible Table of Contents -->
                     <div class="toc-card p-4 rounded-4 bg-surface-card border shadow-sm mb-4">
@@ -188,7 +187,8 @@ Octane::route('GET', '/api/v1/catalog', CatalogController::class)
                         </div>
                     </div>
 
-                    <include src="src/partials/comments.html" />
+                        <include src="src/partials/comments.html" />
+                    </div>
                 </article>
             </div>
 
