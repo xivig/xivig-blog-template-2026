@@ -193,8 +193,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 8px;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: #1e293b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  margin-right: 4px;
   transition: var(--transition-smooth);
+}
+
+.list-inline-item:last-child .footer-social-btn {
+  margin-right: 0;
 }
 
 .footer-social-btn:hover {
