@@ -1,0 +1,276 @@
+<layout src="src/layouts/blog.html" title="Blog Catalog - Xivig Technical Articles & Architecture Blueprints" active="blog-list" description="Browse Xivig's technical catalog with instant keyword filtering, category channels, and switchable 3/4-column layouts.">
+<!-- Hero Title Header -->
+<section class="page-title py-4">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <span class="badge-elite badge-elite-dark mb-2">
+                    <span class="badge-dot pulse"></span> Xivig Journal &amp; Engineering Intelligence
+                </span>
+                <h1 class="font-weight-bold mb-2 display-4" style="letter-spacing: -0.03em;">
+                    Architecture, Security &amp; Strategy
+                </h1>
+                <p class="text-muted mb-3">
+                    Curated technical blueprints, release deep-dives, and design system dispatches written by practitioner architects.
+                </p>
+
+                <!-- Interactive Search Filter Bar -->
+                <div class="d-flex justify-content-center mb-1">
+                    <div class="input-group" style="max-width: 520px; width: 100%;">
+                        <input type="text" id="catalogSearchInput" class="form-control form-control-elite"
+                            placeholder="Filter articles by title, stack or topic..."
+                            style="border-radius: 999px 0 0 999px; height: 48px; padding-left: 22px;">
+                        <span class="btn-elite btn-elite-primary px-4 d-inline-flex align-items-center" style="border-radius: 0 999px 999px 0; height: 48px;">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Blog Catalog -->
+<section class="section blog-wrap py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Category Pills & 3/4 Column Switcher -->
+                <div class="blog-filter-bar d-flex flex-wrap align-items-center justify-content-between mb-4 p-3 rounded-4 bg-surface-card border shadow-sm">
+                    <div class="d-flex flex-wrap align-items-center" style="gap: 8px;">
+                        <a href="#" class="btn-elite-pill js-cat-filter active" data-category="all">
+                            <i class="fas fa-layer-group me-1"></i> All (<span id="catalogResultCount">8</span>)
+                        </a>
+                        <a href="#" class="btn-elite-pill js-cat-filter" data-category="cloud">Cloud Infrastructure</a>
+                        <a href="#" class="btn-elite-pill js-cat-filter" data-category="security">Security &amp; Zero-Trust</a>
+                        <a href="#" class="btn-elite-pill js-cat-filter" data-category="frontend">Frontend &amp; Design</a>
+                        <a href="#" class="btn-elite-pill js-cat-filter" data-category="database">Database Engineering</a>
+                    </div>
+
+                    <div class="d-none d-lg-flex align-items-center ms-auto" style="gap: 6px;">
+                        <span class="text-muted small fw-bold me-1">Columns:</span>
+                        <button type="button" id="btnGridCol3" class="btn btn-sm btn-outline-secondary rounded-pill px-3" title="3 Columns Grid">3 Cols</button>
+                        <button type="button" id="btnGridCol4" class="btn btn-sm btn-outline-secondary rounded-pill px-3 active" title="4 Columns Grid">4 Cols</button>
+                    </div>
+                </div>
+
+                <!-- 4-Column / 3-Column Card Grid -->
+                <div class="row" id="blogCatalogGrid">
+                    <div class="col-lg-3 col-md-6 mb-4 js-catalog-item" data-category="cloud" data-keywords="laravel 13 hyperscale octane swoole scaling cloud">
+                        <article class="blog-item-elite h-100">
+                            <div class="blog-img-wrap-elite">
+                                <a href="blog-post.html"><img loading="lazy" src="/src/assets/img/blog/laravel-hyperscale-architecture.jpg" alt="Laravel 13 Hyperscale"></a>
+                                <div class="blog-card-badges">
+                                    <span class="badge-elite-pinned"><i class="fas fa-thumbtack me-1"></i> Pinned</span>
+                                    <span class="badge-elite-category">Cloud</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-body-elite p-4">
+                                <div class="blog-card-meta-elite mb-2">
+                                    <span><i class="far fa-clock me-1"></i> 8m read</span>
+                                    <span><i class="far fa-user me-1"></i> Aria Alchemist</span>
+                                </div>
+                                <h3 class="blog-card-title-elite h5 mb-2">
+                                    <a href="blog-post.html">Laravel 13 Hyperscale Octane Blueprints</a>
+                                </h3>
+                                <p class="blog-card-excerpt-elite mb-3">Isolated worker pools, Swoole coroutines, and sub-50ms edge routing patterns.</p>
+                                <div class="blog-card-footer-elite pt-3">
+                                    <a href="blog-post.html" class="btn-read-elite">Read Article <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <span class="text-muted small"><i class="far fa-eye me-1"></i> 18.4k</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 js-catalog-item" data-category="security" data-keywords="zero-trust fortify passkey webauthn authentication security">
+                        <article class="blog-item-elite h-100">
+                            <div class="blog-img-wrap-elite">
+                                <a href="single-magazine.html"><img loading="lazy" src="/src/assets/img/blog/fortify-passkey-security.jpg" alt="Fortify Passkeys"></a>
+                                <div class="blog-card-badges">
+                                    <span class="badge-elite-featured"><i class="fas fa-star me-1"></i> Featured</span>
+                                    <span class="badge-elite-category">Security</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-body-elite p-4">
+                                <div class="blog-card-meta-elite mb-2">
+                                    <span><i class="far fa-clock me-1"></i> 7m read</span>
+                                    <span><i class="far fa-user me-1"></i> Julian Vance</span>
+                                </div>
+                                <h3 class="blog-card-title-elite h5 mb-2">
+                                    <a href="single-magazine.html">Zero-Trust Fortify Passkey Migration Guide</a>
+                                </h3>
+                                <p class="blog-card-excerpt-elite mb-3">Replacing password credentials with cryptographic hardware attestation and FIDO2.</p>
+                                <div class="blog-card-footer-elite pt-3">
+                                    <a href="single-magazine.html" class="btn-read-elite">Read Essay <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <span class="text-muted small"><i class="far fa-eye me-1"></i> 14.2k</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 js-catalog-item" data-category="frontend" data-keywords="tokens dark light theme scss design systems ui architecture">
+                        <article class="blog-item-elite h-100">
+                            <div class="blog-img-wrap-elite">
+                                <a href="format-image.html"><img loading="lazy" src="/src/assets/img/blog/reactive-ui-engineering.jpg" alt="Design Tokens"></a>
+                                <div class="blog-card-badges">
+                                    <span class="badge-elite-category">Frontend</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-body-elite p-4">
+                                <div class="blog-card-meta-elite mb-2">
+                                    <span><i class="far fa-clock me-1"></i> 6m read</span>
+                                    <span><i class="far fa-user me-1"></i> Clara Chen</span>
+                                </div>
+                                <h3 class="blog-card-title-elite h5 mb-2">
+                                    <a href="format-image.html">Tokenized UI Architecture &amp; Dark/Light Modes</a>
+                                </h3>
+                                <p class="blog-card-excerpt-elite mb-3">Visual essay exploring semantic color graphs across multi-brand interfaces.</p>
+                                <div class="blog-card-footer-elite pt-3">
+                                    <a href="format-image.html" class="btn-read-elite">Visual Essay <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <span class="text-muted small"><i class="far fa-eye me-1"></i> 11.8k</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 js-catalog-item" data-category="database" data-keywords="mysql zero downtime migrations cutover database video">
+                        <article class="blog-item-elite h-100">
+                            <div class="blog-img-wrap-elite">
+                                <a href="video.html"><img loading="lazy" src="/src/assets/img/blog/video-feature-fallback.jpg" alt="Database Schema Migrations"></a>
+                                <div class="blog-card-badges">
+                                    <span class="badge-elite-featured"><i class="fas fa-video me-1"></i> Video</span>
+                                    <span class="badge-elite-category">Database</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-body-elite p-4">
+                                <div class="blog-card-meta-elite mb-2">
+                                    <span><i class="far fa-clock me-1"></i> 11m watch</span>
+                                    <span><i class="far fa-user me-1"></i> Marcus Thorne</span>
+                                </div>
+                                <h3 class="blog-card-title-elite h5 mb-2">
+                                    <a href="video.html">Zero-Downtime Schema Migrations Walkthrough</a>
+                                </h3>
+                                <p class="blog-card-excerpt-elite mb-3">Step-by-step ghost table shadow sync and online cutover verification.</p>
+                                <div class="blog-card-footer-elite pt-3">
+                                    <a href="video.html" class="btn-read-elite">Watch Video <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <span class="text-muted small"><i class="far fa-eye me-1"></i> 9.8k</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 js-catalog-item" data-category="cloud" data-keywords="edge caching stale while revalidate cdn cloud http">
+                        <article class="blog-item-elite h-100">
+                            <div class="blog-img-wrap-elite">
+                                <a href="feed.html"><img loading="lazy" src="/src/assets/img/blog/blog-1.webp" alt="Edge Caching"></a>
+                                <div class="blog-card-badges">
+                                    <span class="badge-elite-category">Cloud</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-body-elite p-4">
+                                <div class="blog-card-meta-elite mb-2">
+                                    <span><i class="far fa-clock me-1"></i> 5m read</span>
+                                    <span><i class="far fa-user me-1"></i> Aria Alchemist</span>
+                                </div>
+                                <h3 class="blog-card-title-elite h5 mb-2">
+                                    <a href="feed.html">Deterministic Edge Caching with Stale Revalidation</a>
+                                </h3>
+                                <p class="blog-card-excerpt-elite mb-3">Surrogate keys, instant purge webhooks, and regional cache consistency.</p>
+                                <div class="blog-card-footer-elite pt-3">
+                                    <a href="feed.html" class="btn-read-elite">Read Brief <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <span class="text-muted small"><i class="far fa-eye me-1"></i> 8.9k</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 js-catalog-item" data-category="security" data-keywords="rfc 9530 digest fields api signing security bookmark">
+                        <article class="blog-item-elite h-100">
+                            <div class="blog-img-wrap-elite">
+                                <a href="format-link.html"><img loading="lazy" src="/src/assets/img/blog/bookmark-link-fallback.jpg" alt="HTTP Digest Fields"></a>
+                                <div class="blog-card-badges">
+                                    <span class="badge-elite-category">Bookmark</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-body-elite p-4">
+                                <div class="blog-card-meta-elite mb-2">
+                                    <span><i class="far fa-clock me-1"></i> 4m read</span>
+                                    <span><i class="far fa-user me-1"></i> Elena Vance</span>
+                                </div>
+                                <h3 class="blog-card-title-elite h5 mb-2">
+                                    <a href="format-link.html">RFC 9530 Digest Fields &amp; API Signing Standard</a>
+                                </h3>
+                                <p class="blog-card-excerpt-elite mb-3">Annotated reference on integrity headers for financial webhooks.</p>
+                                <div class="blog-card-footer-elite pt-3">
+                                    <a href="format-link.html" class="btn-read-elite">View Brief <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <span class="text-muted small"><i class="far fa-eye me-1"></i> 7.6k</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 js-catalog-item" data-category="cloud" data-keywords="opentelemetry tracing microservices telemetry observability">
+                        <article class="blog-item-elite h-100">
+                            <div class="blog-img-wrap-elite">
+                                <a href="blog-post.html"><img loading="lazy" src="/src/assets/img/blog/blog-2.webp" alt="Trace Correlation"></a>
+                                <div class="blog-card-badges">
+                                    <span class="badge-elite-category">Telemetry</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-body-elite p-4">
+                                <div class="blog-card-meta-elite mb-2">
+                                    <span><i class="far fa-clock me-1"></i> 9m read</span>
+                                    <span><i class="far fa-user me-1"></i> Julian Vance</span>
+                                </div>
+                                <h3 class="blog-card-title-elite h5 mb-2">
+                                    <a href="blog-post.html">Distributed Trace Correlation Across Mesh Gateways</a>
+                                </h3>
+                                <p class="blog-card-excerpt-elite mb-3">Tail-based sampling pipelines reducing cardinality spend without losing errors.</p>
+                                <div class="blog-card-footer-elite pt-3">
+                                    <a href="blog-post.html" class="btn-read-elite">Read Guide <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <span class="text-muted small"><i class="far fa-eye me-1"></i> 7.4k</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 js-catalog-item" data-category="frontend" data-keywords="vite 8 rollup scss es modules build frontend">
+                        <article class="blog-item-elite h-100">
+                            <div class="blog-img-wrap-elite">
+                                <a href="single-magazine.html"><img loading="lazy" src="/src/assets/img/blog/blog-3.webp" alt="Vite 8 Pipelines"></a>
+                                <div class="blog-card-badges">
+                                    <span class="badge-elite-category">Tooling</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-body-elite p-4">
+                                <div class="blog-card-meta-elite mb-2">
+                                    <span><i class="far fa-clock me-1"></i> 6m read</span>
+                                    <span><i class="far fa-user me-1"></i> Clara Chen</span>
+                                </div>
+                                <h3 class="blog-card-title-elite h5 mb-2">
+                                    <a href="single-magazine.html">Building Ultra-Fast Vite 8 Multi-Page Asset Pipelines</a>
+                                </h3>
+                                <p class="blog-card-excerpt-elite mb-3">Custom Rollup plugins, SCSS partials, and portable flat-HTML bundles.</p>
+                                <div class="blog-card-footer-elite pt-3">
+                                    <a href="single-magazine.html" class="btn-read-elite">Read Essay <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <span class="text-muted small"><i class="far fa-eye me-1"></i> 6.4k</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Empty Search State -->
+                <div id="catalogEmptyState" class="d-none text-center py-5 p-4 rounded-4 bg-surface-card border">
+                    <i class="fas fa-search text-muted mb-3" style="font-size: 2.5rem;"></i>
+                    <h4 class="fw-bold text-body">No matching publications found</h4>
+                    <p class="text-muted small mb-0">Try clearing the filter or switching back to "All".</p>
+                </div>
+
+                <!-- Pagination Partial -->
+                <include src="src/partials/pagination.html" />
+            </div>
+        </div>
+    </div>
+</section>
+</layout>

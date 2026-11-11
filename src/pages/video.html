@@ -1,0 +1,150 @@
+<layout src="src/layouts/blog.html" title="Video Studio & Engineering Briefings - Xivig Editorial" active="video" description="Technical walkthrough videos, architectural breakdowns, and interactive episode playlist.">
+<section class="page-title py-4">
+    <div class="container">
+        <span class="badge-elite badge-elite-dark mb-2">
+            <span class="badge-dot pulse"></span> Xivig Video Studio
+        </span>
+        <h1 class="display-5 fw-bold text-body mb-1" style="letter-spacing: -0.025em;">Video &amp; Engineering Briefings</h1>
+        <p class="text-muted small mb-0">Live walkthroughs covering zero-downtime migrations, cluster debugging, and UI systems.</p>
+    </div>
+</section>
+
+<section class="section py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <!-- Active Cinema Video Stage -->
+                <div class="card border-0 rounded-4 overflow-hidden shadow-lg bg-dark text-white mb-4">
+                    <div class="position-relative" style="aspect-ratio: 16 / 9;">
+                        <img id="videoStagePoster" src="/src/assets/img/blog/video-feature-fallback.jpg" alt="Active Video Episode" class="w-100 h-100 object-fit-cover opacity-75">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-between p-4" style="background: linear-gradient(180deg, rgba(15,23,42,0.35) 0%, rgba(15,23,42,0.85) 100%);">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span id="videoStageCategory" class="badge bg-danger px-3 py-2 rounded-pill fw-semibold">Database Engineering</span>
+                                <span id="videoStageDuration" class="badge bg-dark bg-opacity-75 px-3 py-2 rounded-pill"><i class="far fa-clock me-1"></i> 11m 40s</span>
+                            </div>
+
+                            <div class="text-center my-auto">
+                                <button type="button" class="btn btn-danger rounded-circle shadow-lg d-inline-flex align-items-center justify-content-center" style="width: 72px; height: 72px;" data-bs-toggle="modal" data-bs-target="#videoPreviewModal" aria-label="Play Video Briefing">
+                                    <i class="fas fa-play fa-lg ms-1"></i>
+                                </button>
+                            </div>
+
+                            <div>
+                                <h2 id="videoStageTitle" class="h3 fw-bold text-white mb-2">Studio Walkthrough: Zero-Downtime MySQL 8.4 Blue-Green Cutovers</h2>
+                                <p id="videoStageSummary" class="text-white-50 small mb-0">Follow live binlog replication verification, lag throttling, and instant rollback validation across production replicas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Episodes Playlist -->
+                <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
+                    <h3 class="h5 fw-bold mb-0 text-body"><i class="fas fa-video text-primary me-2"></i> More Video Publications</h3>
+                    <span class="small text-muted">Click any episode to load into stage</span>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card p-0 h-100 shadow-sm border border-primary rounded-4 overflow-hidden bg-surface-card js-video-episode" role="button"
+                             data-title="Studio Walkthrough: Zero-Downtime MySQL 8.4 Blue-Green Cutovers"
+                             data-category="Database Engineering"
+                             data-duration="11m 40s"
+                             data-poster="/src/assets/img/blog/video-feature-fallback.jpg"
+                             data-summary="Follow live binlog replication verification, lag throttling, and instant rollback validation across production replicas.">
+                            <div class="position-relative" style="height: 170px; background: #000;">
+                                <img src="/src/assets/img/blog/video-feature-fallback.jpg" alt="MySQL Cutover" class="w-100 h-100 object-fit-cover opacity-75">
+                                <span class="badge bg-dark position-absolute bottom-0 end-0 m-2">11m</span>
+                            </div>
+                            <div class="p-3">
+                                <span class="badge bg-light text-primary mb-2" style="font-size: 11px;">Database</span>
+                                <h5 class="fw-bold mb-1 h6">Zero-Downtime MySQL 8.4 Cutovers</h5>
+                                <small class="text-muted">Marcus Thorne · 9,840 views</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card p-0 h-100 shadow-sm border rounded-4 overflow-hidden bg-surface-card js-video-episode" role="button"
+                             data-title="Multi-Region Octane Worker Isolation Deep-Dive"
+                             data-category="Cloud Infrastructure"
+                             data-duration="14m 15s"
+                             data-poster="/src/assets/img/blog/laravel-hyperscale-architecture.jpg"
+                             data-summary="Live demonstration showing memory leak detection, coroutine timeouts, and container resets under load.">
+                            <div class="position-relative" style="height: 170px; background: #000;">
+                                <img src="/src/assets/img/blog/laravel-hyperscale-architecture.jpg" alt="Octane Deep Dive" class="w-100 h-100 object-fit-cover opacity-75">
+                                <span class="badge bg-dark position-absolute bottom-0 end-0 m-2">14m</span>
+                            </div>
+                            <div class="p-3">
+                                <span class="badge bg-light text-primary mb-2" style="font-size: 11px;">Cloud</span>
+                                <h5 class="fw-bold mb-1 h6">Octane Worker Isolation Deep-Dive</h5>
+                                <small class="text-muted">Aria Alchemist · 12,110 views</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card p-0 h-100 shadow-sm border rounded-4 overflow-hidden bg-surface-card js-video-episode" role="button"
+                             data-title="Engineering Phishing-Resistant Passkey UX"
+                             data-category="Security & Zero-Trust"
+                             data-duration="9m 50s"
+                             data-poster="/src/assets/img/blog/fortify-passkey-security.jpg"
+                             data-summary="Practical WebAuthn conditional mediation patterns built with progressive browser compatibility checks.">
+                            <div class="position-relative" style="height: 170px; background: #000;">
+                                <img src="/src/assets/img/blog/fortify-passkey-security.jpg" alt="Passkey UX" class="w-100 h-100 object-fit-cover opacity-75">
+                                <span class="badge bg-dark position-absolute bottom-0 end-0 m-2">10m</span>
+                            </div>
+                            <div class="p-3">
+                                <span class="badge bg-light text-primary mb-2" style="font-size: 11px;">Security</span>
+                                <h5 class="fw-bold mb-1 h6">Passkey Authentication UX Walkthrough</h5>
+                                <small class="text-muted">Julian Vance · 8,430 views</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card p-0 h-100 shadow-sm border rounded-4 overflow-hidden bg-surface-card js-video-episode" role="button"
+                             data-title="Vite 8 + Sass Embedded Modular Template Pipeline"
+                             data-category="Frontend Tooling"
+                             data-duration="8m 20s"
+                             data-poster="/src/assets/img/blog/reactive-ui-engineering.jpg"
+                             data-summary="How custom HTML composition plugins produce clean flat HTML distributions with zero runtime frameworks.">
+                            <div class="position-relative" style="height: 170px; background: #000;">
+                                <img src="/src/assets/img/blog/reactive-ui-engineering.jpg" alt="Vite Pipeline" class="w-100 h-100 object-fit-cover opacity-75">
+                                <span class="badge bg-dark position-absolute bottom-0 end-0 m-2">8m</span>
+                            </div>
+                            <div class="p-3">
+                                <span class="badge bg-light text-primary mb-2" style="font-size: 11px;">Frontend</span>
+                                <h5 class="fw-bold mb-1 h6">Modular Vite 8 Template Architecture</h5>
+                                <small class="text-muted">Clara Chen · 6,920 views</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="position-sticky" style="top: 90px;">
+                    <include src="src/partials/sidebar.html" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Player Dialog -->
+<div class="modal fade" id="videoPreviewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary rounded-4 overflow-hidden">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title fw-bold">Xivig Studio Playback Preview</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-5 text-center">
+                <i class="fas fa-film fa-3x text-danger mb-3"></i>
+                <p class="mb-2 fw-semibold">Connect your hosted MP4 / HLS stream or YouTube embed inside `src/pages/video.html`.</p>
+                <p class="small text-white-50 mb-0">Episode metadata synchronized dynamically with `src/js/modules/blog-interactive.js`.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</layout>

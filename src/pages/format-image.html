@@ -1,0 +1,212 @@
+<layout src="src/layouts/blog.html" title="Visual Essay: Tokenized Dark & Light Systems - Xivig Editorial" active="format-image" description="Immersive photography & design diagram feature with zen reading mode, EXIF spec dock, filmstrip switcher, and cinema lightbox.">
+<!-- Fixed Reading Progress Bar -->
+<div class="vf-progress-track" aria-hidden="true">
+    <div class="vf-progress-fill" id="vfProgressBar"></div>
+</div>
+
+<article id="vfArticleRoot" class="elite-post pb-5">
+    <!-- 1. Cinematic Full-Bleed Hero Stage -->
+    <header class="vf-hero">
+        <img id="vfHeroBg" src="/src/assets/img/blog/reactive-ui-engineering.jpg" alt="Tokenized UI Architecture" class="vf-hero-bg">
+        <div class="vf-hero-scrim" aria-hidden="true"></div>
+
+        <!-- Top Frosted Controls & Breadcrumbs -->
+        <div class="container position-relative z-2 pt-4">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 vf-hero-breadcrumbs px-3 py-2 rounded-pill small">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-white-50 text-decoration-none">Magazine</a></li>
+                        <li class="breadcrumb-item"><a href="category.html" class="text-white-50 text-decoration-none">Design Systems</a></li>
+                        <li class="breadcrumb-item active text-white fw-semibold" aria-current="page">Visual Format</li>
+                    </ol>
+                </nav>
+
+                <div class="d-flex flex-wrap align-items-center gap-2">
+                    <button type="button" class="vf-glass-btn" id="vfZenToggle" title="Toggle distraction-free reading">
+                        <i class="fas fa-book-open"></i> <span id="vfZenLabel">Zen Mode</span>
+                    </button>
+                    <button type="button" class="vf-glass-btn" id="vfOpenLightboxBtn">
+                        <i class="fas fa-expand-arrows-alt"></i> <span>Inspect Full-Res</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Headline & Editorial Credits -->
+        <div class="container position-relative z-2 pb-5 mb-4 mt-5">
+            <div class="row">
+                <div class="col-xl-10 mx-auto text-center text-white">
+                    <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mb-3">
+                        <a href="category.html" class="badge bg-danger text-white text-uppercase text-decoration-none px-3 py-2 rounded-pill shadow-sm" style="letter-spacing: 1.5px; font-size: 11px;">
+                            Design Systems
+                        </a>
+                        <span class="badge bg-dark bg-opacity-75 text-info border border-info border-opacity-50 px-3 py-2 rounded-pill" style="font-size: 11px; letter-spacing: 1px;">
+                            <i class="fas fa-camera-retro me-1"></i> VISUAL ESSAY · 4 PLATES
+                        </span>
+                    </div>
+
+                    <h1 class="display-4 fw-bold font-serif mb-3 text-white" style="letter-spacing: -0.025em; line-height: 1.15; text-shadow: 0 6px 24px rgba(0,0,0,0.45);">
+                        Tokenized UI Architecture for Adaptive Dark &amp; Light Surfaces
+                    </h1>
+
+                    <p class="lead text-white-50 mx-auto mb-4" style="max-width: 760px; font-size: 1.12rem;">
+                        How semantic elevation layers, luminance contracts, and zero-FOUC persistence keep multi-brand editorial UI consistent.
+                    </p>
+
+                    <div class="d-flex justify-content-center align-items-center gap-3 text-white-50 flex-wrap" style="font-size: 14px;">
+                        <a href="author.html" class="d-inline-flex align-items-center gap-2 text-white text-decoration-none">
+                            <img src="/src/assets/img/avatars/avatar-2.webp" alt="Clara Chen" class="rounded-circle border border-2 border-white" style="width: 36px; height: 36px; object-fit: cover;">
+                            <span class="fw-semibold">Clara Chen</span>
+                        </a>
+                        <span>&bull;</span>
+                        <span><i class="far fa-calendar-alt me-1 text-info"></i> Nov 05, 2026</span>
+                        <span>&bull;</span>
+                        <span><i class="far fa-clock me-1 text-info"></i> 6 min read</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- 2. Floating EXIF Telemetry & Filmstrip Dock -->
+        <section class="vf-telemetry-dock mb-5">
+            <div class="row g-3 align-items-center">
+                <div class="col-6 col-lg-3">
+                    <div class="vf-spec-item">
+                        <span class="vf-spec-icon"><i class="fas fa-expand"></i></span>
+                        <div class="min-w-0">
+                            <div class="text-muted text-uppercase fw-bold" style="font-size: 10.5px;">Resolution</div>
+                            <div class="fw-bold text-body text-truncate" style="font-size: 14px;">2400 &times; 1600 px</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="vf-spec-item">
+                        <span class="vf-spec-icon"><i class="fas fa-file-image"></i></span>
+                        <div class="min-w-0">
+                            <div class="text-muted text-uppercase fw-bold" style="font-size: 10.5px;">Master Format</div>
+                            <div class="fw-bold text-body text-truncate" style="font-size: 14px;">Lossless WebP &amp; SVG</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="vf-spec-item">
+                        <span class="vf-spec-icon"><i class="fas fa-swatchbook"></i></span>
+                        <div class="min-w-0">
+                            <div class="text-muted text-uppercase fw-bold" style="font-size: 10.5px;">Contrast Target</div>
+                            <div class="fw-bold text-body text-truncate" style="font-size: 14px;">Display-P3 / WCAG AA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 d-flex justify-content-lg-end gap-2">
+                    <button type="button" class="btn btn-primary btn-sm rounded-pill px-3 fw-semibold" id="vfDockLightboxBtn">
+                        <i class="fas fa-search-plus me-1"></i> Studio Viewer
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill px-3 fw-semibold" onclick="vfCopyShareLink()">
+                        <i class="fas fa-link me-1"></i> Share
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-3 pt-3 border-top">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
+                    <span class="small fw-bold text-body">
+                        <i class="fas fa-film me-1 text-primary"></i>
+                        Visual Filmstrip &mdash; <span id="vfActivePlateCaption" class="text-muted fw-normal">Plate 01: Semantic Token Graph</span>
+                    </span>
+                    <a href="gallery.html" class="small fw-semibold text-primary text-decoration-none">Full Archive <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+                <div class="row g-2">
+                    <div class="col-4 col-sm-3 col-md-2">
+                        <button type="button" class="vf-filmstrip-btn active" data-frame-idx="0" title="Plate 01: Semantic Token Graph">
+                            <img src="/src/assets/img/blog/reactive-ui-engineering.jpg" alt="Plate 1">
+                        </button>
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-2">
+                        <button type="button" class="vf-filmstrip-btn" data-frame-idx="1" title="Plate 02: Surface Elevation Layers">
+                            <img src="/src/assets/img/gallery/gallery-thumb-2.webp" alt="Plate 2">
+                        </button>
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-2">
+                        <button type="button" class="vf-filmstrip-btn" data-frame-idx="2" title="Plate 03: Typography Scale Grid">
+                            <img src="/src/assets/img/gallery/gallery-thumb-5.webp" alt="Plate 3">
+                        </button>
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-2">
+                        <button type="button" class="vf-filmstrip-btn" data-frame-idx="3" title="Plate 04: Component Parity Audit">
+                            <img src="/src/assets/img/blog/blog-3.webp" alt="Plate 4">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Editorial Essay + Sticky Sidebar -->
+        <div class="row g-4">
+            <div class="col-lg-8 vf-article-col">
+                <div class="vf-surface-card p-4 p-md-5 mb-4">
+                    <div class="vf-prose text-body-secondary">
+                        <p class="vf-drop-cap">
+                            Rather than maintaining parallel theme stylesheets that silently diverge across release cycles, semantic CSS design tokens map intent directly to surface elevation, interactive borders, and foreground readability.
+                        </p>
+                        <div class="vf-callout-quote fst-italic text-body">
+                            "Dark mode is never a color inversion trick; it is a carefully stepped elevation system built from deep navy slate upward."
+                        </div>
+                        <p>
+                            Try toggling the theme switcher in the header utility bar: every card container, dropdown menu, badge, and prose block transitions together in zero-flicker lockstep.
+                        </p>
+                    </div>
+
+                    <include src="src/partials/share-buttons.html" />
+                </div>
+
+                <include src="src/partials/comments.html" />
+            </div>
+
+            <div class="col-lg-4 vf-sidebar-col">
+                <div class="position-sticky" style="top: 90px;">
+                    <include src="src/partials/sidebar.html" />
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- Full-Screen Cinema Lightbox Modal -->
+<div class="vf-lightbox" id="vfLightbox" role="dialog" aria-modal="true" aria-label="Full Resolution Visual Studio">
+    <div class="d-flex align-items-center justify-content-between text-white">
+        <div class="d-flex align-items-center gap-3 min-w-0">
+            <span class="badge bg-primary rounded-pill px-3 py-2" id="vfLightboxCounter">1 / 4</span>
+            <span class="fw-semibold text-truncate" id="vfLightboxTitle">Plate 01: Semantic Token Graph</span>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <button type="button" class="vf-glass-btn" id="vfLightboxZoomBtn"><i class="fas fa-search-plus"></i> <span>Zoom</span></button>
+            <button type="button" class="vf-glass-btn" id="vfCloseLightboxBtn"><i class="fas fa-times"></i> <span>Close</span></button>
+        </div>
+    </div>
+
+    <div class="vf-lightbox-stage">
+        <button type="button" class="vf-glass-btn position-absolute start-0 ms-2" id="vfPrevFrameBtn" aria-label="Previous Plate"><i class="fas fa-chevron-left"></i></button>
+        <img id="vfLightboxImg" src="/src/assets/img/blog/reactive-ui-engineering.jpg" alt="Visual Plate">
+        <button type="button" class="vf-glass-btn position-absolute end-0 me-2" id="vfNextFrameBtn" aria-label="Next Plate"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <div class="text-center text-white-50 small">
+        Click image or press <kbd class="bg-dark border border-secondary px-2 py-1 rounded">Esc</kbd> to exit
+    </div>
+</div>
+
+<div class="vf-toast" id="vfToast" role="status" aria-live="polite">
+    <i class="fas fa-check-circle text-success me-2"></i> Visual essay link copied to clipboard
+</div>
+
+<script id="vfFramesData" type="application/json">
+[
+  {"url": "/src/assets/img/blog/reactive-ui-engineering.jpg", "title": "Plate 01: Semantic Token Graph", "alt": "Semantic Token Graph"},
+  {"url": "/src/assets/img/gallery/gallery-thumb-2.webp", "title": "Plate 02: Surface Elevation Layers", "alt": "Surface Elevation Layers"},
+  {"url": "/src/assets/img/gallery/gallery-thumb-5.webp", "title": "Plate 03: Typography Scale Grid", "alt": "Typography Scale Grid"},
+  {"url": "/src/assets/img/blog/blog-3.webp", "title": "Plate 04: Component Parity Audit", "alt": "Component Parity Audit"}
+]
+</script>
+</layout>

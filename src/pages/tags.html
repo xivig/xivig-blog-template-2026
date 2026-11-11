@@ -1,0 +1,160 @@
+<layout src="src/layouts/blog.html" title="Tags Directory - Browse Topics & Blueprints - Xivig Editorial" active="tags" description="Browse all engineering topics, stacks, and architecture tags indexed alphabetically across Xivig Editorial.">
+<section class="page-title py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-muted">Magazine</a></li>
+                        <li class="breadcrumb-item"><a href="blog-list.html" class="text-muted">Catalog</a></li>
+                        <li class="breadcrumb-item active text-primary" aria-current="page">Tags Directory</li>
+                    </ol>
+                </nav>
+
+                <div class="d-flex align-items-center flex-wrap" style="gap: 16px;">
+                    <div class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle shadow-sm" style="width: 58px; height: 58px;">
+                        <i class="fas fa-tags" style="font-size: 1.4rem;"></i>
+                    </div>
+                    <div>
+                        <span class="badge-elite badge-elite-dark mb-1">
+                            <span class="badge-dot pulse"></span> Knowledge Index
+                        </span>
+                        <h1 class="fw-bold mb-1 display-5 text-body" style="letter-spacing: -0.02em;">Tags &amp; Topics Directory</h1>
+                        <p class="text-muted mb-0 small">Browse engineering and architectural tags organized by popularity and alphabetical section.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section pt-4 pb-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <!-- Trending High-Volume Tags -->
+                <div class="p-4 rounded-4 shadow-sm bg-surface-card border mb-4">
+                    <h2 class="h6 fw-bold text-body mb-3 d-flex align-items-center">
+                        <i class="fas fa-fire me-2 text-danger"></i> Trending &amp; High-Volume Topics
+                    </h2>
+                    <div class="d-flex flex-wrap" style="gap: 10px;">
+                        <a href="tag.html" class="badge badge-light border text-decoration-none py-2 px-3 rounded-pill text-body fw-bold shadow-sm d-inline-flex align-items-center" style="font-size: 13px; gap: 6px;">
+                            <span class="text-primary">#laravel-13</span> <span class="badge bg-primary text-white rounded-pill" style="font-size: 10px;">12</span>
+                        </a>
+                        <a href="tag.html" class="badge badge-light border text-decoration-none py-2 px-3 rounded-pill text-body fw-bold shadow-sm d-inline-flex align-items-center" style="font-size: 13px; gap: 6px;">
+                            <span class="text-primary">#zero-trust</span> <span class="badge bg-primary text-white rounded-pill" style="font-size: 10px;">9</span>
+                        </a>
+                        <a href="tag.html" class="badge badge-light border text-decoration-none py-2 px-3 rounded-pill text-body fw-bold shadow-sm d-inline-flex align-items-center" style="font-size: 13px; gap: 6px;">
+                            <span class="text-primary">#kubernetes</span> <span class="badge bg-primary text-white rounded-pill" style="font-size: 10px;">10</span>
+                        </a>
+                        <a href="tag.html" class="badge badge-light border text-decoration-none py-2 px-3 rounded-pill text-body fw-bold shadow-sm d-inline-flex align-items-center" style="font-size: 13px; gap: 6px;">
+                            <span class="text-primary">#vite-8</span> <span class="badge bg-primary text-white rounded-pill" style="font-size: 10px;">7</span>
+                        </a>
+                        <a href="tag.html" class="badge badge-light border text-decoration-none py-2 px-3 rounded-pill text-body fw-bold shadow-sm d-inline-flex align-items-center" style="font-size: 13px; gap: 6px;">
+                            <span class="text-primary">#passkeys</span> <span class="badge bg-primary text-white rounded-pill" style="font-size: 10px;">6</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Alphabetical Index -->
+                <div class="p-4 rounded-4 shadow-sm bg-surface-card border">
+                    <h2 class="h6 fw-bold text-body mb-4 d-flex align-items-center pb-2 border-bottom">
+                        <i class="fas fa-sort-alpha-down me-2 text-primary"></i> A to Z Topic Index
+                    </h2>
+
+                    <div class="d-flex flex-wrap mb-4 pb-3 border-bottom" style="gap: 6px;">
+                        <a href="#letter-A" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">A</a>
+                        <a href="#letter-D" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">D</a>
+                        <a href="#letter-K" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">K</a>
+                        <a href="#letter-L" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">L</a>
+                        <a href="#letter-P" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">P</a>
+                        <a href="#letter-V" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">V</a>
+                        <a href="#letter-Z" class="btn btn-outline-secondary btn-sm py-1 px-2 fw-bold">Z</a>
+                    </div>
+
+                    <div class="d-flex flex-column gap-4">
+                        <div id="letter-A">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">A</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section A</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#api-signing</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">4</span></a></div>
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#architecture</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">11</span></a></div>
+                            </div>
+                        </div>
+
+                        <div id="letter-D">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">D</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section D</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#dark-mode</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">8</span></a></div>
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#design-tokens</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">8</span></a></div>
+                            </div>
+                        </div>
+
+                        <div id="letter-K">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">K</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section K</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#kubernetes</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">10</span></a></div>
+                            </div>
+                        </div>
+
+                        <div id="letter-L">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">L</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section L</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#laravel-13</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">12</span></a></div>
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#latency</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">5</span></a></div>
+                            </div>
+                        </div>
+
+                        <div id="letter-P">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">P</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section P</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#passkeys</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">6</span></a></div>
+                            </div>
+                        </div>
+
+                        <div id="letter-V">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">V</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section V</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#vite-8</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">7</span></a></div>
+                            </div>
+                        </div>
+
+                        <div id="letter-Z">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bold me-2" style="width: 32px; height: 32px; font-size: 14px;">Z</span>
+                                <h3 class="h6 fw-bold mb-0 text-body">Section Z</h3>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md-4"><a href="tag.html" class="p-2 rounded bg-body-tertiary text-decoration-none text-body d-flex justify-content-between border hover-primary"><span class="small fw-bold">#zero-trust</span><span class="badge bg-secondary-subtle text-secondary rounded-pill">9</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="position-sticky" style="top: 90px;">
+                    <include src="src/partials/sidebar.html" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</layout>

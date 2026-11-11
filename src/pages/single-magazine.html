@@ -1,0 +1,73 @@
+<layout src="src/layouts/blog.html" title="Magazine Essay: Zero-Trust Passkey Authentication - Xivig Editorial" active="single-magazine" description="Serif magazine editorial essay covering WebAuthn hardware passkeys, attestation verification, and session binding.">
+<div class="xivig-reading-progress" id="articleReadingProgress"></div>
+
+<!-- Editorial Headline Header -->
+<section class="page-title py-5 border-bottom">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-9">
+                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
+                    <a href="category.html" class="badge bg-primary text-white rounded-pill px-3 py-2 text-decoration-none fw-semibold">
+                        Security &amp; Zero-Trust
+                    </a>
+                    <span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-semibold">Magazine Essay</span>
+                </div>
+                <h1 class="display-4 fw-bold text-body mb-3" style="font-family: 'Source Serif 4', Georgia, serif; letter-spacing: -0.02em;">
+                    Passwords Are Legacy Infrastructure: Engineering Enterprise Passkeys
+                </h1>
+                <p class="lead text-muted mx-auto mb-4" style="max-width: 680px;">
+                    A longform architectural analysis of FIDO2 hardware attestation, WebAuthn ceremony design, and session hardening without user friction.
+                </p>
+                <div class="d-flex justify-content-center align-items-center flex-wrap gap-4 small text-muted">
+                    <a href="author.html" class="d-inline-flex align-items-center text-decoration-none text-body fw-semibold">
+                        <img src="/src/assets/img/avatars/avatar-3.webp" alt="Julian Vance" class="rounded-circle me-2" style="width: 32px; height: 32px; object-fit: cover;">
+                        Julian Vance
+                    </a>
+                    <span><i class="far fa-calendar-alt me-1 text-primary"></i> November 08, 2026</span>
+                    <span><i class="far fa-clock me-1 text-primary"></i> 7 min essay</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <div class="rounded-4 overflow-hidden shadow mb-4">
+                    <img src="/src/assets/img/blog/fortify-passkey-security.jpg" alt="Enterprise Passkey Security" class="w-100 object-fit-cover" style="max-height: 440px;">
+                </div>
+
+                <div class="entry-content-elite fs-5 lh-lg text-body-secondary mb-5" style="font-family: 'Source Serif 4', Georgia, serif;">
+                    <div class="lead fs-4 mb-4 fw-medium text-body fst-italic p-3 rounded-3 bg-body-tertiary border-start border-4 border-primary">
+                        Public-key ceremonies move authentication guarantees out of fragile human memory and directly into origin-bound silicon.
+                    </div>
+
+                    <p>
+                        Phishing-resistant authentication starts with the cryptographic origin check enforced natively by browsers and mobile OS keychains. Unlike SMS OTPs or static TOTP secrets that an attacker proxy can relay in real time, WebAuthn signatures bind every challenge cryptographically to the verified relying party domain.
+                    </p>
+
+                    <blockquote class="p-4 my-4 rounded-4 bg-surface-card border-start border-4 border-primary shadow-sm fst-italic text-body">
+                        "Security controls only scale when the safest login path is simultaneously the fastest path for every engineer on shift."
+                    </blockquote>
+
+                    <h2 class="h3 fw-bold text-body mt-4 mb-3">Designing Progressive Passkey Enrollment</h2>
+                    <p>
+                        Rather than breaking legacy single sign-on workflows overnight, modern platforms progressively issue conditional mediation prompts immediately after verified SSO login, raising passkey adoption above 84% within sixty days.
+                    </p>
+                </div>
+
+                <include src="src/partials/share-buttons.html" />
+                <include src="src/partials/comments.html" />
+            </div>
+
+            <div class="col-lg-4">
+                <div class="position-sticky" style="top: 90px;">
+                    <include src="src/partials/sidebar.html" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</layout>

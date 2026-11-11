@@ -1,0 +1,117 @@
+<layout src="src/layouts/blog.html" title="Live Editorial Feed - Xivig Dispatches" active="feed" description="Continuous reverse-chronological engineering dispatch feed with spotlight architecture features and sidebar intelligence.">
+<section class="page-title py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <span class="badge-elite badge-elite-dark mb-2">
+                    <span class="badge-dot pulse"></span> Real-Time Editorial Feed
+                </span>
+                <h1 class="display-5 fw-bold text-body mb-1" style="letter-spacing: -0.025em;">Live Dispatch Stream</h1>
+                <p class="text-muted small mb-0">Continuous release notes, architecture advisories, and engineering commentary.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section pt-4 pb-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <!-- Featured Spotlight Block -->
+                <div class="card mb-4 border shadow-sm rounded-4 overflow-hidden bg-surface-card">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-5 h-100">
+                            <a href="blog-post.html">
+                                <img src="/src/assets/img/blog/blog-1.webp" alt="Edge Caching" class="w-100 h-100 object-fit-cover" style="min-height: 250px; max-height: 310px;">
+                            </a>
+                        </div>
+                        <div class="col-md-7 p-4">
+                            <span class="badge bg-light text-primary fw-bold py-1 px-3 mb-2" style="font-size: 12px;">Cloud &amp; Edge</span>
+                            <h2 class="h4 fw-bold mb-3">
+                                <a href="blog-post.html" class="text-body text-decoration-none">Deterministic Edge Caching with Stale-While-Revalidate</a>
+                            </h2>
+                            <p class="text-muted mb-4" style="line-height: 1.6;">
+                                Eliminating origin thunder-herds with scoped surrogate tags and async revalidation queues across 24 edge PoPs.
+                            </p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <a href="blog-post.html" class="btn-read-elite btn-sm">Read Blueprint <i class="fas fa-arrow-right ms-1"></i></a>
+                                <span class="small text-muted"><i class="far fa-eye me-1"></i> 8,920 reads</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Two Compact Sub Cards -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <div class="card p-3 h-100 shadow-sm border rounded-4 bg-surface-card d-flex flex-row align-items-center">
+                            <a href="single-magazine.html" class="flex-shrink-0 me-3" style="width: 78px; height: 78px; border-radius: 12px; overflow: hidden;">
+                                <img src="/src/assets/img/blog/blog-2.webp" alt="Telemetry" class="w-100 h-100 object-fit-cover">
+                            </a>
+                            <div class="min-w-0">
+                                <span class="badge bg-light text-primary small py-0 px-2 fw-bold">Telemetry</span>
+                                <h6 class="fw-bold mb-1 mt-1 mag-line-clamp-2"><a href="single-magazine.html" class="text-body text-decoration-none">OpenTelemetry Tail Sampling Pipelines</a></h6>
+                                <small class="text-muted"><i class="far fa-clock me-1"></i> 6m read</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card p-3 h-100 shadow-sm border rounded-4 bg-surface-card d-flex flex-row align-items-center">
+                            <a href="format-link.html" class="flex-shrink-0 me-3" style="width: 78px; height: 78px; border-radius: 12px; overflow: hidden;">
+                                <img src="/src/assets/img/blog/blog-3.webp" alt="Vite 8" class="w-100 h-100 object-fit-cover">
+                            </a>
+                            <div class="min-w-0">
+                                <span class="badge bg-light text-primary small py-0 px-2 fw-bold">Tooling</span>
+                                <h6 class="fw-bold mb-1 mt-1 mag-line-clamp-2"><a href="format-link.html" class="text-body text-decoration-none">RFC 9530 Digest Fields Reference</a></h6>
+                                <small class="text-muted"><i class="far fa-clock me-1"></i> 4m read</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continuous Stream -->
+                <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
+                    <h3 class="fw-bold mb-0 text-body h5"><i class="fas fa-stream text-primary me-2"></i> All Stream Entries</h3>
+                </div>
+
+                <div class="d-flex flex-column gap-3">
+                    <article class="card p-3 p-md-4 border rounded-4 bg-surface-card shadow-sm transition-hover">
+                        <div class="d-flex justify-content-between align-items-center mb-2 small text-muted">
+                            <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1 fw-bold">Security</span>
+                            <span>2 hours ago · 7 min read</span>
+                        </div>
+                        <h4 class="h5 fw-bold mb-2"><a href="single-magazine.html" class="text-body text-decoration-none">Zero-Trust Fortify Passkey Migration Guide</a></h4>
+                        <p class="text-muted small mb-0">Step-by-step rollout patterns for FIDO2 credentials in customer-facing portals without support ticket spikes.</p>
+                    </article>
+
+                    <article class="card p-3 p-md-4 border rounded-4 bg-surface-card shadow-sm transition-hover">
+                        <div class="d-flex justify-content-between align-items-center mb-2 small text-muted">
+                            <span class="badge bg-info bg-opacity-10 text-info rounded-pill px-2 py-1 fw-bold">Visual Essay</span>
+                            <span>Yesterday · 6 min read</span>
+                        </div>
+                        <h4 class="h5 fw-bold mb-2"><a href="format-image.html" class="text-body text-decoration-none">Tokenized UI Architecture for Multi-Brand Dark Modes</a></h4>
+                        <p class="text-muted small mb-0">Exploring layered surface tokens, WCAG AA contrast contracts, and anti-FOUC theme persistence.</p>
+                    </article>
+
+                    <article class="card p-3 p-md-4 border rounded-4 bg-surface-card shadow-sm transition-hover">
+                        <div class="d-flex justify-content-between align-items-center mb-2 small text-muted">
+                            <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-2 py-1 fw-bold">Video Studio</span>
+                            <span>3 days ago · 11 min watch</span>
+                        </div>
+                        <h4 class="h5 fw-bold mb-2"><a href="video.html" class="text-body text-decoration-none">Zero-Downtime MySQL 8.4 Blue-Green Cutovers</a></h4>
+                        <p class="text-muted small mb-0">Live walkthrough covering binlog position verification, lag throttling, and automated rollback gates.</p>
+                    </article>
+                </div>
+
+                <include src="src/partials/pagination.html" />
+            </div>
+
+            <div class="col-lg-4">
+                <div class="position-sticky" style="top: 90px;">
+                    <include src="src/partials/sidebar.html" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</layout>

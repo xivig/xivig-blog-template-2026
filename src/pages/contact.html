@@ -1,0 +1,85 @@
+<layout src="src/layouts/blog.html" title="Contact Editorial Desk - Xivig Blog" active="contact" description="Reach out to Xivig Editorial for technical tips, corrections, guest contributions, or partnership inquiries.">
+<section class="page-title py-5 border-bottom">
+    <div class="container text-center">
+        <span class="badge-elite badge-elite-dark mb-2">
+            <span class="badge-dot pulse"></span> Direct Channels
+        </span>
+        <h1 class="display-5 fw-bold text-body mb-2">Contact Xivig Editorial</h1>
+        <p class="lead text-muted mx-auto mb-0" style="max-width: 650px;">
+            Have a question, technical correction, or guest publication pitch? Our editorial desk is glad to connect.
+        </p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div id="contactSuccessAlert" class="alert alert-success d-none rounded-4 mb-4" role="alert">
+            <i class="fas fa-check-circle me-2"></i> Thank you! Your message preview has been validated cleanly in this static template demo.
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="card border shadow-sm rounded-4 p-4 p-md-5 bg-surface-card">
+                    <h2 class="h4 fw-bold mb-3 text-body">Send a Message</h2>
+                    <form id="demoContactForm">
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small text-muted" for="contactName">Full Name *</label>
+                                <input type="text" id="contactName" class="form-control form-control-elite" placeholder="Jane Doe" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small text-muted" for="contactEmail">Email Address *</label>
+                                <input type="email" id="contactEmail" class="form-control form-control-elite" placeholder="jane@company.com" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold small text-muted" for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" class="form-control form-control-elite" placeholder="Editorial Inquiry / Technical Tip">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-bold small text-muted" for="contactMessage">Your Message *</label>
+                            <textarea id="contactMessage" rows="5" class="form-control form-control-elite" placeholder="Describe your inquiry..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-elite btn-elite-primary px-4">
+                            <i class="fas fa-paper-plane me-2"></i> Dispatch Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="card border shadow-sm rounded-4 p-4 p-md-5 bg-surface-card h-100">
+                    <h2 class="h4 fw-bold mb-4 text-body">Contact Information</h2>
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 44px; height: 44px;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1 text-body">Global Headquarters</h6>
+                            <p class="text-muted small mb-0">XIVIG Maison Tech Hub, Boulevard Haussmann, Paris, France</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 44px; height: 44px;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1 text-body">Editorial Support</h6>
+                            <p class="text-muted small mb-0">hello@xivig.com</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <div class="rounded-circle bg-info text-white d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 44px; height: 44px;">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1 text-body">Response Window</h6>
+                            <p class="text-muted small mb-0">Monday – Friday: 08:00 - 18:00 UTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</layout>

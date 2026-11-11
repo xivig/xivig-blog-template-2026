@@ -1,0 +1,81 @@
+<div class="comments-area-wrapper mt-5 pt-4 border-top" id="comments">
+    <h3 class="mb-4 fw-bold text-body" style="font-size: 1.5rem;">
+        Community Discussion (<span id="commentsTotalCount">2</span>)
+    </h3>
+
+    <div class="comments-list mb-5 d-flex flex-column gap-4" id="commentsListContainer">
+        <!-- Comment 1 with nested reply -->
+        <div class="comment-thread-group p-4 bg-body-tertiary rounded-4 border border-light-subtle">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+                <div class="d-flex align-items-center">
+                    <img src="/src/assets/img/avatars/avatar-2.webp" alt="Elena Vance" class="rounded-circle me-3" style="width: 44px; height: 44px; object-fit: cover;">
+                    <div>
+                        <h6 class="fw-bold mb-0 text-body">Elena Vance</h6>
+                        <small class="text-muted"><i class="far fa-clock me-1"></i> 4 hours ago</small>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 js-comment-like" data-count="14">
+                    <i class="far fa-thumbs-up me-1"></i> <span>14</span>
+                </button>
+            </div>
+            <p class="text-body-secondary mb-3" style="line-height: 1.65;">
+                Splitting worker pools by latency SLO instead of endpoint prefix reduced our p99 checkout latency from 420ms to 68ms in staging.
+            </p>
+            <div class="ms-4 ps-3 border-start border-2 border-primary">
+                <div class="d-flex align-items-center mb-1">
+                    <img src="/src/assets/img/avatars/avatar-1.webp" alt="Aria Alchemist" class="rounded-circle me-2" style="width: 30px; height: 30px; object-fit: cover;">
+                    <span class="fw-bold text-primary small me-2">Aria Alchemist (Author)</span>
+                    <small class="text-muted" style="font-size: 11px;">2 hours ago</small>
+                </div>
+                <p class="small text-body-secondary mb-0">
+                    Glad that pattern translated cleanly! Pairing dedicated Octane tables for hot configuration state gives another ~15% headroom under spike loads.
+                </p>
+            </div>
+        </div>
+
+        <!-- Comment 2 -->
+        <div class="comment-thread-group p-4 bg-body-tertiary rounded-4 border border-light-subtle">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+                <div class="d-flex align-items-center">
+                    <img src="/src/assets/img/avatars/avatar-4.webp" alt="Marcus Thorne" class="rounded-circle me-3" style="width: 44px; height: 44px; object-fit: cover;">
+                    <div>
+                        <h6 class="fw-bold mb-0 text-body">Marcus Thorne</h6>
+                        <small class="text-muted"><i class="far fa-clock me-1"></i> 1 day ago</small>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 js-comment-like" data-count="9">
+                    <i class="far fa-thumbs-up me-1"></i> <span>9</span>
+                </button>
+            </div>
+            <p class="text-body-secondary mb-0" style="line-height: 1.65;">
+                Are there plans to publish Terraform modules for the edge cache invalidation workers shown in Section 3?
+            </p>
+        </div>
+    </div>
+
+    <!-- Interactive Demo Comment Composer -->
+    <div class="comment-form-card p-4 p-md-5 bg-surface-card border rounded-4 shadow-sm">
+        <h4 class="fw-bold mb-2 text-body">Leave a Technical Note</h4>
+        <p class="text-muted small mb-4">Appends directly into the thread preview below to demonstrate interactive comment state.</p>
+
+        <form id="demoCommentForm">
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold small text-muted" for="commentAuthorInput">Name *</label>
+                    <input type="text" id="commentAuthorInput" class="form-control form-control-elite" placeholder="Dr. Samira Patel" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold small text-muted" for="commentEmailInput">Email *</label>
+                    <input type="email" id="commentEmailInput" class="form-control form-control-elite" placeholder="samira@engineering.dev" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-semibold small text-muted" for="commentBodyInput">Comment *</label>
+                <textarea id="commentBodyInput" rows="4" class="form-control form-control-elite" placeholder="Share benchmark results or architecture feedback..." required></textarea>
+            </div>
+            <button type="submit" class="btn-elite btn-elite-primary px-4">
+                <i class="fas fa-paper-plane me-2"></i> Post Comment
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,125 @@
+<header class="navigation">
+    <!-- Top Header Utility Bar -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- Left: Social Icons & Engine Badge -->
+                <div class="col-auto d-flex align-items-center">
+                    <div class="header-top-socials">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://x.com/xivig" target="_blank" rel="noopener noreferrer" aria-label="X" title="Follow on X">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="https://github.com/xivig" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                    <span class="badge-v13 ms-3 d-none d-sm-inline-flex">
+                        <span class="badge-dot pulse"></span> v13 Engine
+                    </span>
+                </div>
+
+                <!-- Right: Quick Nav, Theme Switcher & Actions -->
+                <div class="col-auto text-end">
+                    <div class="d-inline-flex align-items-center header-top-right">
+                        <a href="feed.html" class="top-util-link me-3 d-none d-md-inline-flex">
+                            <i class="bi bi-lightning-charge me-1 text-primary"></i> Live Feed
+                        </a>
+                        <a href="contact.html" class="top-util-link me-3 d-none d-sm-inline-flex">
+                            <i class="bi bi-envelope me-1 text-primary"></i> Contact
+                        </a>
+                        <span class="top-util-divider me-3 d-none d-sm-inline-block"></span>
+
+                        <!-- Dark/Light Mode Switcher -->
+                        <button type="button" id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Dark / Light Mode" aria-label="Toggle dark/light mode">
+                            <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
+                            <i class="bi bi-sun-fill theme-icon-light" style="display: none;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Primary Editorial Navbar -->
+    <nav class="navbar navbar-expand-lg py-3" id="navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-decoration-none" href="index.html">
+                <span class="brand-text-gradient">Xivig</span>
+                <span class="badge bg-primary bg-opacity-10 text-primary ms-2 rounded-pill fw-semibold" style="font-size: 11px;">Editorial</span>
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMain"
+                aria-controls="navbarsMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="ti-menu"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsMain">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item" data-li-nav="index,magazine">
+                        <a class="nav-link" href="index.html" data-nav="index,magazine">Magazine</a>
+                    </li>
+                    <li class="nav-item" data-li-nav="blog-list">
+                        <a class="nav-link" href="blog-list.html" data-nav="blog-list">Catalog</a>
+                    </li>
+
+                    <!-- Rich 3-Column Editorial Mega-Menu -->
+                    <include src="src/partials/mega-menu.html" />
+
+                    <li class="nav-item" data-li-nav="gallery">
+                        <a class="nav-link" href="gallery.html" data-nav="gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item" data-li-nav="video">
+                        <a class="nav-link" href="video.html" data-nav="video">Videos</a>
+                    </li>
+                    <li class="nav-item dropdown pages-dropdown" data-li-nav="about,contact,privacy,terms">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" data-nav="about,contact,privacy,terms">
+                            Pages <i class="bi bi-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-elite pages-dropdown-menu shadow-lg" aria-labelledby="dropdownPages">
+                            <div class="dropdown-header blog-mega-heading text-uppercase fw-bold px-2 pt-1 pb-2" style="color: #6366f1;">
+                                <i class="bi bi-file-earmark-richtext me-1"></i> Editorial Pages
+                            </div>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="about.html" data-nav="about">
+                                <i class="fas fa-info-circle text-primary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">About Editorial</span>
+                                    <small class="text-muted" style="font-size: 11px;">Mission &amp; collective</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="contact.html" data-nav="contact">
+                                <i class="fas fa-envelope text-success me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Contact Desk</span>
+                                    <small class="text-muted" style="font-size: 11px;">Tips &amp; inquiries</small>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider my-1">
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="privacy.html" data-nav="privacy">
+                                <i class="fas fa-shield-alt text-secondary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Privacy Policy</span>
+                                    <small class="text-muted" style="font-size: 11px;">Data compliance</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item py-2 px-2 rounded-3 d-flex align-items-center" href="terms.html" data-nav="terms">
+                                <i class="fas fa-file-contract text-secondary me-3" style="font-size: 14px; width: 18px; text-align: center;"></i>
+                                <div>
+                                    <span class="d-block fw-bold" style="font-size: 13.5px;">Terms &amp; Conditions</span>
+                                    <small class="text-muted" style="font-size: 11px;">Usage &amp; licensing</small>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a href="feed.html" class="btn-elite btn-elite-primary btn-sm" style="padding: 8px 18px; font-size: 13px;">
+                            <i class="fas fa-bolt me-1"></i> Live Stream
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,85 @@
+/* Hero Section (Slider) */
+.slider {
+  position: relative;
+  background: #090d16 !important;
+  background-image: var(--gradient-mesh) !important;
+  padding: 64px 0 56px 0;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    padding: 44px 0;
+  }
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(79, 70, 229, 0.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.slider .block h1 {
+  font-size: 3.5rem;
+  line-height: 1.15;
+  color: #ffffff;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.slider .block p {
+  color: #94a3b8;
+  font-size: 1.15rem;
+  max-width: 650px;
+  margin-bottom: 24px;
+}
+
+
+/* ==========================================================================
+   GLOBAL SECTION & PAGE-TITLE VERTICAL RHYTHM NORMALIZATION
+   Cures legacy style.css `.section { padding: 100px 0; }` & bloated banner voids
+   ========================================================================== */
+.section {
+  padding: 28px 0;
+}
+
+.section + .section {
+  padding-top: 24px;
+}
+
+.section.pb-5 {
+  padding-top: 24px !important;
+}
+
+.section-title {
+  margin-bottom: 0;
+}
+
+.about-content {
+  padding: 0;
+}
+
+.about-content h4::before,
+.about-content h4:before {
+  content: none;
+  display: none;
+}
+
+footer.footer {
+  padding: 40px 0 24px 0;
+}
+
+.page-title {
+  padding: 36px 0;
+}
+
+.page-title.page-title-compact {
+  padding: 14px 0 !important;
+}
+
+.page-title + .section {
+  padding-top: 28px !important;
+}
+

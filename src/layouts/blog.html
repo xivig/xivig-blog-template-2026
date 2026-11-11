@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light" data-theme="light">
+<include src="src/partials/head.html" />
+<body class="full-page-body" data-page="{{ active }}">
+<div class="xivig-page-wrapper">
+    <include src="src/partials/header.html" />
+
+    <main class="xivig-main-content">
+        <slot />
+    </main>
+
+    <include src="src/partials/footer.html" />
+</div>
+
+<include src="src/partials/scripts.html" />
+<slot name="scripts" />
+</body>
+</html>

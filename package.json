@@ -1,0 +1,28 @@
+{
+  "name": "xivig-blog-template-2026",
+  "version": "1.0.0",
+  "description": "Xivig Editorial & Blog Template — modular HTML, dark/light theme engine, magazine portal, multi-format articles, and Vite + Sass build pipeline",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "validate": "node scripts/validate-dist.mjs"
+  },
+  "keywords": [
+    "xivig",
+    "blog-template",
+    "magazine-template",
+    "bootstrap-5",
+    "vite",
+    "sass",
+    "dark-mode",
+    "editorial"
+  ],
+  "author": "Xivig Engineering",
+  "license": "MIT",
+  "devDependencies": {
+    "sass-embedded": "^1.108.1",
+    "vite": "^8.3.6"
+  }
+}

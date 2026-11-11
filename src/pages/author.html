@@ -1,0 +1,93 @@
+<layout src="src/layouts/blog.html" title="Author: Aria Alchemist - Articles & Contributions - Xivig Editorial" active="author" description="Author profile and published system architecture articles by Aria Alchemist.">
+<section class="page-title page-title-compact py-3">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent p-0 mb-0 small">
+                <li class="breadcrumb-item"><a href="index.html" class="text-muted">Magazine</a></li>
+                <li class="breadcrumb-item"><a href="authors.html" class="text-muted">Authors</a></li>
+                <li class="breadcrumb-item active text-primary" aria-current="page">Aria Alchemist</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<section class="section pt-4 pb-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <!-- Author Profile Bio Card -->
+                <div class="card bg-surface-card p-4 p-md-5 mb-4 shadow-sm border rounded-4 text-center">
+                    <div class="mb-3 position-relative d-inline-block mx-auto">
+                        <img src="/src/assets/img/avatars/avatar-1.webp" alt="Aria Alchemist" class="rounded-circle shadow" style="width: 116px; height: 116px; object-fit: cover; border: 4px solid #6366f1;">
+                        <span class="position-absolute bottom-0 end-0 bg-success rounded-circle" style="width: 18px; height: 18px; border: 3px solid #ffffff; right: 6px; bottom: 6px;" title="Verified Author"></span>
+                    </div>
+
+                    <h1 class="h2 fw-bold mb-1 text-body">Aria Alchemist</h1>
+                    <p class="text-primary fw-bold small mb-2 text-uppercase">Principal Systems Architect &amp; Contributing Editor</p>
+                    <p class="text-muted mx-auto mb-4" style="max-width: 580px; font-size: 15px; line-height: 1.6;">
+                        Senior engineering contributor specializing in distributed cloud infrastructure, high-throughput Laravel Octane pools, and zero-trust authentication systems.
+                    </p>
+
+                    <div class="d-flex align-items-center justify-content-center flex-wrap mb-4" style="gap: 12px;">
+                        <span class="badge badge-light p-2 px-3 fw-bold text-muted border"><i class="fas fa-file-alt text-primary me-1"></i> 14 Publications</span>
+                        <span class="badge badge-light p-2 px-3 fw-bold text-muted border"><i class="fas fa-eye text-primary me-1"></i> 84,210 Reads</span>
+                        <span class="badge badge-light p-2 px-3 fw-bold text-muted border"><i class="fas fa-certificate text-warning me-1"></i> Core Fellow</span>
+                    </div>
+
+                    <div class="d-flex justify-content-center" style="gap: 10px;">
+                        <a href="https://x.com/xivig" target="_blank" rel="noopener noreferrer" class="share-circle-btn share-x" title="Follow on X" aria-label="Follow on X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="share-circle-btn share-linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/xivig" target="_blank" rel="noopener noreferrer" class="share-circle-btn share-x" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Author Articles -->
+                <div class="d-flex align-items-center justify-content-between mb-4 pb-2 border-bottom">
+                    <h2 class="h4 fw-bold mb-0 text-body"><i class="fas fa-feather-alt text-primary me-2"></i> Publications by Aria Alchemist</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <article class="blog-item-elite h-100">
+                            <div class="blog-img-wrap-elite" style="height: 185px;">
+                                <a href="blog-post.html"><img loading="lazy" src="/src/assets/img/blog/laravel-hyperscale-architecture.jpg" alt="Laravel 13 Hyperscale"></a>
+                                <div class="blog-card-badges"><span class="badge-elite-pinned">Pinned</span></div>
+                            </div>
+                            <div class="blog-card-body-elite p-4">
+                                <h3 class="blog-card-title-elite h5 mb-2"><a href="blog-post.html">Laravel 13 Hyperscale Octane Blueprints</a></h3>
+                                <p class="blog-card-excerpt-elite mb-3">Isolated worker pools and deterministic edge routing patterns.</p>
+                                <div class="blog-card-footer-elite pt-3">
+                                    <a href="blog-post.html" class="btn-read-elite">Read Article <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <span class="small text-muted">18.4k views</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <article class="blog-item-elite h-100">
+                            <div class="blog-img-wrap-elite" style="height: 185px;">
+                                <a href="feed.html"><img loading="lazy" src="/src/assets/img/blog/blog-1.webp" alt="Edge Caching"></a>
+                                <div class="blog-card-badges"><span class="badge-elite-category">Cloud</span></div>
+                            </div>
+                            <div class="blog-card-body-elite p-4">
+                                <h3 class="blog-card-title-elite h5 mb-2"><a href="feed.html">Deterministic Edge Caching with Stale Revalidation</a></h3>
+                                <p class="blog-card-excerpt-elite mb-3">Surrogate cache purging without origin stampedes across 24 edge PoPs.</p>
+                                <div class="blog-card-footer-elite pt-3">
+                                    <a href="feed.html" class="btn-read-elite">Read Brief <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <span class="small text-muted">8.9k views</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="position-sticky" style="top: 90px;">
+                    <include src="src/partials/sidebar.html" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</layout>

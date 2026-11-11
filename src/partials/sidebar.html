@@ -1,0 +1,275 @@
+<aside class="blog-sidebar-elite w-100">
+    <!-- 1. Search Insights Widget -->
+    <div class="sidebar-widget-card mb-4">
+        <h5 class="sidebar-card-title">
+            <i class="fas fa-search me-2 text-primary"></i> Search Insights
+        </h5>
+        <div class="position-relative w-100" id="sidebarSearchWrapper" data-fallback-avatar="/src/assets/img/avatar.png">
+            <form action="blog-list.html" method="GET" class="position-relative w-100 mb-0" id="sidebarSearchForm">
+                <input type="text" name="search" id="sidebarSearchInput" class="form-control form-control-elite"
+                    style="border-radius: 999px; padding-right: 52px; height: 46px; font-size: 14px;"
+                    placeholder="Search articles, topics..." autocomplete="off">
+                <button type="submit" class="btn-elite btn-elite-primary btn-sm position-absolute"
+                    style="top: 50%; right: 5px; transform: translateY(-50%); border-radius: 999px; height: 36px; width: 36px; padding: 0; display: inline-flex; align-items: center; justify-content: center; z-index: 5;"
+                    title="Search" aria-label="Search Articles">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+            <!-- Floating Live Autocomplete Dropdown -->
+            <div id="sidebarAutocompleteDropdown" class="card border shadow-lg rounded-4 p-3 position-absolute w-100 d-none" style="top: 52px; left: 0; z-index: 1050; max-height: 400px; overflow-y: auto;">
+                <div id="autocompleteResultsContent"></div>
+            </div>
+        </div>
+
+        <!-- Popular Search Terms -->
+        <div class="d-flex flex-wrap align-items-center mt-3" style="gap: 5px;">
+            <small class="text-muted me-1" style="font-size: 11px;"><i class="fas fa-fire text-danger me-1"></i> Popular:</small>
+            <a href="blog-list.html?search=Laravel" class="badge badge-light border text-muted px-2 py-1 small text-decoration-none" style="font-size: 11px; border-radius: 999px;">Laravel</a>
+            <a href="blog-list.html?search=Passkey" class="badge badge-light border text-muted px-2 py-1 small text-decoration-none" style="font-size: 11px; border-radius: 999px;">Passkeys</a>
+            <a href="blog-list.html?search=Architecture" class="badge badge-light border text-muted px-2 py-1 small text-decoration-none" style="font-size: 11px; border-radius: 999px;">Architecture</a>
+            <a href="blog-list.html?search=Zero-Trust" class="badge badge-light border text-muted px-2 py-1 small text-decoration-none" style="font-size: 11px; border-radius: 999px;">Zero-Trust</a>
+        </div>
+    </div>
+
+    <!-- 2. Interactive Tabs Widget: Popular / Recent / Comments -->
+    <div class="sidebar-widget-card mb-4">
+        <ul class="nav nav-tabs nav-tabs-elite" id="sidebarStoryTabs" role="tablist">
+            <li class="nav-item flex-fill text-center" role="presentation">
+                <button class="nav-link active w-100" id="tab-popular-btn" data-bs-toggle="tab" data-bs-target="#tab-popular" type="button" role="tab" aria-controls="tab-popular" aria-selected="true">
+                    <i class="fas fa-fire me-1 text-danger"></i> Popular
+                </button>
+            </li>
+            <li class="nav-item flex-fill text-center" role="presentation">
+                <button class="nav-link w-100" id="tab-recent-btn" data-bs-toggle="tab" data-bs-target="#tab-recent" type="button" role="tab" aria-controls="tab-recent" aria-selected="false">
+                    <i class="far fa-clock me-1 text-primary"></i> Recent
+                </button>
+            </li>
+            <li class="nav-item flex-fill text-center" role="presentation">
+                <button class="nav-link w-100" id="tab-comments-btn" data-bs-toggle="tab" data-bs-target="#tab-comments" type="button" role="tab" aria-controls="tab-comments" aria-selected="false">
+                    <i class="far fa-comments me-1 text-success"></i> Replies
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content pt-3" id="sidebarStoryTabsContent">
+            <!-- Popular Stories Tab -->
+            <div class="tab-pane fade show active" id="tab-popular" role="tabpanel" aria-labelledby="tab-popular-btn">
+                <div class="d-flex flex-column" style="gap: 14px;">
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="blog-post.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="/src/assets/img/blog/laravel-hyperscale-architecture.jpg" alt="Laravel 13 Hyperscale Architecture" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge badge-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Cloud</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="blog-post.html" class="text-body text-decoration-none sidebar-article-title">Laravel 13 Hyperscale Octane Blueprints</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-eye me-1"></i> 18,420</span>
+                                <span><i class="far fa-clock me-1"></i> 8m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="single-magazine.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="/src/assets/img/blog/fortify-passkey-security.jpg" alt="Zero-Trust Passkey Authentication" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge badge-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Security</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="single-magazine.html" class="text-body text-decoration-none sidebar-article-title">Zero-Trust Fortify Passkey Migration Guide</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-eye me-1"></i> 14,190</span>
+                                <span><i class="far fa-clock me-1"></i> 7m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="format-image.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="/src/assets/img/blog/reactive-ui-engineering.jpg" alt="Reactive UI Design Tokens" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge badge-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Design Systems</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="format-image.html" class="text-body text-decoration-none sidebar-article-title">Tokenized UI Architecture for Multi-Brand Systems</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-eye me-1"></i> 11,860</span>
+                                <span><i class="far fa-clock me-1"></i> 6m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Stories Tab -->
+            <div class="tab-pane fade" id="tab-recent" role="tabpanel" aria-labelledby="tab-recent-btn">
+                <div class="d-flex flex-column" style="gap: 14px;">
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="feed.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="/src/assets/img/blog/blog-1.webp" alt="Deterministic Edge Caching" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge badge-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Cloud</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="feed.html" class="text-body text-decoration-none sidebar-article-title">Deterministic Edge Caching with Stale Revalidation</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-calendar-alt me-1"></i> Nov 09</span>
+                                <span><i class="far fa-clock me-1"></i> 5m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="video.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="/src/assets/img/blog/video-feature-fallback.jpg" alt="Zero-Downtime MySQL Cutovers" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge badge-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Database</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="video.html" class="text-body text-decoration-none sidebar-article-title">Zero-Downtime MySQL 8.4 Blue-Green Cutovers</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-calendar-alt me-1"></i> Nov 06</span>
+                                <span><i class="far fa-clock me-1"></i> 11m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-mini-article d-flex align-items-start">
+                        <a href="format-link.html" class="flex-shrink-0 me-3" style="width: 64px; height: 54px; border-radius: 10px; overflow: hidden; display: block;">
+                            <img loading="lazy" src="/src/assets/img/blog/bookmark-link-fallback.jpg" alt="RFC 9530 Digest Auth" class="w-100 h-100 object-fit-cover">
+                        </a>
+                        <div class="flex-grow-1" style="min-width: 0; width: 0;">
+                            <span class="badge badge-light text-primary small py-1 px-2 fw-bold sidebar-category-badge" style="font-size: 11px;">Specs</span>
+                            <h6 class="mb-1 mt-1 fw-bold">
+                                <a href="format-link.html" class="text-body text-decoration-none sidebar-article-title">RFC 9530 Digest Fields &amp; Signing Standard</a>
+                            </h6>
+                            <div class="small text-muted d-flex align-items-center" style="gap: 10px; font-size: 11.5px;">
+                                <span><i class="far fa-calendar-alt me-1"></i> Nov 02</span>
+                                <span><i class="far fa-clock me-1"></i> 4m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments Tab -->
+            <div class="tab-pane fade" id="tab-comments" role="tabpanel" aria-labelledby="tab-comments-btn">
+                <div class="d-flex flex-column" style="gap: 12px;">
+                    <div class="p-2 rounded bg-body-tertiary border border-light-subtle">
+                        <div class="d-flex align-items-center mb-1 flex-wrap gap-2">
+                            <span class="badge bg-secondary py-1 px-2 text-truncate" style="font-size: 10px; max-width: 140px;">
+                                <i class="far fa-user me-1"></i> Elena Vance
+                            </span>
+                            <small class="text-muted" style="font-size: 11px;">4h ago</small>
+                        </div>
+                        <p class="mb-1 small text-body fst-italic" style="font-size: 12.5px; line-height: 1.4;">"The Octane memory isolation checklist eliminated our worker drift completely."</p>
+                        <a href="blog-post.html#comments" class="small text-primary fw-bold text-decoration-none d-block text-truncate" style="font-size: 11.5px;">
+                            on Laravel 13 Hyperscale <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="p-2 rounded bg-body-tertiary border border-light-subtle">
+                        <div class="d-flex align-items-center mb-1 flex-wrap gap-2">
+                            <span class="badge bg-secondary py-1 px-2 text-truncate" style="font-size: 10px; max-width: 140px;">
+                                <i class="far fa-user me-1"></i> Marcus Thorne
+                            </span>
+                            <small class="text-muted" style="font-size: 11px;">1d ago</small>
+                        </div>
+                        <p class="mb-1 small text-body fst-italic" style="font-size: 12.5px; line-height: 1.4;">"WebAuthn attestation examples made hardware passkey testing effortless."</p>
+                        <a href="single-magazine.html#comments" class="small text-primary fw-bold text-decoration-none d-block text-truncate" style="font-size: 11.5px;">
+                            on Zero-Trust Passkey Guide <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Topic Categories Widget -->
+    <div class="sidebar-widget-card mb-4">
+        <h5 class="sidebar-card-title">
+            <i class="fas fa-folder-open me-2 text-primary"></i> Topic Categories
+        </h5>
+        <div class="d-flex flex-column" style="gap: 8px;">
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">Cloud &amp; Infrastructure</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">14</span>
+            </a>
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">Security &amp; Zero-Trust</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">11</span>
+            </a>
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">Frontend &amp; Design Systems</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">9</span>
+            </a>
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">AI Systems &amp; Telemetry</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">8</span>
+            </a>
+            <a href="category.html" class="sidebar-cat-row d-flex align-items-center justify-content-between p-2 rounded text-decoration-none">
+                <span class="d-inline-flex align-items-center fw-bold text-truncate me-2" style="font-size: 13.5px; color: inherit;">
+                    <i class="fas fa-chevron-right me-2 text-muted flex-shrink-0" style="font-size: 10px;"></i>
+                    <span class="text-truncate">Database Engineering</span>
+                </span>
+                <span class="badge badge-elite-count flex-shrink-0">6</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 4. Trending Tags Cloud -->
+    <div class="sidebar-widget-card mb-4">
+        <h5 class="sidebar-card-title">
+            <i class="fas fa-tags me-2 text-primary"></i> Trending Tags
+        </h5>
+        <div class="d-flex flex-wrap" style="gap: 8px;">
+            <a href="tag.html" class="sidebar-tag-chip">#laravel-13 <span class="tag-chip-count">12</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#zero-trust <span class="tag-chip-count">9</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#vite-8 <span class="tag-chip-count">7</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#kubernetes <span class="tag-chip-count">10</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#passkeys <span class="tag-chip-count">6</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#mysql-tuning <span class="tag-chip-count">5</span></a>
+            <a href="tag.html" class="sidebar-tag-chip">#design-tokens <span class="tag-chip-count">8</span></a>
+            <a href="tags.html" class="sidebar-tag-chip text-primary fw-bold">All Tags &rarr;</a>
+        </div>
+    </div>
+
+    <!-- 5. Newsletter Dispatch Widget -->
+    <div class="sidebar-widget-card sidebar-newsletter-card mb-4 text-center">
+        <div class="mb-3">
+            <div class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width: 52px; height: 52px; box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);">
+                <i class="fas fa-paper-plane" style="font-size: 1.25rem;"></i>
+            </div>
+        </div>
+        <h5 class="fw-bold mb-2 text-body">Engineering Dispatch</h5>
+        <p class="text-muted small mb-3">Join 15,000+ developers receiving weekly system blueprints and security updates.</p>
+        <form class="js-newsletter-form" data-feedback="sidebarNewsletterMsg">
+            <div class="input-group mb-2">
+                <input type="email" name="email" class="form-control form-control-elite" placeholder="name@company.com" required style="border-radius: 999px 0 0 999px; height: 44px; font-size: 13.5px;">
+                <button class="btn-elite btn-elite-primary btn-sm px-3 fw-bold" type="submit" style="border-radius: 0 999px 999px 0; height: 44px;">
+                    Join
+                </button>
+            </div>
+            <div id="sidebarNewsletterMsg" class="small text-success fw-semibold d-none mt-2"></div>
+        </form>
+    </div>
+</aside>

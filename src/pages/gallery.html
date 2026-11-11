@@ -1,0 +1,145 @@
+<layout src="src/layouts/blog.html" title="Living Photo & Visual Gallery - Xivig Editorial" active="gallery" description="Interactive photography archive, system topology diagrams, and architecture plates with cinema modal lightbox.">
+<section class="page-title py-4">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div>
+                <span class="badge-elite badge-elite-dark mb-2">
+                    <span class="badge-dot pulse"></span> Curated Visual Archive
+                </span>
+                <h1 class="display-5 fw-bold text-body mb-1" style="letter-spacing: -0.025em;">Living Gallery &amp; Diagrams</h1>
+                <p class="text-muted small mb-0">High-resolution hardware setups, cluster topology blueprints, and design plates.</p>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+                <button type="button" class="btn-elite-pill js-gallery-filter active" data-filter="all">All Plates</button>
+                <button type="button" class="btn-elite-pill js-gallery-filter" data-filter="architecture">Architecture</button>
+                <button type="button" class="btn-elite-pill js-gallery-filter" data-filter="design">Design Systems</button>
+                <button type="button" class="btn-elite-pill js-gallery-filter" data-filter="hardware">Security &amp; Enclaves</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section py-5">
+    <div class="container">
+        <div class="row g-4" id="livingGalleryGrid">
+            <div class="col-sm-6 col-lg-4 js-gallery-item" data-category="architecture">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-surface-card transition-hover">
+                    <div class="position-relative" style="height: 240px; cursor: pointer;" onclick="openGalleryLightbox('/src/assets/img/gallery/gallery-thumb-1.webp', 'Distributed worker clusters pinned across isolated memory bounds.', 'Multi-Region Worker Topology', 'blog-post.html')">
+                        <img src="/src/assets/img/gallery/gallery-thumb-1.webp" alt="Worker Topology" class="w-100 h-100 object-fit-cover">
+                        <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 start-0 m-3 px-2 py-1" style="font-size: 11px;">Architecture</span>
+                    </div>
+                    <div class="p-3 d-flex align-items-center justify-content-between">
+                        <div>
+                            <h5 class="h6 fw-bold mb-1 text-body">Multi-Region Worker Topology</h5>
+                            <span class="text-muted small">Cloud Architecture</span>
+                        </div>
+                        <a href="blog-post.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">Story</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 js-gallery-item" data-category="design">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-surface-card transition-hover">
+                    <div class="position-relative" style="height: 240px; cursor: pointer;" onclick="openGalleryLightbox('/src/assets/img/gallery/gallery-thumb-2.webp', 'Adaptive surface luminance scale verified across WCAG AA checkpoints.', 'Tokenized Contrast Matrix', 'format-image.html')">
+                        <img src="/src/assets/img/gallery/gallery-thumb-2.webp" alt="Tokenized Contrast Matrix" class="w-100 h-100 object-fit-cover">
+                        <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 start-0 m-3 px-2 py-1" style="font-size: 11px;">Design Systems</span>
+                    </div>
+                    <div class="p-3 d-flex align-items-center justify-content-between">
+                        <div>
+                            <h5 class="h6 fw-bold mb-1 text-body">Tokenized Contrast Matrix</h5>
+                            <span class="text-muted small">Visual Essay</span>
+                        </div>
+                        <a href="format-image.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">Essay</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 js-gallery-item" data-category="hardware">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-surface-card transition-hover">
+                    <div class="position-relative" style="height: 240px; cursor: pointer;" onclick="openGalleryLightbox('/src/assets/img/gallery/gallery-thumb-3.webp', 'FIDO2 hardware enclave provisioning workflow inside zero-trust admin zones.', 'Hardware Passkey Enclave', 'single-magazine.html')">
+                        <img src="/src/assets/img/gallery/gallery-thumb-3.webp" alt="Passkey Enclave" class="w-100 h-100 object-fit-cover">
+                        <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 start-0 m-3 px-2 py-1" style="font-size: 11px;">Security</span>
+                    </div>
+                    <div class="p-3 d-flex align-items-center justify-content-between">
+                        <div>
+                            <h5 class="h6 fw-bold mb-1 text-body">Hardware Passkey Enclave</h5>
+                            <span class="text-muted small">Zero-Trust</span>
+                        </div>
+                        <a href="single-magazine.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">Essay</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 js-gallery-item" data-category="architecture">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-surface-card transition-hover">
+                    <div class="position-relative" style="height: 240px; cursor: pointer;" onclick="openGalleryLightbox('/src/assets/img/gallery/gallery-thumb-4.webp', 'Flamegraph trace correlation identifying cold cache contention.', 'Flamegraph Latency Trace', 'feed.html')">
+                        <img src="/src/assets/img/gallery/gallery-thumb-4.webp" alt="Flamegraph Latency Trace" class="w-100 h-100 object-fit-cover">
+                        <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 start-0 m-3 px-2 py-1" style="font-size: 11px;">Architecture</span>
+                    </div>
+                    <div class="p-3 d-flex align-items-center justify-content-between">
+                        <div>
+                            <h5 class="h6 fw-bold mb-1 text-body">Flamegraph Latency Trace</h5>
+                            <span class="text-muted small">Telemetry</span>
+                        </div>
+                        <a href="feed.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">Brief</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 js-gallery-item" data-category="design">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-surface-card transition-hover">
+                    <div class="position-relative" style="height: 240px; cursor: pointer;" onclick="openGalleryLightbox('/src/assets/img/gallery/gallery-thumb-5.webp', 'Editorial headline modular grid rhythm on desktop viewports.', 'Magazine Grid Anatomy', 'index.html')">
+                        <img src="/src/assets/img/gallery/gallery-thumb-5.webp" alt="Magazine Grid Anatomy" class="w-100 h-100 object-fit-cover">
+                        <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 start-0 m-3 px-2 py-1" style="font-size: 11px;">Design Systems</span>
+                    </div>
+                    <div class="p-3 d-flex align-items-center justify-content-between">
+                        <div>
+                            <h5 class="h6 fw-bold mb-1 text-body">Magazine Grid Anatomy</h5>
+                            <span class="text-muted small">Layout Study</span>
+                        </div>
+                        <a href="index.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">Portal</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 js-gallery-item" data-category="hardware">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-surface-card transition-hover">
+                    <div class="position-relative" style="height: 240px; cursor: pointer;" onclick="openGalleryLightbox('/src/assets/img/gallery/gallery-thumb-6.webp', 'Blue-green replication verification console during cutover testing.', 'Replication Verification Console', 'video.html')">
+                        <img src="/src/assets/img/gallery/gallery-thumb-6.webp" alt="Replication Console" class="w-100 h-100 object-fit-cover">
+                        <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 start-0 m-3 px-2 py-1" style="font-size: 11px;">Database</span>
+                    </div>
+                    <div class="p-3 d-flex align-items-center justify-content-between">
+                        <div>
+                            <h5 class="h6 fw-bold mb-1 text-body">Replication Console Plate</h5>
+                            <span class="text-muted small">Video Studio</span>
+                        </div>
+                        <a href="video.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">Watch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Modal Lightbox -->
+<div class="modal fade" id="galleryLightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 overflow-hidden bg-surface-card shadow-lg">
+            <div class="modal-header border-bottom">
+                <div>
+                    <h5 class="modal-title fw-bold text-body mb-0" id="lightboxSubtitle">Plate Preview</h5>
+                    <small class="text-muted" id="lightboxCaption"></small>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0 bg-dark text-center">
+                <img id="lightboxImg" src="/src/assets/img/gallery/gallery-thumb-1.webp" alt="Lightbox preview" class="img-fluid" style="max-height: 70vh; object-fit: contain;">
+            </div>
+            <div class="modal-footer border-top d-flex justify-content-between">
+                <a href="blog-post.html" id="lightboxPostLink" class="btn-elite btn-elite-primary btn-sm">Open Related Article <i class="fas fa-arrow-right ms-1"></i></a>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</layout>
