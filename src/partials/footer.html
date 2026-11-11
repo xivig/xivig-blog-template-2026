@@ -31,9 +31,13 @@
                 <div class="widget mb-4 mb-lg-0">
                     <h4 class="text-capitalize mb-4">Dispatch Subscribe</h4>
                     <p>Weekly system architecture blueprints, release engineering briefs, and security advisories.</p>
-                    <form class="sub-form js-newsletter-form" data-feedback="footerNewsletterMsg">
-                        <input type="email" name="email" class="form-control form-control-elite mb-3" placeholder="Subscribe Email ..." required>
-                        <button type="submit" class="btn-elite btn-elite-primary btn-sm px-4">Subscribe</button>
+                    <form class="sub-form js-newsletter-form mt-3" data-feedback="footerNewsletterMsg">
+                        <div class="position-relative w-100">
+                            <input type="email" name="email" class="form-control form-control-elite" placeholder="Enter your email" aria-label="Email address" style="border-radius: 999px; padding-right: 118px; height: 46px;" required>
+                            <button type="submit" class="btn-elite btn-elite-primary btn-sm position-absolute" style="top: 50%; right: 5px; transform: translateY(-50%); border-radius: 999px; height: 36px; padding: 0 18px; display: inline-flex; align-items: center; justify-content: center; z-index: 5;">
+                                Subscribe
+                            </button>
+                        </div>
                         <div id="footerNewsletterMsg" class="small text-success fw-semibold d-none mt-2"></div>
                     </form>
                 </div>
