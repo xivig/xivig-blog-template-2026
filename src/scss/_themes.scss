@@ -302,7 +302,7 @@
   color: #e2e8f0 !important;
 }
 
-[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .card:not(.bg-dark):not(.bg-black):not(.text-bg-dark):not(.bg-primary):not(.bg-secondary):not(.bg-success):not(.bg-danger):not(.bg-warning):not(.bg-info),
 [data-bs-theme="dark"] .widget,
 [data-bs-theme="dark"] .single-blog-item,
 [data-bs-theme="dark"] .blog-item,
@@ -317,7 +317,7 @@
 [data-bs-theme="dark"] .pricing-box,
 [data-bs-theme="dark"] .service-block,
 [data-bs-theme="dark"] .bg-white,
-[data-theme="dark"] .card,
+[data-theme="dark"] .card:not(.bg-dark):not(.bg-black):not(.text-bg-dark):not(.bg-primary):not(.bg-secondary):not(.bg-success):not(.bg-danger):not(.bg-warning):not(.bg-info),
 [data-theme="dark"] .widget,
 [data-theme="dark"] .single-blog-item,
 [data-theme="dark"] .blog-item,
@@ -333,12 +333,28 @@
 [data-theme="dark"] .service-block,
 [data-theme="dark"] .bg-white {
   background: #13192b !important;
-  border-color: rgba(255, 255, 255, 0.08) !important;
   color: #e2e8f0 !important;
 }
 
-[data-bs-theme="dark"] .border,
-[data-theme="dark"] .border {
+[data-bs-theme="dark"] .card:not(.border-primary):not(.border-secondary):not(.border-success):not(.border-danger):not(.border-warning):not(.border-info):not(.border-white),
+[data-bs-theme="dark"] .widget,
+[data-bs-theme="dark"] .single-blog-item,
+[data-bs-theme="dark"] .blog-item,
+[data-bs-theme="dark"] .sidebar-widget,
+[data-bs-theme="dark"] .comment-area-box,
+[data-bs-theme="dark"] .author-box,
+[data-theme="dark"] .card:not(.border-primary):not(.border-secondary):not(.border-success):not(.border-danger):not(.border-warning):not(.border-info):not(.border-white),
+[data-theme="dark"] .widget,
+[data-theme="dark"] .single-blog-item,
+[data-theme="dark"] .blog-item,
+[data-theme="dark"] .sidebar-widget,
+[data-theme="dark"] .comment-area-box,
+[data-theme="dark"] .author-box {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-bs-theme="dark"] .border:not(.border-primary):not(.border-secondary):not(.border-success):not(.border-danger):not(.border-warning):not(.border-info):not(.border-white),
+[data-theme="dark"] .border:not(.border-primary):not(.border-secondary):not(.border-success):not(.border-danger):not(.border-warning):not(.border-info):not(.border-white) {
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
@@ -921,9 +937,7 @@
 [data-bs-theme="light"] .page-title .page-heading,
 [data-theme="light"] .page-title .page-heading,
 [data-bs-theme="light"] .page-title .display-4,
-[data-theme="light"] .page-title .display-4,
-[data-bs-theme="light"] .page-title .text-white,
-[data-theme="light"] .page-title .text-white {
+[data-theme="light"] .page-title .display-4 {
   color: #0f172a !important;
   font-weight: 800 !important;
 }
@@ -948,8 +962,8 @@
   font-weight: 500 !important;
 }
 
-[data-bs-theme="light"] .page-title a,
-[data-theme="light"] .page-title a {
+[data-bs-theme="light"] .page-title a:not(.btn-elite):not(.btn):not(.badge):not(.text-primary),
+[data-theme="light"] .page-title a:not(.btn-elite):not(.btn):not(.badge):not(.text-primary) {
   color: #1e293b !important;
 }
 
@@ -975,17 +989,17 @@
 /* Light Sections & Content */
 [data-bs-theme="light"] section.section,
 [data-bs-theme="light"] .section,
-[data-bs-theme="light"] .bg-light,
+[data-bs-theme="light"] .bg-light:not(.badge),
 [data-bs-theme="light"] .bg-gray,
 [data-theme="light"] section.section,
 [data-theme="light"] .section,
-[data-theme="light"] .bg-light,
+[data-theme="light"] .bg-light:not(.badge),
 [data-theme="light"] .bg-gray {
   background: #f8fafc !important;
   color: #334155 !important;
 }
 
-[data-bs-theme="light"] .card,
+[data-bs-theme="light"] .card:not(.bg-dark):not(.bg-black):not(.text-bg-dark):not(.bg-primary):not(.bg-secondary):not(.bg-success):not(.bg-danger):not(.bg-warning):not(.bg-info),
 [data-bs-theme="light"] .widget,
 [data-bs-theme="light"] .single-blog-item,
 [data-bs-theme="light"] .blog-item,
@@ -1000,7 +1014,7 @@
 [data-bs-theme="light"] .pricing-box,
 [data-bs-theme="light"] .service-block,
 [data-bs-theme="light"] .bg-white,
-[data-theme="light"] .card,
+[data-theme="light"] .card:not(.bg-dark):not(.bg-black):not(.text-bg-dark):not(.bg-primary):not(.bg-secondary):not(.bg-success):not(.bg-danger):not(.bg-warning):not(.bg-info),
 [data-theme="light"] .widget,
 [data-theme="light"] .single-blog-item,
 [data-theme="light"] .blog-item,
@@ -1016,30 +1030,87 @@
 [data-theme="light"] .service-block,
 [data-theme="light"] .bg-white {
   background: #ffffff !important;
-  border-color: #e2e8f0 !important;
   color: #334155 !important;
 }
 
-[data-bs-theme="light"] .border,
-[data-theme="light"] .border {
+[data-bs-theme="light"] .card:not(.border-primary):not(.border-secondary):not(.border-success):not(.border-danger):not(.border-warning):not(.border-info):not(.border-white),
+[data-bs-theme="light"] .widget,
+[data-bs-theme="light"] .single-blog-item,
+[data-bs-theme="light"] .blog-item,
+[data-bs-theme="light"] .sidebar-widget,
+[data-bs-theme="light"] .comment-area-box,
+[data-bs-theme="light"] .author-box,
+[data-theme="light"] .card:not(.border-primary):not(.border-secondary):not(.border-success):not(.border-danger):not(.border-warning):not(.border-info):not(.border-white),
+[data-theme="light"] .widget,
+[data-theme="light"] .single-blog-item,
+[data-theme="light"] .blog-item,
+[data-theme="light"] .sidebar-widget,
+[data-theme="light"] .comment-area-box,
+[data-theme="light"] .author-box {
   border-color: #e2e8f0 !important;
 }
 
-[data-bs-theme="light"] h1,
-[data-bs-theme="light"] h2,
-[data-bs-theme="light"] h3,
-[data-bs-theme="light"] h4,
-[data-bs-theme="light"] h5,
-[data-bs-theme="light"] h6,
+[data-bs-theme="light"] .border:not(.border-primary):not(.border-secondary):not(.border-success):not(.border-danger):not(.border-warning):not(.border-info):not(.border-white),
+[data-theme="light"] .border:not(.border-primary):not(.border-secondary):not(.border-success):not(.border-danger):not(.border-warning):not(.border-info):not(.border-white) {
+  border-color: #e2e8f0 !important;
+}
+
+[data-bs-theme="light"] h1:not(.text-white):not(.text-light):not(.text-primary):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
+[data-bs-theme="light"] h2:not(.text-white):not(.text-light):not(.text-primary):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
+[data-bs-theme="light"] h3:not(.text-white):not(.text-light):not(.text-primary):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
+[data-bs-theme="light"] h4:not(.text-white):not(.text-light):not(.text-primary):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
+[data-bs-theme="light"] h5:not(.text-white):not(.text-light):not(.text-primary):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
+[data-bs-theme="light"] h6:not(.text-white):not(.text-light):not(.text-primary):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
 [data-bs-theme="light"] .text-dark,
-[data-theme="light"] h1,
-[data-theme="light"] h2,
-[data-theme="light"] h3,
-[data-theme="light"] h4,
-[data-theme="light"] h5,
-[data-theme="light"] h6,
+[data-theme="light"] h1:not(.text-white):not(.text-light):not(.text-primary):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
+[data-theme="light"] h2:not(.text-white):not(.text-light):not(.text-primary):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
+[data-theme="light"] h3:not(.text-white):not(.text-light):not(.text-primary):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
+[data-theme="light"] h4:not(.text-white):not(.text-light):not(.text-primary):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
+[data-theme="light"] h5:not(.text-white):not(.text-light):not(.text-primary):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
+[data-theme="light"] h6:not(.text-white):not(.text-light):not(.text-primary):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
 [data-theme="light"] .text-dark {
   color: #0f172a !important;
+}
+
+/* Preserve white/high-contrast copy inside dark cards, dark modals, and dark overlays in Light Mode */
+[data-bs-theme="light"] .bg-dark h1,
+[data-bs-theme="light"] .bg-dark h2,
+[data-bs-theme="light"] .bg-dark h3,
+[data-bs-theme="light"] .bg-dark h4,
+[data-bs-theme="light"] .bg-dark h5,
+[data-bs-theme="light"] .bg-dark h6,
+[data-bs-theme="light"] .bg-dark .modal-title,
+[data-bs-theme="light"] .gallery-caption h4,
+[data-bs-theme="light"] #videoStageTitle,
+[data-bs-theme="light"] #lightboxCaption,
+[data-theme="light"] .bg-dark h1,
+[data-theme="light"] .bg-dark h2,
+[data-theme="light"] .bg-dark h3,
+[data-theme="light"] .bg-dark h4,
+[data-theme="light"] .bg-dark h5,
+[data-theme="light"] .bg-dark h6,
+[data-theme="light"] .bg-dark .modal-title,
+[data-theme="light"] .gallery-caption h4,
+[data-theme="light"] #videoStageTitle,
+[data-theme="light"] #lightboxCaption {
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+[data-bs-theme="light"] .bg-dark .text-white-50,
+[data-bs-theme="light"] .bg-dark .text-muted,
+[data-bs-theme="light"] #videoStageSummary,
+[data-bs-theme="light"] #lightboxSubtitle,
+[data-theme="light"] .bg-dark .text-white-50,
+[data-theme="light"] .bg-dark .text-muted,
+[data-theme="light"] #videoStageSummary,
+[data-theme="light"] #lightboxSubtitle {
+  color: rgba(241, 245, 249, 0.86) !important;
+}
+
+[data-bs-theme="light"] #heroMagCarousel .carousel-indicators [data-bs-target],
+[data-theme="light"] #heroMagCarousel .carousel-indicators [data-bs-target] {
+  background-color: #6366f1;
 }
 
 [data-bs-theme="light"] .text-muted,
@@ -1071,6 +1142,24 @@
 [data-theme="light"] .badge.bg-light {
   background: #f1f5f9 !important;
   color: #475569 !important;
+}
+
+[data-bs-theme="light"] .badge.bg-light.text-primary,
+[data-theme="light"] .badge.bg-light.text-primary {
+  background: #eef2ff !important;
+  color: #4f46e5 !important;
+}
+
+[data-bs-theme="light"] .badge.bg-info.bg-opacity-10.text-info,
+[data-theme="light"] .badge.bg-info.bg-opacity-10.text-info {
+  background-color: rgba(2, 132, 199, 0.12) !important;
+  color: #0369a1 !important;
+}
+
+[data-bs-theme="light"] .badge.bg-warning.bg-opacity-10.text-warning,
+[data-theme="light"] .badge.bg-warning.bg-opacity-10.text-warning {
+  background-color: rgba(217, 119, 6, 0.12) !important;
+  color: #b45309 !important;
 }
 
 [data-bs-theme="light"] .counter-stat,

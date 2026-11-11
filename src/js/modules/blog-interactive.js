@@ -126,7 +126,11 @@ function initVideoPlaylist() {
             if (stageImg && btn.dataset.poster) stageImg.src = btn.dataset.poster;
             if (stageTitle && btn.dataset.title) stageTitle.textContent = btn.dataset.title;
             if (stageCategory && btn.dataset.category) stageCategory.textContent = btn.dataset.category;
-            if (stageDuration && btn.dataset.duration) stageDuration.textContent = btn.dataset.duration;
+            if (stageDuration && btn.dataset.duration) {
+                const clockIcon = document.createElement('i');
+                clockIcon.className = 'far fa-clock me-1';
+                stageDuration.replaceChildren(clockIcon, document.createTextNode(` ${btn.dataset.duration}`));
+            }
             if (stageSummary && btn.dataset.summary) stageSummary.textContent = btn.dataset.summary;
             window.scrollTo({ top: 140, behavior: 'smooth' });
         });
